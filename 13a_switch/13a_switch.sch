@@ -1,0 +1,462 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:13a_switch
+LIBS:13a_switch-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L PIC16F1829LIN U1
+U 1 1 57DF7683
+P 4700 3250
+F 0 "U1" H 4750 3350 60  0000 C CNN
+F 1 "PIC16F1829LIN" H 5650 1900 60  0000 C CNN
+F 2 "SMD_Packages:SSOP-20" H 4700 3250 60  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/41673A.pdf" H 4700 3250 60  0001 C CNN
+F 4 "PIC16F1829LIN-I/SS-ND" H 4700 3250 60  0001 C CNN "DIGIKEY"
+	1    4700 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C2
+U 1 1 57DF7684
+P 3550 2550
+F 0 "C2" H 3575 2650 50  0000 L CNN
+F 1 "1uF" H 3575 2450 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3588 2400 50  0001 C CNN
+F 3 "http://www.digikey.com/product-detail/en/murata-electronics-north-america/GCM21BL81C105KA58L/490-8046-1-ND/4380331" H 3550 2550 50  0001 C CNN
+F 4 "490-8046-1-ND" H 3550 2550 60  0001 C CNN "DIGIKEY"
+	1    3550 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C1
+U 1 1 57DF7685
+P 3100 2550
+F 0 "C1" H 3125 2650 50  0000 L CNN
+F 1 "10uF" H 3125 2450 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1210_HandSoldering" H 3138 2400 50  0001 C CNN
+F 3 "http://www.digikey.com/product-detail/en/tdk-corporation/CGA6P3X8R1C106M250AB/445-13057-1-ND/3954723" H 3100 2550 50  0001 C CNN
+F 4 "445-13057-1-ND" H 3100 2550 60  0001 C CNN "DIGIKEY"
+	1    3100 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L ZENER D1
+U 1 1 57DF7687
+P 3400 5400
+F 0 "D1" H 3400 5500 50  0000 C CNN
+F 1 "RSB36V" H 3400 5300 50  0000 C CNN
+F 2 "conn_ribbon:SOD-323_HandSoldering" H 3400 5400 50  0001 C CNN
+F 3 "http://rohmfs.rohm.com/en/products/databook/datasheet/discrete/diode/zener/rsb36v.pdf" H 3400 5400 50  0001 C CNN
+F 4 "RSB36VTE-17CT-ND" H 3400 5400 60  0001 C CNN "DIGIKEY"
+	1    3400 5400
+	0    1    1    0   
+$EndComp
+$Comp
+L D D2
+U 1 1 57DF7688
+P 5400 2650
+F 0 "D2" H 5400 2750 50  0000 C CNN
+F 1 "1N4148W-7-F" H 5400 2550 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 5400 2650 50  0001 C CNN
+F 3 "http://www.diodes.com/_files/datasheets/ds30086.pdf" H 5400 2650 50  0001 C CNN
+F 4 "1N4148W-FDICT-ND" H 5400 2650 60  0001 C CNN "DIGIKEY"
+	1    5400 2650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +12V #PWR01
+U 1 1 57DF768A
+P 5400 2300
+F 0 "#PWR01" H 5400 2150 50  0001 C CNN
+F 1 "+12V" H 5400 2440 50  0000 C CNN
+F 2 "" H 5400 2300 50  0000 C CNN
+F 3 "" H 5400 2300 50  0000 C CNN
+	1    5400 2300
+	1    0    0    -1  
+$EndComp
+Text Label 4050 4250 0    60   ~ 0
+/MCLR
+Text Label 4050 3850 0    60   ~ 0
+ICSPDAT
+Text Label 4050 4050 0    60   ~ 0
+ICSPCLK
+$Comp
+L Q_NMOS_GDSD Q1
+U 1 1 57DF7C1E
+P 7950 4100
+F 0 "Q1" H 8250 4150 50  0000 R CNN
+F 1 "Q_NMOS_GDSD" H 8650 4050 50  0000 R CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 8150 4200 50  0001 C CNN
+F 3 "http://www.st.com/web/en/resource/technical/document/datasheet/DM00043834.pdf" H 7950 4100 50  0001 C CNN
+F 4 "497-14326-1-ND" H 7950 4100 60  0001 C CNN "DIGIKEY"
+	1    7950 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 57DF7E85
+P 8050 4800
+F 0 "#PWR02" H 8050 4550 50  0001 C CNN
+F 1 "GND" H 8050 4650 50  0000 C CNN
+F 2 "" H 8050 4800 50  0000 C CNN
+F 3 "" H 8050 4800 50  0000 C CNN
+	1    8050 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P1
+U 1 1 57DF7F56
+P 2050 3400
+F 0 "P1" H 2050 3500 50  0000 C CNN
+F 1 "CONN_01X01" V 2150 3400 50  0000 C CNN
+F 2 "Connect:1pin" H 2050 3400 50  0001 C CNN
+F 3 "" H 2050 3400 50  0000 C CNN
+	1    2050 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X01 P4
+U 1 1 57DF9774
+P 9200 3650
+F 0 "P4" H 9200 3750 50  0000 C CNN
+F 1 "CONN_01X01" V 9300 3650 50  0000 C CNN
+F 2 "Connect:1pin" H 9200 3650 50  0001 C CNN
+F 3 "" H 9200 3650 50  0000 C CNN
+	1    9200 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 57DF990E
+P 7500 4100
+F 0 "R1" V 7580 4100 50  0000 C CNN
+F 1 "1K" V 7500 4100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7430 4100 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_04.pdf" H 7500 4100 50  0001 C CNN
+F 4 "311-1.00KCRCT-ND" V 7500 4100 60  0001 C CNN "DIGIKEY"
+	1    7500 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 57DFB653
+P 5700 6100
+F 0 "#PWR03" H 5700 5850 50  0001 C CNN
+F 1 "GND" H 5700 5950 50  0000 C CNN
+F 2 "" H 5700 6100 50  0000 C CNN
+F 3 "" H 5700 6100 50  0000 C CNN
+	1    5700 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR04
+U 1 1 57DFC07F
+P 3750 3400
+F 0 "#PWR04" H 3750 3250 50  0001 C CNN
+F 1 "+12V" H 3750 3540 50  0000 C CNN
+F 2 "" H 3750 3400 50  0000 C CNN
+F 3 "" H 3750 3400 50  0000 C CNN
+	1    3750 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR05
+U 1 1 57DFC341
+P 5700 2300
+F 0 "#PWR05" H 5700 2150 50  0001 C CNN
+F 1 "+5V" H 5700 2440 50  0000 C CNN
+F 2 "" H 5700 2300 50  0000 C CNN
+F 3 "" H 5700 2300 50  0000 C CNN
+	1    5700 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR06
+U 1 1 57DFC522
+P 3100 2700
+F 0 "#PWR06" H 3100 2450 50  0001 C CNN
+F 1 "GND" H 3100 2550 50  0000 C CNN
+F 2 "" H 3100 2700 50  0000 C CNN
+F 3 "" H 3100 2700 50  0000 C CNN
+	1    3100 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR07
+U 1 1 57DFC55A
+P 3100 2400
+F 0 "#PWR07" H 3100 2250 50  0001 C CNN
+F 1 "+12V" H 3100 2540 50  0000 C CNN
+F 2 "" H 3100 2400 50  0000 C CNN
+F 3 "" H 3100 2400 50  0000 C CNN
+	1    3100 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR08
+U 1 1 57DFC6C4
+P 3550 2400
+F 0 "#PWR08" H 3550 2250 50  0001 C CNN
+F 1 "+5V" H 3550 2540 50  0000 C CNN
+F 2 "" H 3550 2400 50  0000 C CNN
+F 3 "" H 3550 2400 50  0000 C CNN
+	1    3550 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR09
+U 1 1 57DFC6FC
+P 3550 2700
+F 0 "#PWR09" H 3550 2450 50  0001 C CNN
+F 1 "GND" H 3550 2550 50  0000 C CNN
+F 2 "" H 3550 2700 50  0000 C CNN
+F 3 "" H 3550 2700 50  0000 C CNN
+	1    3550 2700
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6700 3700
+NoConn ~ 6700 3900
+NoConn ~ 6700 4500
+NoConn ~ 6700 4300
+NoConn ~ 6700 4700
+NoConn ~ 6700 5100
+NoConn ~ 6700 5300
+Text Label 4100 4750 0    60   ~ 0
+LBUS
+Text Label 8800 3650 0    60   ~ 0
+OUT
+$Comp
+L CONN_01X01 P6
+U 1 1 57DFF88A
+P 9200 4400
+F 0 "P6" H 9200 4500 50  0000 C CNN
+F 1 "CONN_01X01" V 9300 4400 50  0000 C CNN
+F 2 "Connect:1pin" H 9200 4400 50  0001 C CNN
+F 3 "" H 9200 4400 50  0000 C CNN
+	1    9200 4400
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_01X06 P3
+U 1 1 57E0B1D0
+P 7600 2600
+F 0 "P3" H 7600 2950 50  0000 C CNN
+F 1 "CONN_01X06" V 7700 2600 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06" H 7600 2600 50  0001 C CNN
+F 3 "" H 7600 2600 50  0000 C CNN
+	1    7600 2600
+	1    0    0    -1  
+$EndComp
+Text Label 6850 2350 0    60   ~ 0
+/MCLR
+$Comp
+L +5V #PWR010
+U 1 1 57E0B6A0
+P 6750 2400
+F 0 "#PWR010" H 6750 2250 50  0001 C CNN
+F 1 "+5V" H 6750 2540 50  0000 C CNN
+F 2 "" H 6750 2400 50  0000 C CNN
+F 3 "" H 6750 2400 50  0000 C CNN
+	1    6750 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR011
+U 1 1 57E0BA65
+P 6750 2600
+F 0 "#PWR011" H 6750 2350 50  0001 C CNN
+F 1 "GND" H 6750 2450 50  0000 C CNN
+F 2 "" H 6750 2600 50  0000 C CNN
+F 3 "" H 6750 2600 50  0000 C CNN
+	1    6750 2600
+	1    0    0    -1  
+$EndComp
+Text Label 6850 2650 0    60   ~ 0
+ICSPDAT
+Text Label 6850 2750 0    60   ~ 0
+ICSPCLK
+Wire Wire Line
+	3950 4250 4500 4250
+Wire Wire Line
+	3950 3850 4500 3850
+Wire Wire Line
+	3950 4050 4500 4050
+Wire Wire Line
+	8050 4300 8050 4800
+Wire Wire Line
+	8050 3650 9000 3650
+Wire Wire Line
+	8150 3650 8150 3900
+Connection ~ 8150 3650
+Wire Wire Line
+	7650 4100 7750 4100
+Wire Wire Line
+	4500 4950 4400 4950
+Wire Wire Line
+	4400 4950 4400 5150
+Wire Wire Line
+	4400 5150 4500 5150
+Wire Wire Line
+	5500 5950 5500 6000
+Wire Wire Line
+	5700 5950 5700 6100
+Wire Wire Line
+	5400 2800 5400 3050
+Wire Wire Line
+	2600 4750 4500 4750
+Wire Wire Line
+	2250 3400 3750 3400
+Wire Wire Line
+	5400 2500 5400 2300
+Wire Wire Line
+	5600 3050 5600 2950
+Wire Wire Line
+	5600 2950 5800 2950
+Wire Wire Line
+	5800 2950 5800 3050
+Wire Wire Line
+	5700 2950 5700 2300
+Connection ~ 5700 2950
+Wire Wire Line
+	8050 3900 8050 3650
+Wire Wire Line
+	3400 5200 3400 4750
+Connection ~ 3400 4750
+Wire Wire Line
+	8050 4400 9000 4400
+Wire Wire Line
+	7400 2350 6850 2350
+Wire Wire Line
+	6750 2450 7400 2450
+Wire Wire Line
+	6750 2550 7400 2550
+Wire Wire Line
+	7400 2650 6850 2650
+Wire Wire Line
+	7400 2750 6850 2750
+Wire Wire Line
+	6750 2550 6750 2600
+Wire Wire Line
+	6750 2450 6750 2400
+Wire Wire Line
+	5500 6000 5700 6000
+Connection ~ 5700 6000
+Wire Wire Line
+	3400 5600 3400 6000
+NoConn ~ 7400 2850
+Text Notes 8800 4100 0    60   ~ 0
+Max 13A\nAWG 12 (2.053 mm)
+Connection ~ 8050 4400
+$Comp
+L LED D3
+U 1 1 57E21D1D
+P 7150 4550
+F 0 "D3" H 7150 4650 50  0000 C CNN
+F 1 "LED" H 7150 4450 50  0000 C CNN
+F 2 "LEDs:LED_0805" H 7150 4550 50  0001 C CNN
+F 3 "http://www.osram-os.com/Graphics/XPic8/00078869_0.pdf" H 7150 4550 50  0001 C CNN
+F 4 "475-1415-1-ND" H 7150 4550 60  0001 C CNN "DIGIKEY"
+	1    7150 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R2
+U 1 1 57E21EE2
+P 7150 4900
+F 0 "R2" V 7230 4900 50  0000 C CNN
+F 1 "160" V 7150 4900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7080 4900 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_04.pdf" H 7150 4900 50  0001 C CNN
+F 4 "311-160CRCT-ND" V 7150 4900 60  0001 C CNN "DIGIKEY"
+	1    7150 4900
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR012
+U 1 1 57E227B3
+P 3400 6000
+F 0 "#PWR012" H 3400 5750 50  0001 C CNN
+F 1 "GND" H 3400 5850 50  0000 C CNN
+F 2 "" H 3400 6000 50  0000 C CNN
+F 3 "" H 3400 6000 50  0000 C CNN
+	1    3400 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P2
+U 1 1 57E228B5
+P 2400 4750
+F 0 "P2" H 2400 4850 50  0000 C CNN
+F 1 "CONN_01X01" V 2500 4750 50  0000 C CNN
+F 2 "Connect:1pin" H 2400 4750 50  0001 C CNN
+F 3 "" H 2400 4750 50  0000 C CNN
+	1    2400 4750
+	-1   0    0    1   
+$EndComp
+Text Notes 2400 4650 0    60   ~ 0
+AWG 18 (1.024mm wire)
+Text Notes 2450 3400 0    60   ~ 0
+AWG 18 (1.024mm wire)
+Wire Wire Line
+	6700 4100 7350 4100
+$Comp
+L +5V #PWR013
+U 1 1 57E24194
+P 7150 4350
+F 0 "#PWR013" H 7150 4200 50  0001 C CNN
+F 1 "+5V" H 7150 4490 50  0000 C CNN
+F 2 "" H 7150 4350 50  0000 C CNN
+F 3 "" H 7150 4350 50  0000 C CNN
+	1    7150 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 5050 6900 5050
+Wire Wire Line
+	6900 5050 6900 4900
+Wire Wire Line
+	6900 4900 6700 4900
+Text Notes 7450 5450 0    60   ~ 0
+Forward voltage at 20mA = 1.8V
+$EndSCHEMATC
