@@ -61,9 +61,12 @@ void main(void)
 
     while (1)
     {
-        LIN_handler();
+        if (LIN_handler() == LIN_RX_IDLE) {
+            asm("sleep");
+        }
     }
 }
+
 /**
  End of File
 */

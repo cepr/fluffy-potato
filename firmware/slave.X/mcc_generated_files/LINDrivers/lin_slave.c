@@ -60,6 +60,7 @@ void LIN_init(uint8_t tableLength, const lin_rx_cmd_t* const command, void (*pro
     LIN_stopTimer();
     LIN_enableRx();
     LIN_setTimerHandler();
+    BAUDCONbits.WUE = 1;
 }
 
 void LIN_queuePacket(uint8_t cmd){
@@ -101,6 +102,8 @@ lin_rx_state_t LIN_handler(void){
     switch(LIN_rxState){
         case LIN_RX_IDLE:
             if(LIN_EUSART_DataReady > 0){
+                // Discard the wake-up 0x00 character
+                LIN_EUSART_Read();
                 //Start Timer
                 LIN_startTimer(READ_TIMEOUT); 
                 LIN_rxInProgress = true;
@@ -109,11 +112,8 @@ lin_rx_state_t LIN_handler(void){
             break;
         case LIN_RX_BREAK:
             if(LIN_EUSART_DataReady > 0){
-                if(LIN_breakCheck() == true){  //Read Break
-                    LIN_rxState = LIN_RX_SYNC;
-                } else {
-                    LIN_rxState = LIN_RX_ERROR;
-                }
+                LIN_breakCheck();
+                LIN_rxState = LIN_RX_SYNC;
             }
             break;
         case LIN_RX_SYNC:
@@ -180,6 +180,7 @@ lin_rx_state_t LIN_handler(void){
             if(LIN_TRMT){
                 LIN_enableRx();
                 LIN_rxState = LIN_RX_IDLE;
+                BAUDCONbits.WUE = 1;
             } else {
                 LIN_rxState = LIN_RX_WAIT;
             }
