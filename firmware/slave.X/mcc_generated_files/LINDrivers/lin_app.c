@@ -55,9 +55,9 @@ void processLIN(void){
     switch(cmd){
         case BRAKE_PEDAL:
             if (!tempRxData[0]) {
-                LED_SetHigh();
+                P7_SetHigh();
             } else {
-                LED_SetLow();
+                P7_SetLow();
             }
             break;
         default:

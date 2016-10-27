@@ -97,23 +97,23 @@
 #define IO_RA1_SetDigitalMode()   do { ANSA1 = 0; } while(0)
 
 
-// get/set IO_RA2 aliases
-#define IO_RA2_TRIS               TRISA2
-#define IO_RA2_LAT                LATA2
-#define IO_RA2_PORT               RA2
-#define IO_RA2_WPU                WPUA2
-#define IO_RA2_ANS                ANSA2
-#define IO_RA2_SetHigh()    do { LATA2 = 1; } while(0)
-#define IO_RA2_SetLow()   do { LATA2 = 0; } while(0)
-#define IO_RA2_Toggle()   do { LATA2 = ~LATA2; } while(0)
-#define IO_RA2_GetValue()         PORTAbits.RA2
-#define IO_RA2_SetDigitalInput()    do { TRISA2 = 1; } while(0)
-#define IO_RA2_SetDigitalOutput()   do { TRISA2 = 0; } while(0)
+// get/set P7 aliases
+#define P7_TRIS               TRISA2
+#define P7_LAT                LATA2
+#define P7_PORT               RA2
+#define P7_WPU                WPUA2
+#define P7_ANS                ANSA2
+#define P7_SetHigh()    do { LATA2 = 1; } while(0)
+#define P7_SetLow()   do { LATA2 = 0; } while(0)
+#define P7_Toggle()   do { LATA2 = ~LATA2; } while(0)
+#define P7_GetValue()         PORTAbits.RA2
+#define P7_SetDigitalInput()    do { TRISA2 = 1; } while(0)
+#define P7_SetDigitalOutput()   do { TRISA2 = 0; } while(0)
 
-#define IO_RA2_SetPullup()    do { WPUA2 = 1; } while(0)
-#define IO_RA2_ResetPullup()   do { WPUA2 = 0; } while(0)
-#define IO_RA2_SetAnalogMode()   do { ANSA2 = 1; } while(0)
-#define IO_RA2_SetDigitalMode()   do { ANSA2 = 0; } while(0)
+#define P7_SetPullup()    do { WPUA2 = 1; } while(0)
+#define P7_ResetPullup()   do { WPUA2 = 0; } while(0)
+#define P7_SetAnalogMode()   do { ANSA2 = 1; } while(0)
+#define P7_SetDigitalMode()   do { ANSA2 = 0; } while(0)
 
 
 // get/set IO_RA4 aliases
@@ -227,61 +227,61 @@
 #define IO_RB6_SetDigitalMode()   do { ANSB6 = 0; } while(0)
 
 
-// get/set IO_RC0 aliases
-#define IO_RC0_TRIS               TRISC0
-#define IO_RC0_LAT                LATC0
-#define IO_RC0_PORT               RC0
-#define IO_RC0_WPU                WPUC0
-#define IO_RC0_ANS                ANSC0
-#define IO_RC0_SetHigh()    do { LATC0 = 1; } while(0)
-#define IO_RC0_SetLow()   do { LATC0 = 0; } while(0)
-#define IO_RC0_Toggle()   do { LATC0 = ~LATC0; } while(0)
-#define IO_RC0_GetValue()         PORTCbits.RC0
-#define IO_RC0_SetDigitalInput()    do { TRISC0 = 1; } while(0)
-#define IO_RC0_SetDigitalOutput()   do { TRISC0 = 0; } while(0)
+// get/set P8 aliases
+#define P8_TRIS               TRISC0
+#define P8_LAT                LATC0
+#define P8_PORT               RC0
+#define P8_WPU                WPUC0
+#define P8_ANS                ANSC0
+#define P8_SetHigh()    do { LATC0 = 1; } while(0)
+#define P8_SetLow()   do { LATC0 = 0; } while(0)
+#define P8_Toggle()   do { LATC0 = ~LATC0; } while(0)
+#define P8_GetValue()         PORTCbits.RC0
+#define P8_SetDigitalInput()    do { TRISC0 = 1; } while(0)
+#define P8_SetDigitalOutput()   do { TRISC0 = 0; } while(0)
 
-#define IO_RC0_SetPullup()    do { WPUC0 = 1; } while(0)
-#define IO_RC0_ResetPullup()   do { WPUC0 = 0; } while(0)
-#define IO_RC0_SetAnalogMode()   do { ANSC0 = 1; } while(0)
-#define IO_RC0_SetDigitalMode()   do { ANSC0 = 0; } while(0)
-
-
-// get/set LED aliases
-#define LED_TRIS               TRISC1
-#define LED_LAT                LATC1
-#define LED_PORT               RC1
-#define LED_WPU                WPUC1
-#define LED_ANS                ANSC1
-#define LED_SetHigh()    do { LATC1 = 1; } while(0)
-#define LED_SetLow()   do { LATC1 = 0; } while(0)
-#define LED_Toggle()   do { LATC1 = ~LATC1; } while(0)
-#define LED_GetValue()         PORTCbits.RC1
-#define LED_SetDigitalInput()    do { TRISC1 = 1; } while(0)
-#define LED_SetDigitalOutput()   do { TRISC1 = 0; } while(0)
-
-#define LED_SetPullup()    do { WPUC1 = 1; } while(0)
-#define LED_ResetPullup()   do { WPUC1 = 0; } while(0)
-#define LED_SetAnalogMode()   do { ANSC1 = 1; } while(0)
-#define LED_SetDigitalMode()   do { ANSC1 = 0; } while(0)
+#define P8_SetPullup()    do { WPUC0 = 1; } while(0)
+#define P8_ResetPullup()   do { WPUC0 = 0; } while(0)
+#define P8_SetAnalogMode()   do { ANSC0 = 1; } while(0)
+#define P8_SetDigitalMode()   do { ANSC0 = 0; } while(0)
 
 
-// get/set IO_RC2 aliases
-#define IO_RC2_TRIS               TRISC2
-#define IO_RC2_LAT                LATC2
-#define IO_RC2_PORT               RC2
-#define IO_RC2_WPU                WPUC2
-#define IO_RC2_ANS                ANSC2
-#define IO_RC2_SetHigh()    do { LATC2 = 1; } while(0)
-#define IO_RC2_SetLow()   do { LATC2 = 0; } while(0)
-#define IO_RC2_Toggle()   do { LATC2 = ~LATC2; } while(0)
-#define IO_RC2_GetValue()         PORTCbits.RC2
-#define IO_RC2_SetDigitalInput()    do { TRISC2 = 1; } while(0)
-#define IO_RC2_SetDigitalOutput()   do { TRISC2 = 0; } while(0)
+// get/set P5 aliases
+#define P5_TRIS               TRISC1
+#define P5_LAT                LATC1
+#define P5_PORT               RC1
+#define P5_WPU                WPUC1
+#define P5_ANS                ANSC1
+#define P5_SetHigh()    do { LATC1 = 1; } while(0)
+#define P5_SetLow()   do { LATC1 = 0; } while(0)
+#define P5_Toggle()   do { LATC1 = ~LATC1; } while(0)
+#define P5_GetValue()         PORTCbits.RC1
+#define P5_SetDigitalInput()    do { TRISC1 = 1; } while(0)
+#define P5_SetDigitalOutput()   do { TRISC1 = 0; } while(0)
 
-#define IO_RC2_SetPullup()    do { WPUC2 = 1; } while(0)
-#define IO_RC2_ResetPullup()   do { WPUC2 = 0; } while(0)
-#define IO_RC2_SetAnalogMode()   do { ANSC2 = 1; } while(0)
-#define IO_RC2_SetDigitalMode()   do { ANSC2 = 0; } while(0)
+#define P5_SetPullup()    do { WPUC1 = 1; } while(0)
+#define P5_ResetPullup()   do { WPUC1 = 0; } while(0)
+#define P5_SetAnalogMode()   do { ANSC1 = 1; } while(0)
+#define P5_SetDigitalMode()   do { ANSC1 = 0; } while(0)
+
+
+// get/set P4 aliases
+#define P4_TRIS               TRISC2
+#define P4_LAT                LATC2
+#define P4_PORT               RC2
+#define P4_WPU                WPUC2
+#define P4_ANS                ANSC2
+#define P4_SetHigh()    do { LATC2 = 1; } while(0)
+#define P4_SetLow()   do { LATC2 = 0; } while(0)
+#define P4_Toggle()   do { LATC2 = ~LATC2; } while(0)
+#define P4_GetValue()         PORTCbits.RC2
+#define P4_SetDigitalInput()    do { TRISC2 = 1; } while(0)
+#define P4_SetDigitalOutput()   do { TRISC2 = 0; } while(0)
+
+#define P4_SetPullup()    do { WPUC2 = 1; } while(0)
+#define P4_ResetPullup()   do { WPUC2 = 0; } while(0)
+#define P4_SetAnalogMode()   do { ANSC2 = 1; } while(0)
+#define P4_SetDigitalMode()   do { ANSC2 = 0; } while(0)
 
 
 // get/set IO_RC3 aliases

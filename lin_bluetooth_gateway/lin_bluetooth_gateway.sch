@@ -1,0 +1,341 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:bl652
+LIBS:mcp2050
+LIBS:lin_bluetooth_gateway-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L BL652 U2
+U 1 1 5807152B
+P 7000 3600
+F 0 "U2" H 6250 2100 60  0000 C CNN
+F 1 "BL652" H 6350 4900 60  0000 C CNN
+F 2 "footprints:BL652-SA" H 7000 3600 60  0001 C CNN
+F 3 "" H 7000 3600 60  0001 C CNN
+	1    7000 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 580719F1
+P 3300 3650
+F 0 "#PWR01" H 3300 3400 50  0001 C CNN
+F 1 "GND" H 3300 3500 50  0000 C CNN
+F 2 "" H 3300 3650 50  0000 C CNN
+F 3 "" H 3300 3650 50  0000 C CNN
+	1    3300 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 58071A27
+P 5950 4800
+F 0 "#PWR02" H 5950 4550 50  0001 C CNN
+F 1 "GND" H 5950 4650 50  0000 C CNN
+F 2 "" H 5950 4800 50  0000 C CNN
+F 3 "" H 5950 4800 50  0000 C CNN
+	1    5950 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 4750 6000 4750
+Wire Wire Line
+	5950 4450 5950 4800
+Wire Wire Line
+	6000 4650 5950 4650
+Connection ~ 5950 4750
+Wire Wire Line
+	6000 4550 5950 4550
+Connection ~ 5950 4650
+Wire Wire Line
+	6000 4450 5950 4450
+Connection ~ 5950 4550
+$Comp
+L MCP2050 U1
+U 1 1 5807224D
+P 4500 3000
+F 0 "U1" H 4050 2300 60  0000 C CNN
+F 1 "MCP2050" H 4200 3600 60  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 4050 3050 60  0001 C CNN
+F 3 "" H 4050 3050 60  0001 C CNN
+	1    4500 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 3500 3800 3500
+Wire Wire Line
+	3300 3500 3300 3650
+Wire Wire Line
+	5300 2600 6000 2600
+Wire Wire Line
+	6000 2700 5300 2700
+Wire Wire Line
+	5300 2800 6000 2800
+Wire Wire Line
+	6000 2900 5300 2900
+Wire Wire Line
+	5300 3100 6000 3100
+$Comp
+L CONN_01X01 P3
+U 1 1 5807317B
+P 2400 2600
+F 0 "P3" H 2400 2700 50  0000 C CNN
+F 1 "CONN_01X01" V 2500 2600 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_1-2mmDrill" H 2400 2600 50  0001 C CNN
+F 3 "" H 2400 2600 50  0000 C CNN
+	1    2400 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X01 P2
+U 1 1 58073289
+P 1400 3100
+F 0 "P2" H 1400 3200 50  0000 C CNN
+F 1 "CONN_01X01" V 1500 3100 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_1-2mmDrill" H 1400 3100 50  0001 C CNN
+F 3 "" H 1400 3100 50  0000 C CNN
+	1    1400 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X01 P1
+U 1 1 580732CF
+P 2600 3500
+F 0 "P1" H 2600 3600 50  0000 C CNN
+F 1 "CONN_01X01" V 2700 3500 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_1-2mmDrill" H 2600 3500 50  0001 C CNN
+F 3 "" H 2600 3500 50  0000 C CNN
+	1    2600 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2900 2600 3800 2600
+Wire Wire Line
+	1600 3100 3800 3100
+Connection ~ 3300 3500
+$Comp
+L +12V #PWR03
+U 1 1 580733CC
+P 3300 2500
+F 0 "#PWR03" H 3300 2350 50  0001 C CNN
+F 1 "+12V" H 3300 2640 50  0000 C CNN
+F 2 "" H 3300 2500 50  0000 C CNN
+F 3 "" H 3300 2500 50  0000 C CNN
+	1    3300 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2500 3300 2600
+Connection ~ 3300 2600
+Wire Wire Line
+	3800 2700 3700 2700
+Wire Wire Line
+	3700 2700 3700 2600
+Connection ~ 3700 2600
+$Comp
+L R R2
+U 1 1 58073BC8
+P 5650 2900
+F 0 "R2" V 5730 2900 50  0000 C CNN
+F 1 "10k" V 5650 2900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" V 5580 2900 50  0001 C CNN
+F 3 "" H 5650 2900 50  0000 C CNN
+	1    5650 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 3050 5650 3100
+Connection ~ 5650 3100
+Wire Wire Line
+	5650 2750 5650 2600
+Connection ~ 5650 2600
+$Comp
+L PWR_FLAG #FLG04
+U 1 1 58074312
+P 3000 2500
+F 0 "#FLG04" H 3000 2595 50  0001 C CNN
+F 1 "PWR_FLAG" H 3000 2680 50  0000 C CNN
+F 2 "" H 3000 2500 50  0000 C CNN
+F 3 "" H 3000 2500 50  0000 C CNN
+	1    3000 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG05
+U 1 1 58074339
+P 3000 3400
+F 0 "#FLG05" H 3000 3495 50  0001 C CNN
+F 1 "PWR_FLAG" H 3000 3580 50  0000 C CNN
+F 2 "" H 3000 3400 50  0000 C CNN
+F 3 "" H 3000 3400 50  0000 C CNN
+	1    3000 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 2500 3000 2600
+Connection ~ 3000 2600
+Wire Wire Line
+	3000 3400 3000 3500
+Connection ~ 3000 3500
+NoConn ~ 8000 2500
+NoConn ~ 8000 2600
+NoConn ~ 8000 2700
+NoConn ~ 8000 2800
+NoConn ~ 8000 2900
+NoConn ~ 8000 3000
+NoConn ~ 8000 3100
+NoConn ~ 8000 3200
+NoConn ~ 8000 3300
+NoConn ~ 8000 3400
+NoConn ~ 8000 3500
+NoConn ~ 8000 3600
+NoConn ~ 8000 3700
+NoConn ~ 8000 3800
+NoConn ~ 8000 3900
+NoConn ~ 8000 4000
+NoConn ~ 8000 4100
+NoConn ~ 8000 4200
+NoConn ~ 8000 4300
+NoConn ~ 8000 4400
+NoConn ~ 8000 4500
+NoConn ~ 8000 4600
+NoConn ~ 8000 4700
+NoConn ~ 8000 4800
+NoConn ~ 5300 3500
+NoConn ~ 5300 3400
+NoConn ~ 5300 3300
+NoConn ~ 5300 3200
+NoConn ~ 8000 4900
+NoConn ~ 8000 5000
+$Comp
+L CONN_01X04 P4
+U 1 1 580874C5
+P 5450 4100
+F 0 "P4" H 5450 4300 50  0000 C CNN
+F 1 "CONN_01X03" V 5550 4100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.00mm" H 5450 4100 50  0001 C CNN
+F 3 "" H 5450 4100 50  0000 C CNN
+	1    5450 4100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR06
+U 1 1 5808755D
+P 5650 3950
+F 0 "#PWR06" H 5650 3700 50  0001 C CNN
+F 1 "GND" H 5650 3800 50  0000 C CNN
+F 2 "" H 5650 3950 50  0000 C CNN
+F 3 "" H 5650 3950 50  0000 C CNN
+	1    5650 3950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6000 4150 5650 4150
+Wire Wire Line
+	5650 4050 6000 4050
+$Comp
+L D D2
+U 1 1 58088008
+P 2750 2600
+F 0 "D2" H 2750 2700 50  0000 C CNN
+F 1 "D" H 2750 2500 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-123" H 2750 2600 50  0001 C CNN
+F 3 "http://www.diodes.com/_files/datasheets/ds30086.pdf" H 2750 2600 50  0001 C CNN
+F 4 "1N4148W-FDICT-ND" H 2750 2600 60  0001 C CNN "DIGIKEY"
+	1    2750 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L ZENERsmall D1
+U 1 1 58088341
+P 2100 3350
+F 0 "D1" H 2100 3450 50  0000 C CNN
+F 1 "RSB36V" H 2100 3250 50  0000 C CNN
+F 2 "Diodes_SMD:SOD-323_HandSoldering" H 2100 3350 50  0001 C CNN
+F 3 "http://rohmfs.rohm.com/en/products/databook/datasheet/discrete/diode/zener/rsb36v.pdf" H 2100 3350 50  0001 C CNN
+F 4 "RSB36VTE-17CT-ND" H 2100 3350 60  0001 C CNN "DIGIKEY"
+	1    2100 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 580884F7
+P 2100 3550
+F 0 "#PWR07" H 2100 3300 50  0001 C CNN
+F 1 "GND" H 2100 3400 50  0000 C CNN
+F 2 "" H 2100 3550 50  0000 C CNN
+F 3 "" H 2100 3550 50  0000 C CNN
+	1    2100 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 3450 2100 3550
+Wire Wire Line
+	2100 3250 2100 3100
+Connection ~ 2100 3100
+NoConn ~ 6000 3650
+NoConn ~ 6000 3750
+$Comp
+L +3V3 #PWR08
+U 1 1 5808A7D0
+P 5650 2600
+F 0 "#PWR08" H 5650 2450 50  0001 C CNN
+F 1 "+3V3" H 5650 2740 50  0000 C CNN
+F 2 "" H 5650 2600 50  0000 C CNN
+F 3 "" H 5650 2600 50  0000 C CNN
+	1    5650 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR09
+U 1 1 5808A811
+P 5650 4250
+F 0 "#PWR09" H 5650 4100 50  0001 C CNN
+F 1 "+3V3" H 5650 4390 50  0000 C CNN
+F 2 "" H 5650 4250 50  0000 C CNN
+F 3 "" H 5650 4250 50  0000 C CNN
+	1    5650 4250
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC

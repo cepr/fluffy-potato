@@ -75,8 +75,8 @@ P 4100 1550
 F 0 "C1" H 4125 1650 50  0000 L CNN
 F 1 "10uF" H 4125 1450 50  0000 L CNN
 F 2 "Capacitors_SMD:C_1210_HandSoldering" H 4138 1400 50  0001 C CNN
-F 3 "http://www.digikey.com/product-detail/en/tdk-corporation/CGA6P3X8R1C106M250AB/445-13057-1-ND/3954723" H 4100 1550 50  0001 C CNN
-F 4 "445-13057-1-ND" H 4100 1550 60  0001 C CNN "DIGIKEY"
+F 3 "http://datasheets.avx.com/TPS.pdf" H 4100 1550 50  0001 C CNN
+F 4 "478-5230-1-ND" H 4100 1550 60  0001 C CNN "DIGIKEY"
 	1    4100 1550
 	1    0    0    -1  
 $EndComp
