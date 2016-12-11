@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/cpriscal/Projets/lin_modules/13a_switch_x4/13a_switch_x4.sch</source>
-    <date>Thu 13 Oct 2016 08:27:49 PM PDT</date>
+    <date>Sun 04 Dec 2016 03:55:44 PM PST</date>
     <tool>Eeschema 4.0.4+e1-6308~48~ubuntu16.04.1-stable</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -19,17 +19,6 @@
     </sheet>
   </design>
   <components>
-    <comp ref="U1">
-      <value>PIC16F1829LIN</value>
-      <footprint>Housings_SSOP:SSOP-20_5.3x7.2mm_Pitch0.65mm</footprint>
-      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/41673A.pdf</datasheet>
-      <fields>
-        <field name="DIGIKEY">PIC16F1829LIN-I/SS-ND</field>
-      </fields>
-      <libsource lib="13a_switch_x4" part="PIC16F1829LIN"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57DF7683</tstamp>
-    </comp>
     <comp ref="C2">
       <value>1uF</value>
       <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
@@ -44,9 +33,9 @@
     <comp ref="C1">
       <value>10uF</value>
       <footprint>Capacitors_SMD:C_1210_HandSoldering</footprint>
-      <datasheet>http://www.digikey.com/product-detail/en/tdk-corporation/CGA6P3X8R1C106M250AB/445-13057-1-ND/3954723</datasheet>
+      <datasheet>http://datasheets.avx.com/TPS.pdf</datasheet>
       <fields>
-        <field name="DIGIKEY">445-13057-1-ND</field>
+        <field name="DIGIKEY">478-5230-1-ND</field>
       </fields>
       <libsource lib="device" part="CP"/>
       <sheetpath names="/" tstamps="/"/>
@@ -85,51 +74,15 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57DF7C1E</tstamp>
     </comp>
-    <comp ref="P1">
-      <value>CONN_01X01</value>
-      <footprint>Connect:1pin</footprint>
-      <libsource lib="conn" part="CONN_01X01"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57DF7F56</tstamp>
-    </comp>
-    <comp ref="P4">
-      <value>CONN_01X01</value>
-      <footprint>Connect:1pin</footprint>
-      <libsource lib="conn" part="CONN_01X01"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57DF9774</tstamp>
-    </comp>
-    <comp ref="R1">
-      <value>1K</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_04.pdf</datasheet>
-      <fields>
-        <field name="DIGIKEY">311-1.00KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57DF990E</tstamp>
-    </comp>
-    <comp ref="P6">
-      <value>CONN_01X01</value>
-      <footprint>Connect:1pin</footprint>
-      <libsource lib="conn" part="CONN_01X01"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57DFF88A</tstamp>
-    </comp>
     <comp ref="P3">
-      <value>CONN_01X05</value>
+      <value>MOLEX-22-28-6050</value>
       <footprint>Pin_Headers:Pin_Header_Straight_1x05</footprint>
+      <fields>
+        <field name="DIGIKEY">WM13455-ND</field>
+      </fields>
       <libsource lib="conn" part="CONN_01X05"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57E0B1D0</tstamp>
-    </comp>
-    <comp ref="P2">
-      <value>CONN_01X01</value>
-      <footprint>Connect:1pin</footprint>
-      <libsource lib="conn" part="CONN_01X01"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57E228B5</tstamp>
     </comp>
     <comp ref="Q2">
       <value>Q_NMOS_GDSD</value>
@@ -142,24 +95,6 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57FC7611</tstamp>
     </comp>
-    <comp ref="P5">
-      <value>CONN_01X01</value>
-      <footprint>Connect:1pin</footprint>
-      <libsource lib="conn" part="CONN_01X01"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57FC761D</tstamp>
-    </comp>
-    <comp ref="R2">
-      <value>1K</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_04.pdf</datasheet>
-      <fields>
-        <field name="DIGIKEY">311-1.00KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57FC7624</tstamp>
-    </comp>
     <comp ref="Q3">
       <value>Q_NMOS_GDSD</value>
       <footprint>TO_SOT_Packages_SMD:SOT-223</footprint>
@@ -170,24 +105,6 @@
       <libsource lib="device" part="Q_NMOS_GDSD"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57FC7891</tstamp>
-    </comp>
-    <comp ref="P7">
-      <value>CONN_01X01</value>
-      <footprint>Connect:1pin</footprint>
-      <libsource lib="conn" part="CONN_01X01"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57FC789D</tstamp>
-    </comp>
-    <comp ref="R3">
-      <value>1K</value>
-      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_04.pdf</datasheet>
-      <fields>
-        <field name="DIGIKEY">311-1.00KCRCT-ND</field>
-      </fields>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57FC78A4</tstamp>
     </comp>
     <comp ref="Q4">
       <value>Q_NMOS_GDSD</value>
@@ -200,40 +117,193 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57FC798C</tstamp>
     </comp>
-    <comp ref="P8">
-      <value>CONN_01X01</value>
-      <footprint>Connect:1pin</footprint>
-      <libsource lib="conn" part="CONN_01X01"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57FC7998</tstamp>
-    </comp>
     <comp ref="R4">
-      <value>1K</value>
+      <value>150</value>
       <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
-      <datasheet>http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_04.pdf</datasheet>
       <fields>
-        <field name="DIGIKEY">311-1.00KCRCT-ND</field>
+        <field name="DIGIKEY">311-150CRCT-ND</field>
       </fields>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57FC799F</tstamp>
     </comp>
+    <comp ref="P1">
+      <value>MOLEX-0431603103</value>
+      <footprint>Connectors_Molex:Molex_Sabre_43160-XX03_03x7.49mm_Angled_BoardLock</footprint>
+      <datasheet>http://www.molex.com/pdm_docs/sd/431603103_sd.pdf</datasheet>
+      <fields>
+        <field name="DIGIKEY">WM18489-ND</field>
+      </fields>
+      <libsource lib="conn" part="CONN_01X03"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>584117F6</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>MOLEX-0431603103</value>
+      <footprint>Connectors_Molex:Molex_Sabre_43160-XX03_03x7.49mm_Angled_BoardLock</footprint>
+      <datasheet>http://www.molex.com/pdm_docs/sd/431603103_sd.pdf</datasheet>
+      <fields>
+        <field name="DIGIKEY">WM18489-ND</field>
+      </fields>
+      <libsource lib="conn" part="CONN_01X03"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>584119F8</tstamp>
+    </comp>
+    <comp ref="P4">
+      <value>TE-282836-4</value>
+      <footprint>Connect:bornier4</footprint>
+      <datasheet>http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&amp;DocNm=282836&amp;DocType=Customer+Drawing&amp;DocLang=English</datasheet>
+      <fields>
+        <field name="DIGIKEY">A98078-ND</field>
+      </fields>
+      <libsource lib="conn" part="CONN_01X04"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58414752</tstamp>
+    </comp>
+    <comp ref="D4">
+      <value>LITEON-LTST-C170KGKT</value>
+      <footprint>LEDs:LED_0805</footprint>
+      <datasheet>http://optoelectronics.liteon.com/upload/download/DS22-2000-073/S_110_LTST-C170KGKT.pdf</datasheet>
+      <fields>
+        <field name="DIGIKEY">160-1414-1-ND</field>
+      </fields>
+      <libsource lib="device" part="LED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58424E52</tstamp>
+    </comp>
+    <comp ref="D5">
+      <value>LITEON-LTST-C170KGKT</value>
+      <footprint>LEDs:LED_0805</footprint>
+      <datasheet>http://optoelectronics.liteon.com/upload/download/DS22-2000-073/S_110_LTST-C170KGKT.pdf</datasheet>
+      <fields>
+        <field name="DIGIKEY">160-1414-1-ND</field>
+      </fields>
+      <libsource lib="device" part="LED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>584258F2</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>LITEON-LTST-C170KGKT</value>
+      <footprint>LEDs:LED_0805</footprint>
+      <datasheet>http://optoelectronics.liteon.com/upload/download/DS22-2000-073/S_110_LTST-C170KGKT.pdf</datasheet>
+      <fields>
+        <field name="DIGIKEY">160-1414-1-ND</field>
+      </fields>
+      <libsource lib="device" part="LED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58425FEE</tstamp>
+    </comp>
+    <comp ref="D3">
+      <value>LITEON-LTST-C170KGKT</value>
+      <footprint>LEDs:LED_0805</footprint>
+      <datasheet>http://optoelectronics.liteon.com/upload/download/DS22-2000-073/S_110_LTST-C170KGKT.pdf</datasheet>
+      <fields>
+        <field name="DIGIKEY">160-1414-1-ND</field>
+      </fields>
+      <libsource lib="device" part="LED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58426325</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>150</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <fields>
+        <field name="DIGIKEY">311-150CRCT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58428698</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>150</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <fields>
+        <field name="DIGIKEY">311-150CRCT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>584289A7</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>150</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <fields>
+        <field name="DIGIKEY">311-150CRCT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58428BB2</tstamp>
+    </comp>
+    <comp ref="P5">
+      <value>TE-282836-4</value>
+      <footprint>Connect:bornier4</footprint>
+      <datasheet>http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&amp;DocNm=282836&amp;DocType=Customer+Drawing&amp;DocLang=English</datasheet>
+      <fields>
+        <field name="DIGIKEY">A98078-ND</field>
+      </fields>
+      <libsource lib="conn" part="CONN_01X04"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58429134</tstamp>
+    </comp>
+    <comp ref="S1">
+      <value>DIP_SWITCH_4</value>
+      <footprint>footprints:Copal_CHS-04TB</footprint>
+      <datasheet>http://www.nidec-copal-electronics.com/e/catalog/switch/chs.pdf</datasheet>
+      <fields>
+        <field name="DIGIKEY">563-1008-1-ND</field>
+      </fields>
+      <libsource lib="dip_switch_4" part="DIP_SWITCH_4"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5844A01A</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>PIC16F1829LIN</value>
+      <footprint>Housings_SSOP:SSOP-20_5.3x7.2mm_Pitch0.65mm</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/41673A.pdf</datasheet>
+      <fields>
+        <field name="DIGIKEY">PIC16F1829LIN-I/SS-ND</field>
+      </fields>
+      <libsource lib="13a_switch_x4" part="PIC16F1829LIN"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57DF7683</tstamp>
+    </comp>
   </components>
   <libparts>
-    <libpart lib="conn" part="CONN_01X01">
-      <description>Connector 01x01</description>
+    <libpart lib="conn" part="CONN_01X03">
+      <description>Connector 01x03</description>
       <footprints>
-        <fp>Pin_Header_Straight_1X01</fp>
-        <fp>Pin_Header_Angled_1X01</fp>
-        <fp>Socket_Strip_Straight_1X01</fp>
-        <fp>Socket_Strip_Angled_1X01</fp>
+        <fp>Pin_Header_Straight_1X03</fp>
+        <fp>Pin_Header_Angled_1X03</fp>
+        <fp>Socket_Strip_Straight_1X03</fp>
+        <fp>Socket_Strip_Angled_1X03</fp>
       </footprints>
       <fields>
         <field name="Reference">P</field>
-        <field name="Value">CONN_01X01</field>
+        <field name="Value">CONN_01X03</field>
       </fields>
       <pins>
         <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X04">
+      <description>Connector 01x04</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X04</fp>
+        <fp>Pin_Header_Angled_1X04</fp>
+        <fp>Socket_Strip_Straight_1X04</fp>
+        <fp>Socket_Strip_Angled_1X04</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="conn" part="CONN_01X05">
@@ -287,6 +357,41 @@
       <fields>
         <field name="Reference">D</field>
         <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="dip_switch_4" part="DIP_SWITCH_4">
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">DIP_SWITCH_4</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+        <pin num="7" name="~" type="passive"/>
+        <pin num="8" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="LED">
+      <footprints>
+        <fp>LED-3MM</fp>
+        <fp>LED-5MM</fp>
+        <fp>LED-10MM</fp>
+        <fp>LED-0603</fp>
+        <fp>LED-0805</fp>
+        <fp>LED-1206</fp>
+        <fp>LEDV</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
       </fields>
       <pins>
         <pin num="1" name="K" type="passive"/>
@@ -367,132 +472,158 @@
     </libpart>
   </libparts>
   <libraries>
+    <library logical="dip_switch_4">
+      <uri>/home/cpriscal/Projets/lin_modules/common/symbols/dip_switch_4.lib</uri>
+    </library>
     <library logical="device">
       <uri>/usr/share/kicad/library/device.lib</uri>
-    </library>
-    <library logical="conn">
-      <uri>/usr/share/kicad/library/conn.lib</uri>
     </library>
     <library logical="13a_switch_x4">
       <uri>/home/cpriscal/Projets/lin_modules/13a_switch_x4/13a_switch_x4.lib</uri>
     </library>
+    <library logical="conn">
+      <uri>/usr/share/kicad/library/conn.lib</uri>
+    </library>
   </libraries>
   <nets>
-    <net code="1" name="GND">
-      <node ref="C1" pin="2"/>
-      <node ref="D1" pin="2"/>
-      <node ref="Q4" pin="3"/>
-      <node ref="Q2" pin="3"/>
-      <node ref="P3" pin="3"/>
-      <node ref="P6" pin="1"/>
-      <node ref="Q1" pin="3"/>
-      <node ref="C2" pin="2"/>
-      <node ref="U1" pin="20"/>
-      <node ref="U1" pin="8"/>
-      <node ref="Q3" pin="3"/>
-    </net>
-    <net code="2" name="Net-(Q2-Pad1)">
-      <node ref="Q2" pin="1"/>
-      <node ref="R2" pin="1"/>
-    </net>
-    <net code="3" name="/OUT_2">
-      <node ref="Q2" pin="4"/>
-      <node ref="Q2" pin="2"/>
-      <node ref="P5" pin="1"/>
-    </net>
-    <net code="4" name="/OUT_3">
-      <node ref="Q3" pin="2"/>
-      <node ref="Q3" pin="4"/>
-      <node ref="P7" pin="1"/>
-    </net>
-    <net code="5" name="Net-(Q3-Pad1)">
-      <node ref="R3" pin="1"/>
+    <net code="1" name="Net-(D6-Pad2)">
       <node ref="Q3" pin="1"/>
+      <node ref="R3" pin="1"/>
+      <node ref="D6" pin="2"/>
     </net>
-    <net code="6" name="Net-(R3-Pad2)">
-      <node ref="U1" pin="17"/>
-      <node ref="R3" pin="2"/>
+    <net code="2" name="/LBUS">
+      <node ref="P2" pin="2"/>
+      <node ref="P1" pin="2"/>
+      <node ref="U1" pin="9"/>
+      <node ref="D1" pin="1"/>
     </net>
-    <net code="7" name="Net-(U1-Pad3)">
-      <node ref="U1" pin="3"/>
+    <net code="3" name="GND">
+      <node ref="S1" pin="6"/>
+      <node ref="Q1" pin="3"/>
+      <node ref="P3" pin="3"/>
+      <node ref="D1" pin="2"/>
+      <node ref="S1" pin="4"/>
+      <node ref="S1" pin="8"/>
+      <node ref="U1" pin="8"/>
+      <node ref="U1" pin="20"/>
+      <node ref="P1" pin="3"/>
+      <node ref="Q3" pin="3"/>
+      <node ref="Q2" pin="3"/>
+      <node ref="C1" pin="2"/>
+      <node ref="P2" pin="3"/>
+      <node ref="Q4" pin="3"/>
+      <node ref="S1" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="D4" pin="1"/>
+      <node ref="D3" pin="1"/>
+      <node ref="D6" pin="1"/>
+      <node ref="D5" pin="1"/>
     </net>
-    <net code="8" name="Net-(R2-Pad2)">
-      <node ref="R2" pin="2"/>
-      <node ref="U1" pin="15"/>
-    </net>
-    <net code="9" name="Net-(R4-Pad2)">
-      <node ref="U1" pin="16"/>
-      <node ref="R4" pin="2"/>
-    </net>
-    <net code="10" name="Net-(U1-Pad2)">
-      <node ref="U1" pin="2"/>
-    </net>
-    <net code="11" name="Net-(U1-Pad7)">
-      <node ref="U1" pin="7"/>
-    </net>
-    <net code="12" name="Net-(U1-Pad6)">
-      <node ref="U1" pin="6"/>
-    </net>
-    <net code="13" name="Net-(U1-Pad5)">
-      <node ref="U1" pin="5"/>
-    </net>
-    <net code="14" name="Net-(Q4-Pad1)">
-      <node ref="Q4" pin="1"/>
-      <node ref="R4" pin="1"/>
-    </net>
-    <net code="15" name="/OUT_4">
-      <node ref="Q4" pin="2"/>
-      <node ref="Q4" pin="4"/>
-      <node ref="P8" pin="1"/>
-    </net>
-    <net code="16" name="Net-(R1-Pad2)">
-      <node ref="U1" pin="14"/>
-      <node ref="R1" pin="2"/>
-    </net>
-    <net code="17" name="Net-(D2-Pad2)">
+    <net code="4" name="/12V_UNPROTECTED">
+      <node ref="P5" pin="1"/>
+      <node ref="P5" pin="3"/>
+      <node ref="P2" pin="1"/>
       <node ref="P1" pin="1"/>
+      <node ref="P4" pin="3"/>
       <node ref="D2" pin="2"/>
+      <node ref="P4" pin="1"/>
     </net>
-    <net code="18" name="Net-(Q1-Pad1)">
-      <node ref="Q1" pin="1"/>
+    <net code="5" name="Net-(D4-Pad2)">
+      <node ref="D4" pin="2"/>
       <node ref="R1" pin="1"/>
+      <node ref="Q1" pin="1"/>
     </net>
-    <net code="19" name="//MCLR">
-      <node ref="P3" pin="1"/>
-      <node ref="U1" pin="4"/>
+    <net code="6" name="/A0">
+      <node ref="U1" pin="17"/>
+      <node ref="S1" pin="1"/>
     </net>
-    <net code="20" name="+12V">
+    <net code="7" name="/A1">
+      <node ref="U1" pin="16"/>
+      <node ref="S1" pin="3"/>
+    </net>
+    <net code="8" name="/A2">
+      <node ref="U1" pin="15"/>
+      <node ref="S1" pin="5"/>
+    </net>
+    <net code="9" name="/A3">
+      <node ref="S1" pin="7"/>
+      <node ref="U1" pin="14"/>
+    </net>
+    <net code="10" name="Net-(U1-Pad12)">
+      <node ref="U1" pin="12"/>
+      <node ref="U1" pin="13"/>
+    </net>
+    <net code="11" name="+12V">
       <node ref="D2" pin="1"/>
       <node ref="C1" pin="1"/>
       <node ref="U1" pin="11"/>
     </net>
-    <net code="21" name="/ICSPCLK">
-      <node ref="U1" pin="18"/>
-      <node ref="P3" pin="5"/>
+    <net code="12" name="/CMD_3">
+      <node ref="U1" pin="7"/>
+      <node ref="R3" pin="2"/>
     </net>
-    <net code="22" name="/ICSPDAT">
-      <node ref="P3" pin="4"/>
-      <node ref="U1" pin="19"/>
+    <net code="13" name="/CMD_4">
+      <node ref="U1" pin="6"/>
+      <node ref="R4" pin="2"/>
     </net>
-    <net code="23" name="Net-(U1-Pad12)">
-      <node ref="U1" pin="12"/>
-      <node ref="U1" pin="13"/>
+    <net code="14" name="/CMD_2">
+      <node ref="U1" pin="5"/>
+      <node ref="R2" pin="2"/>
     </net>
-    <net code="24" name="+5V">
-      <node ref="U1" pin="1"/>
+    <net code="15" name="/CMD_1">
+      <node ref="R1" pin="2"/>
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="16" name="Net-(U1-Pad2)">
+      <node ref="U1" pin="2"/>
+    </net>
+    <net code="17" name="+5V">
       <node ref="U1" pin="10"/>
-      <node ref="P3" pin="2"/>
       <node ref="C2" pin="1"/>
+      <node ref="P3" pin="2"/>
+      <node ref="U1" pin="1"/>
     </net>
-    <net code="25" name="/OUT_1">
+    <net code="18" name="/ICSPCLK">
+      <node ref="P3" pin="5"/>
+      <node ref="U1" pin="18"/>
+    </net>
+    <net code="19" name="/ICSPDAT">
+      <node ref="U1" pin="19"/>
+      <node ref="P3" pin="4"/>
+    </net>
+    <net code="20" name="//MCLR">
+      <node ref="P3" pin="1"/>
+      <node ref="U1" pin="4"/>
+    </net>
+    <net code="21" name="/OUT_1">
+      <node ref="P5" pin="2"/>
       <node ref="Q1" pin="4"/>
-      <node ref="P4" pin="1"/>
       <node ref="Q1" pin="2"/>
     </net>
-    <net code="26" name="/LBUS">
-      <node ref="U1" pin="9"/>
-      <node ref="P2" pin="1"/>
-      <node ref="D1" pin="1"/>
+    <net code="22" name="/OUT_4">
+      <node ref="P4" pin="4"/>
+      <node ref="Q4" pin="4"/>
+      <node ref="Q4" pin="2"/>
+    </net>
+    <net code="23" name="Net-(D3-Pad2)">
+      <node ref="D3" pin="2"/>
+      <node ref="Q4" pin="1"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="24" name="Net-(D5-Pad2)">
+      <node ref="R2" pin="1"/>
+      <node ref="Q2" pin="1"/>
+      <node ref="D5" pin="2"/>
+    </net>
+    <net code="25" name="/OUT_3">
+      <node ref="Q3" pin="2"/>
+      <node ref="Q3" pin="4"/>
+      <node ref="P4" pin="2"/>
+    </net>
+    <net code="26" name="/OUT_2">
+      <node ref="P5" pin="4"/>
+      <node ref="Q2" pin="4"/>
+      <node ref="Q2" pin="2"/>
     </net>
   </nets>
 </export>
