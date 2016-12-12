@@ -1,4 +1,4 @@
-update=Tue 11 Oct 2016 09:00:16 PM PDT
+update=Sat 10 Dec 2016 04:51:36 PM PST
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,3 +59,4 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=inputs
+LibName31=/home/cpriscal/Projets/lin_modules/common/symbols/dip_switch_4
