@@ -1,4 +1,4 @@
-update=Tue 27 Dec 2016 07:05:41 PM CET
+update=Tue 27 Dec 2016 09:45:43 PM CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=
+LibDir=../../common/kicad-library/library
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -59,4 +59,3 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=/home/cpriscal/projects/fluffy-potato/common/kicad-library/library/laird
-LibName31=/home/cpriscal/projects/fluffy-potato/common/kicad/mcp2050
