@@ -29,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:fluffy-potato
+LIBS:switches
 LIBS:13a_switch_x4-cache
 EELAYER 25 0
 EELAYER END
@@ -534,18 +535,6 @@ F 3 "" H 3550 7100 50  0000 C CNN
 	1    3550 7100
 	1    0    0    -1  
 $EndComp
-$Comp
-L DIP_SWITCH_4 S1
-U 1 1 5844A01A
-P 3200 6700
-F 0 "S1" H 3200 7000 60  0000 C CNN
-F 1 "DIP_SWITCH_4" H 3200 6400 60  0000 C CNN
-F 2 "footprints:Copal_CHS-04TB" H 3250 7050 60  0001 C CNN
-F 3 "http://www.nidec-copal-electronics.com/e/catalog/switch/chs.pdf" H 3250 7050 60  0001 C CNN
-F 4 "563-1008-1-ND" H 3200 7100 60  0000 C CNN "DIGIKEY"
-	1    3200 6700
-	1    0    0    -1  
-$EndComp
 Text Label 6900 1550 2    60   ~ 0
 CMD_1
 Text Label 6900 2750 2    60   ~ 0
@@ -809,4 +798,16 @@ Wire Wire Line
 Wire Wire Line
 	6000 6300 6000 6400
 Connection ~ 6000 6400
+$Comp
+L SW_DIP_x04 SW1
+U 1 1 5862DCE9
+P 3200 6750
+F 0 "SW1" H 3200 7100 50  0000 C CNN
+F 1 "SW_DIP_x04" H 3200 6500 50  0000 C CNN
+F 2 "Buttons_Switches_SMD:SW_SPST_Copal_CHS-04TB" H 3200 6750 50  0001 C CNN
+F 3 "" H 3200 6750 50  0000 C CNN
+F 4 "563-1008-1-ND" V 2600 6750 60  0000 C CNN "DIGIKEY"
+	1    3200 6750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

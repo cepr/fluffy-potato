@@ -1,4 +1,4 @@
-update=Tue 27 Dec 2016 10:09:09 PM CET
+update=Tue 27 Dec 2016 10:19:50 PM CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,3 +59,4 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=/home/cpriscal/projects/fluffy-potato/common/kicad/fluffy-potato
+LibName31=switches
