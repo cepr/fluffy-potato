@@ -1,4 +1,4 @@
-update=Tue 18 Oct 2016 09:59:32 PM PDT
+update=Tue 27 Dec 2016 07:05:41 PM CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,5 +58,5 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=bl652
-LibName31=mcp2050
+LibName30=/home/cpriscal/projects/fluffy-potato/common/kicad-library/library/laird
+LibName31=/home/cpriscal/projects/fluffy-potato/common/kicad/mcp2050
