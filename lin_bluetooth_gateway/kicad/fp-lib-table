@@ -1,4 +1,4 @@
 (fp_lib_table
   (lib (name fluffy-potato)(type KiCad)(uri "$(KIPRJMOD)/../../common/kicad/fluffy-potato.pretty")(options "")(descr ""))
-  (lib (name Bluetooth_Modules)(type KiCad)(uri "$(KIPRJMOD)/../../common/kicad/Bluetooth_Modules.pretty")(options "")(descr ""))
+  (lib (name RF_Modules)(type KiCad)(uri "$(KIPRJMOD)/../../common/kicad/RF_Modules.pretty")(options "")(descr ""))
 )
