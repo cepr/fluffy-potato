@@ -253,67 +253,6 @@ Text Label 1350 3100 0    60   ~ 0
 ICSPDAT
 Text Label 1350 3200 0    60   ~ 0
 ICSPCLK
-Wire Wire Line
-	2800 3250 3350 3250
-Wire Wire Line
-	2800 2850 3350 2850
-Wire Wire Line
-	2800 3050 3350 3050
-Wire Wire Line
-	8300 1750 8300 1750
-Wire Wire Line
-	8300 1100 10300 1100
-Wire Wire Line
-	8400 1100 8400 1350
-Connection ~ 8400 1100
-Wire Wire Line
-	7900 1550 8000 1550
-Wire Wire Line
-	3350 3950 3250 3950
-Wire Wire Line
-	3250 3950 3250 4150
-Wire Wire Line
-	3250 4150 3350 4150
-Wire Wire Line
-	4350 4950 4350 5000
-Wire Wire Line
-	4550 4950 4550 5100
-Wire Wire Line
-	4250 1850 4250 2050
-Wire Wire Line
-	2750 3750 3350 3750
-Wire Wire Line
-	4450 2050 4450 1950
-Wire Wire Line
-	4450 1950 4650 1950
-Wire Wire Line
-	4650 1950 4650 2050
-Wire Wire Line
-	4550 1950 4550 1850
-Connection ~ 4550 1950
-Wire Wire Line
-	8300 1350 8300 1100
-Wire Wire Line
-	2750 4200 2750 3750
-Wire Wire Line
-	1900 2800 1350 2800
-Wire Wire Line
-	1250 2900 1900 2900
-Wire Wire Line
-	1250 3000 1900 3000
-Wire Wire Line
-	1900 3100 1350 3100
-Wire Wire Line
-	1900 3200 1350 3200
-Wire Wire Line
-	1250 3000 1250 3050
-Wire Wire Line
-	1250 2900 1250 2850
-Wire Wire Line
-	4350 5000 4550 5000
-Connection ~ 4550 5000
-Wire Wire Line
-	2750 4600 2750 5000
 $Comp
 L GND #PWR012
 U 1 1 57E227B3
@@ -350,17 +289,6 @@ F 3 "" H 8150 3300 50  0000 C CNN
 $EndComp
 Text Label 8950 2300 0    60   ~ 0
 OUT_2
-Wire Wire Line
-	8300 2950 8300 2950
-Wire Wire Line
-	8300 2300 10200 2300
-Wire Wire Line
-	8400 2300 8400 2550
-Connection ~ 8400 2300
-Wire Wire Line
-	7900 2750 8000 2750
-Wire Wire Line
-	8300 2550 8300 2300
 Text Notes 10600 2750 0    60   ~ 0
 AWG 16
 $Comp
@@ -388,17 +316,6 @@ F 3 "" H 8150 4500 50  0000 C CNN
 $EndComp
 Text Label 8950 3500 0    60   ~ 0
 OUT_3
-Wire Wire Line
-	8300 4150 8300 4150
-Wire Wire Line
-	8300 3500 10200 3500
-Wire Wire Line
-	8400 3500 8400 3750
-Connection ~ 8400 3500
-Wire Wire Line
-	7900 3950 8000 3950
-Wire Wire Line
-	8300 3750 8300 3500
 $Comp
 L Q_NMOS_GDSD Q4
 U 1 1 57FC798C
@@ -436,27 +353,6 @@ F 4 "311-150CRCT-ND" V 7600 5100 60  0000 C CNN "DIGIKEY"
 $EndComp
 Text Label 8900 4750 0    60   ~ 0
 OUT_4
-Wire Wire Line
-	8250 5400 8250 5400
-Wire Wire Line
-	8250 4750 10300 4750
-Wire Wire Line
-	8350 4750 8350 5000
-Connection ~ 8350 4750
-Wire Wire Line
-	7850 5200 7950 5200
-Wire Wire Line
-	8250 5000 8250 4750
-Wire Wire Line
-	7600 1550 6900 1550
-Wire Wire Line
-	7600 2750 6900 2750
-Wire Wire Line
-	5450 6400 6250 6400
-Wire Wire Line
-	7600 3950 6900 3950
-Wire Wire Line
-	7550 5200 6900 5200
 $Comp
 L PWR_FLAG #FLG016
 U 1 1 57FD97C2
@@ -503,26 +399,12 @@ F 4 "WM18489-ND" V 6500 6850 60  0000 C CNN "DIGIKEY"
 	1    6300 6850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4600 6750 6100 6750
-Wire Wire Line
-	4600 6850 6100 6850
-Wire Wire Line
-	4600 6950 6100 6950
 Text Label 5200 6750 0    60   ~ 0
 12V_UNPROTECTED
 Text Label 5500 6950 0    60   ~ 0
 GND
 Text Label 5500 6850 0    60   ~ 0
 LBUS
-Wire Wire Line
-	4800 7000 4800 6950
-Connection ~ 4800 6950
-Wire Wire Line
-	5150 6400 5100 6400
-Wire Wire Line
-	5100 6400 5100 6750
-Connection ~ 5100 6750
 $Comp
 L CONN_01X04 P4
 U 1 1 58414752
@@ -535,24 +417,8 @@ F 4 "A98078-ND" V 10800 3750 60  0000 C CNN "DIGIKEY"
 	1    10600 3750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	10300 1100 10300 3050
-Wire Wire Line
-	10300 3050 10400 3050
-Wire Wire Line
-	10200 2300 10200 3250
-Wire Wire Line
-	10200 3250 10400 3250
-Wire Wire Line
-	10300 4750 10300 3900
-Wire Wire Line
-	10300 3900 10400 3900
-Wire Wire Line
-	10400 3700 10200 3700
-Wire Wire Line
-	10200 3700 10200 3500
 $Comp
-L LED D4
+L LED-RESCUE-13a_switch_x4 D4
 U 1 1 58424E52
 P 7950 1800
 F 0 "D4" V 8000 1950 50  0000 C CNN
@@ -563,20 +429,8 @@ F 4 "160-1414-1-ND" V 7900 2300 60  0000 C CNN "DIGIKEY"
 	1    7950 1800
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	7950 1550 7950 1600
-Connection ~ 7950 1550
-Wire Wire Line
-	7950 2000 7950 2050
-Wire Wire Line
-	7950 2050 8300 2050
-Wire Wire Line
-	8150 2050 8150 2100
-Wire Wire Line
-	8300 2050 8300 1750
-Connection ~ 8150 2050
 $Comp
-L LED D5
+L LED-RESCUE-13a_switch_x4 D5
 U 1 1 584258F2
 P 7950 3000
 F 0 "D5" V 8000 3150 50  0000 C CNN
@@ -587,20 +441,8 @@ F 4 "160-1414-1-ND" V 7900 3500 60  0000 C CNN "DIGIKEY"
 	1    7950 3000
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	7950 2750 7950 2800
-Connection ~ 7950 2750
-Wire Wire Line
-	7950 3200 7950 3250
-Wire Wire Line
-	7950 3250 8300 3250
-Wire Wire Line
-	8150 3250 8150 3300
-Wire Wire Line
-	8300 3250 8300 2950
-Connection ~ 8150 3250
 $Comp
-L LED D6
+L LED-RESCUE-13a_switch_x4 D6
 U 1 1 58425FEE
 P 7950 4200
 F 0 "D6" V 8000 4350 50  0000 C CNN
@@ -611,20 +453,8 @@ F 4 "160-1414-1-ND" V 7900 4700 60  0000 C CNN "DIGIKEY"
 	1    7950 4200
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	7950 3950 7950 4000
-Connection ~ 7950 3950
-Wire Wire Line
-	7950 4400 7950 4450
-Wire Wire Line
-	7950 4450 8300 4450
-Wire Wire Line
-	8150 4450 8150 4500
-Wire Wire Line
-	8300 4450 8300 4150
-Connection ~ 8150 4450
 $Comp
-L LED D3
+L LED-RESCUE-13a_switch_x4 D3
 U 1 1 58426325
 P 7900 5450
 F 0 "D3" V 7950 5600 50  0000 C CNN
@@ -635,18 +465,6 @@ F 4 "160-1414-1-ND" V 7850 5950 60  0000 C CNN "DIGIKEY"
 	1    7900 5450
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	7900 5200 7900 5250
-Connection ~ 7900 5200
-Wire Wire Line
-	7900 5650 7900 5700
-Wire Wire Line
-	7900 5700 8250 5700
-Wire Wire Line
-	8100 5700 8100 5750
-Wire Wire Line
-	8250 5700 8250 5400
-Connection ~ 8100 5700
 Text Notes 7400 2000 0    60   ~ 0
 2V, 20mA
 Text Notes 7400 3200 0    60   ~ 0
@@ -703,18 +521,6 @@ F 4 "A98078-ND" V 10800 3100 60  0000 C CNN "DIGIKEY"
 	1    10600 3100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	10400 2950 10050 2950
-Wire Wire Line
-	10050 2950 10050 3800
-Wire Wire Line
-	10050 3150 10400 3150
-Wire Wire Line
-	10050 3600 10400 3600
-Wire Wire Line
-	10050 3800 10400 3800
-Connection ~ 10050 3600
-Connection ~ 10050 3150
 Text Label 10050 3400 1    60   ~ 0
 12V_UNPROTECTED
 $Comp
@@ -728,6 +534,257 @@ F 3 "" H 3550 7100 50  0000 C CNN
 	1    3550 7100
 	1    0    0    -1  
 $EndComp
+$Comp
+L DIP_SWITCH_4 S1
+U 1 1 5844A01A
+P 3200 6700
+F 0 "S1" H 3200 7000 60  0000 C CNN
+F 1 "DIP_SWITCH_4" H 3200 6400 60  0000 C CNN
+F 2 "footprints:Copal_CHS-04TB" H 3250 7050 60  0001 C CNN
+F 3 "http://www.nidec-copal-electronics.com/e/catalog/switch/chs.pdf" H 3250 7050 60  0001 C CNN
+F 4 "563-1008-1-ND" H 3200 7100 60  0000 C CNN "DIGIKEY"
+	1    3200 6700
+	1    0    0    -1  
+$EndComp
+Text Label 6900 1550 2    60   ~ 0
+CMD_1
+Text Label 6900 2750 2    60   ~ 0
+CMD_2
+Text Label 6900 3950 2    60   ~ 0
+CMD_3
+Text Label 6900 5200 2    60   ~ 0
+CMD_4
+$Comp
+L PIC16F1829LIN U1
+U 1 1 57DF7683
+P 4450 3500
+F 0 "U1" H 4500 3600 60  0000 C CNN
+F 1 "PIC16F1829LIN" H 5400 2150 60  0000 C CNN
+F 2 "Housings_SSOP:SSOP-20_5.3x7.2mm_Pitch0.65mm" H 4450 3500 60  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/41673A.pdf" H 4450 3500 60  0001 C CNN
+F 4 "PIC16F1829LIN-I/SS-ND" H 5400 2050 60  0000 C CNN "DIGIKEY"
+	1    4450 3500
+	1    0    0    -1  
+$EndComp
+Text Label 2800 6550 2    60   ~ 0
+A0
+Text Label 2800 6650 2    60   ~ 0
+A1
+Text Label 2800 6750 2    60   ~ 0
+A2
+Text Label 2800 6850 2    60   ~ 0
+A3
+Text Label 5500 2700 0    60   ~ 0
+A0
+Text Label 5500 3300 0    60   ~ 0
+A1
+Text Label 5500 3500 0    60   ~ 0
+A2
+Text Label 5500 3700 0    60   ~ 0
+A3
+Text Label 5500 2900 0    60   ~ 0
+CMD_1
+Text Label 5500 4300 0    60   ~ 0
+CMD_2
+Text Label 5500 3900 0    60   ~ 0
+CMD_3
+Text Label 5500 4100 0    60   ~ 0
+CMD_4
+NoConn ~ 5500 3100
+Wire Wire Line
+	2800 3250 3400 3250
+Wire Wire Line
+	2800 2850 3400 2850
+Wire Wire Line
+	2800 3050 3400 3050
+Wire Wire Line
+	8300 1750 8300 1750
+Wire Wire Line
+	8300 1100 10300 1100
+Wire Wire Line
+	8400 1100 8400 1350
+Connection ~ 8400 1100
+Wire Wire Line
+	7900 1550 8000 1550
+Wire Wire Line
+	3400 3950 3250 3950
+Wire Wire Line
+	3250 3950 3250 4150
+Wire Wire Line
+	3250 4150 3400 4150
+Wire Wire Line
+	4350 4900 4350 5000
+Wire Wire Line
+	4550 4900 4550 5100
+Wire Wire Line
+	4250 1850 4250 2100
+Wire Wire Line
+	2750 3750 3400 3750
+Wire Wire Line
+	4450 2100 4450 1950
+Wire Wire Line
+	4450 1950 4650 1950
+Wire Wire Line
+	4650 1950 4650 2100
+Wire Wire Line
+	4550 1950 4550 1850
+Connection ~ 4550 1950
+Wire Wire Line
+	8300 1350 8300 1100
+Wire Wire Line
+	2750 4200 2750 3750
+Wire Wire Line
+	1900 2800 1350 2800
+Wire Wire Line
+	1250 2900 1900 2900
+Wire Wire Line
+	1250 3000 1900 3000
+Wire Wire Line
+	1900 3100 1350 3100
+Wire Wire Line
+	1900 3200 1350 3200
+Wire Wire Line
+	1250 3000 1250 3050
+Wire Wire Line
+	1250 2900 1250 2850
+Wire Wire Line
+	4350 5000 4550 5000
+Connection ~ 4550 5000
+Wire Wire Line
+	2750 4600 2750 5000
+Wire Wire Line
+	8300 2950 8300 2950
+Wire Wire Line
+	8300 2300 10200 2300
+Wire Wire Line
+	8400 2300 8400 2550
+Connection ~ 8400 2300
+Wire Wire Line
+	7900 2750 8000 2750
+Wire Wire Line
+	8300 2550 8300 2300
+Wire Wire Line
+	8300 4150 8300 4150
+Wire Wire Line
+	8300 3500 10200 3500
+Wire Wire Line
+	8400 3500 8400 3750
+Connection ~ 8400 3500
+Wire Wire Line
+	7900 3950 8000 3950
+Wire Wire Line
+	8300 3750 8300 3500
+Wire Wire Line
+	8250 5400 8250 5400
+Wire Wire Line
+	8250 4750 10300 4750
+Wire Wire Line
+	8350 4750 8350 5000
+Connection ~ 8350 4750
+Wire Wire Line
+	7850 5200 7950 5200
+Wire Wire Line
+	8250 5000 8250 4750
+Wire Wire Line
+	7600 1550 6900 1550
+Wire Wire Line
+	7600 2750 6900 2750
+Wire Wire Line
+	5450 6400 6250 6400
+Wire Wire Line
+	7600 3950 6900 3950
+Wire Wire Line
+	7550 5200 6900 5200
+Wire Wire Line
+	4600 6750 6100 6750
+Wire Wire Line
+	4600 6850 6100 6850
+Wire Wire Line
+	4600 6950 6100 6950
+Wire Wire Line
+	4800 7000 4800 6950
+Connection ~ 4800 6950
+Wire Wire Line
+	5150 6400 5100 6400
+Wire Wire Line
+	5100 6400 5100 6750
+Connection ~ 5100 6750
+Wire Wire Line
+	10300 1100 10300 3050
+Wire Wire Line
+	10300 3050 10400 3050
+Wire Wire Line
+	10200 2300 10200 3250
+Wire Wire Line
+	10200 3250 10400 3250
+Wire Wire Line
+	10300 4750 10300 3900
+Wire Wire Line
+	10300 3900 10400 3900
+Wire Wire Line
+	10400 3700 10200 3700
+Wire Wire Line
+	10200 3700 10200 3500
+Wire Wire Line
+	7950 1550 7950 1600
+Connection ~ 7950 1550
+Wire Wire Line
+	7950 2000 7950 2050
+Wire Wire Line
+	7950 2050 8300 2050
+Wire Wire Line
+	8150 2050 8150 2100
+Wire Wire Line
+	8300 2050 8300 1750
+Connection ~ 8150 2050
+Wire Wire Line
+	7950 2750 7950 2800
+Connection ~ 7950 2750
+Wire Wire Line
+	7950 3200 7950 3250
+Wire Wire Line
+	7950 3250 8300 3250
+Wire Wire Line
+	8150 3250 8150 3300
+Wire Wire Line
+	8300 3250 8300 2950
+Connection ~ 8150 3250
+Wire Wire Line
+	7950 3950 7950 4000
+Connection ~ 7950 3950
+Wire Wire Line
+	7950 4400 7950 4450
+Wire Wire Line
+	7950 4450 8300 4450
+Wire Wire Line
+	8150 4450 8150 4500
+Wire Wire Line
+	8300 4450 8300 4150
+Connection ~ 8150 4450
+Wire Wire Line
+	7900 5200 7900 5250
+Connection ~ 7900 5200
+Wire Wire Line
+	7900 5650 7900 5700
+Wire Wire Line
+	7900 5700 8250 5700
+Wire Wire Line
+	8100 5700 8100 5750
+Wire Wire Line
+	8250 5700 8250 5400
+Connection ~ 8100 5700
+Wire Wire Line
+	10400 2950 10050 2950
+Wire Wire Line
+	10050 2950 10050 3800
+Wire Wire Line
+	10050 3150 10400 3150
+Wire Wire Line
+	10050 3600 10400 3600
+Wire Wire Line
+	10050 3800 10400 3800
+Connection ~ 10050 3600
+Connection ~ 10050 3150
 Wire Wire Line
 	3550 6850 3500 6850
 Wire Wire Line
@@ -741,18 +798,6 @@ Connection ~ 3550 6750
 Wire Wire Line
 	3500 6550 3550 6550
 Connection ~ 3550 6650
-$Comp
-L DIP_SWITCH_4 S1
-U 1 1 5844A01A
-P 3200 6700
-F 0 "S1" H 3200 7000 60  0000 C CNN
-F 1 "DIP_SWITCH_4" H 3200 6400 60  0000 C CNN
-F 2 "footprints:Copal_CHS-04TB" H 3250 7050 60  0001 C CNN
-F 3 "http://www.nidec-copal-electronics.com/e/catalog/switch/chs.pdf" H 3250 7050 60  0001 C CNN
-F 4 "563-1008-1-ND" H 3200 7100 60  0000 C CNN "DIGIKEY"
-	1    3200 6700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2800 6850 2900 6850
 Wire Wire Line
@@ -761,51 +806,6 @@ Wire Wire Line
 	2800 6650 2900 6650
 Wire Wire Line
 	2800 6550 2900 6550
-Text Label 6900 1550 2    60   ~ 0
-CMD_1
-Text Label 6900 2750 2    60   ~ 0
-CMD_2
-Text Label 6900 3950 2    60   ~ 0
-CMD_3
-Text Label 6900 5200 2    60   ~ 0
-CMD_4
-$Comp
-L PIC16F1829LIN U1
-U 1 1 57DF7683
-P 3550 2250
-F 0 "U1" H 3600 2350 60  0000 C CNN
-F 1 "PIC16F1829LIN" H 4500 900 60  0000 C CNN
-F 2 "Housings_SSOP:SSOP-20_5.3x7.2mm_Pitch0.65mm" H 3550 2250 60  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/41673A.pdf" H 3550 2250 60  0001 C CNN
-F 4 "PIC16F1829LIN-I/SS-ND" H 4500 800 60  0000 C CNN "DIGIKEY"
-	1    3550 2250
-	1    0    0    -1  
-$EndComp
-Text Label 2800 6550 2    60   ~ 0
-A0
-Text Label 2800 6650 2    60   ~ 0
-A1
-Text Label 2800 6750 2    60   ~ 0
-A2
-Text Label 2800 6850 2    60   ~ 0
-A3
-Text Label 5550 2700 0    60   ~ 0
-A0
-Text Label 5550 3300 0    60   ~ 0
-A1
-Text Label 5550 3500 0    60   ~ 0
-A2
-Text Label 5550 3700 0    60   ~ 0
-A3
-Text Label 5550 2900 0    60   ~ 0
-CMD_1
-Text Label 5550 4300 0    60   ~ 0
-CMD_2
-Text Label 5550 3900 0    60   ~ 0
-CMD_3
-Text Label 5550 4100 0    60   ~ 0
-CMD_4
-NoConn ~ 5550 3100
 Wire Wire Line
 	6000 6300 6000 6400
 Connection ~ 6000 6400
