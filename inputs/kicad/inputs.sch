@@ -1,0 +1,231 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:inputs
+LIBS:fluffy-potato
+LIBS:inputs-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 3400 3050 650  1000
+U 584CAB5E
+F0 "lin_common" 60
+F1 "13a_switch_x4.sch" 60
+F2 "+12V" O R 4050 3250 60 
+F3 "LBUS" B R 4050 3350 60 
+F4 "GND" O R 4050 3450 60 
+F5 "A0" U R 4050 3600 60 
+F6 "A1" U R 4050 3700 60 
+F7 "A2" U R 4050 3800 60 
+F8 "A3" U R 4050 3900 60 
+$EndSheet
+Wire Wire Line
+	4050 3250 4550 3250
+Wire Wire Line
+	4050 3450 4550 3450
+$Sheet
+S 6650 2800 850  300 
+U 584D6B97
+F0 "Sheet584D6B96" 60
+F1 "input_connector.sch" 60
+F2 "CHAN_A" U L 6650 2900 60 
+F3 "CHAN_B" U L 6650 3000 60 
+F4 "GND" U R 7500 2900 60 
+$EndSheet
+$Comp
+L GND #PWR01
+U 1 1 584D78FF
+P 7850 2900
+F 0 "#PWR01" H 7850 2650 50  0001 C CNN
+F 1 "GND" H 7850 2750 50  0000 C CNN
+F 2 "" H 7850 2900 50  0000 C CNN
+F 3 "" H 7850 2900 50  0000 C CNN
+	1    7850 2900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7500 2900 7850 2900
+$Sheet
+S 6650 3350 850  300 
+U 584D7AB6
+F0 "Sheet584D7AB5" 60
+F1 "input_connector.sch" 60
+F2 "CHAN_A" U L 6650 3450 60 
+F3 "CHAN_B" U L 6650 3550 60 
+F4 "GND" U R 7500 3450 60 
+$EndSheet
+$Comp
+L GND #PWR02
+U 1 1 584D7CB2
+P 7850 3450
+F 0 "#PWR02" H 7850 3200 50  0001 C CNN
+F 1 "GND" H 7850 3300 50  0000 C CNN
+F 2 "" H 7850 3450 50  0000 C CNN
+F 3 "" H 7850 3450 50  0000 C CNN
+	1    7850 3450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7500 3450 7850 3450
+$Sheet
+S 6650 3900 850  300 
+U 584D820A
+F0 "Sheet584D8209" 60
+F1 "input_connector.sch" 60
+F2 "CHAN_A" U L 6650 4000 60 
+F3 "CHAN_B" U L 6650 4100 60 
+F4 "GND" U R 7500 4000 60 
+$EndSheet
+$Comp
+L GND #PWR03
+U 1 1 584D844C
+P 7850 4000
+F 0 "#PWR03" H 7850 3750 50  0001 C CNN
+F 1 "GND" H 7850 3850 50  0000 C CNN
+F 2 "" H 7850 4000 50  0000 C CNN
+F 3 "" H 7850 4000 50  0000 C CNN
+	1    7850 4000
+	0    -1   -1   0   
+$EndComp
+$Sheet
+S 6650 4450 850  300 
+U 584D84B9
+F0 "Sheet584D84B8" 60
+F1 "input_connector.sch" 60
+F2 "CHAN_A" U L 6650 4550 60 
+F3 "CHAN_B" U L 6650 4650 60 
+F4 "GND" U R 7500 4550 60 
+$EndSheet
+Wire Wire Line
+	7500 4000 7850 4000
+$Comp
+L GND #PWR04
+U 1 1 584D8FEC
+P 7850 4550
+F 0 "#PWR04" H 7850 4300 50  0001 C CNN
+F 1 "GND" H 7850 4400 50  0000 C CNN
+F 2 "" H 7850 4550 50  0000 C CNN
+F 3 "" H 7850 4550 50  0000 C CNN
+	1    7850 4550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7500 4550 7850 4550
+$Sheet
+S 4550 2750 1500 2350
+U 584DA63A
+F0 "Sheet584DA639" 60
+F1 "pic16f1829.sch" 60
+F2 "RA2" B R 6050 4100 60 
+F3 "RA4" B R 6050 3550 60 
+F4 "RA5" B R 6050 3450 60 
+F5 "RC0" B R 6050 4000 60 
+F6 "RC1" B R 6050 3000 60 
+F7 "RC2" B R 6050 2900 60 
+F8 "RC3" B R 6050 4650 60 
+F9 "RC4" B R 6050 4550 60 
+F10 "RC5" B L 4550 3900 60 
+F11 "RA0/ICSP" B L 4550 3700 60 
+F12 "RA1/ICSP" B L 4550 3600 60 
+F13 "RA3/ICSP" B L 4550 3800 60 
+F14 "LBUS" B L 4550 3350 60 
+F15 "+5V" O R 6050 5000 60 
+F16 "+12V" I L 4550 3250 60 
+F17 "GND" B L 4550 3450 60 
+$EndSheet
+Wire Wire Line
+	4050 3350 4550 3350
+Wire Wire Line
+	4050 3600 4550 3600
+Wire Wire Line
+	4550 3700 4050 3700
+Wire Wire Line
+	4050 3800 4550 3800
+Wire Wire Line
+	4550 3900 4050 3900
+Wire Wire Line
+	6650 2900 6050 2900
+Wire Wire Line
+	6050 3000 6650 3000
+Wire Wire Line
+	6650 3450 6050 3450
+Wire Wire Line
+	6050 3550 6650 3550
+Wire Wire Line
+	6050 4000 6650 4000
+Wire Wire Line
+	6650 4100 6050 4100
+Wire Wire Line
+	6050 4550 6650 4550
+Wire Wire Line
+	6650 4650 6050 4650
+$Comp
+L GND #PWR05
+U 1 1 584E1A0B
+P 4300 4350
+F 0 "#PWR05" H 4300 4100 50  0001 C CNN
+F 1 "GND" H 4300 4200 50  0000 C CNN
+F 2 "" H 4300 4350 50  0000 C CNN
+F 3 "" H 4300 4350 50  0000 C CNN
+	1    4300 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 4350 4300 3450
+Connection ~ 4300 3450
+Text Label 6250 2900 0    60   ~ 0
+IN0
+Text Label 6250 3000 0    60   ~ 0
+IN1
+Text Label 6250 4000 0    60   ~ 0
+IN2
+Text Label 6250 4100 0    60   ~ 0
+IN3
+Text Label 6250 3450 0    60   ~ 0
+IN4
+Text Label 6250 3550 0    60   ~ 0
+IN5
+Text Label 6250 4550 0    60   ~ 0
+IN6
+Text Label 6250 4650 0    60   ~ 0
+IN7
+$EndSCHEMATC
