@@ -1,4 +1,4 @@
-update=Tue 27 Dec 2016 10:19:50 PM CET
+update=Mon 02 Jan 2017 05:57:08 PM CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,5 +58,5 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=/home/cpriscal/projects/fluffy-potato/common/kicad/fluffy-potato
-LibName31=switches
+LibName30=switches
+LibName31=microchip_pic16mcu
