@@ -1,4 +1,4 @@
-update=Tue 27 Dec 2016 09:45:43 PM CET
+update=Mon 02 Jan 2017 05:46:36 PM CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,4 +58,4 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=/home/cpriscal/projects/fluffy-potato/common/kicad-library/library/laird
+LibName30=rfcom

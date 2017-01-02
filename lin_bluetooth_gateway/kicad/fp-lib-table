@@ -1,4 +1,5 @@
 (fp_lib_table
-  (lib (name fluffy-potato)(type KiCad)(uri "$(KIPRJMOD)/../../common/kicad/fluffy-potato.pretty")(options "")(descr ""))
   (lib (name RF_Modules)(type KiCad)(uri "$(KIPRJMOD)/../../common/kicad/RF_Modules.pretty")(options "")(descr ""))
+  (lib (name fluffy-potato)(type KiCad)(uri "$(KIPRJMOD)/../../common/kicad/fluffy-potato.pretty")(options "")(descr ""))
+  (lib (name Buttons_Switches_SMD)(type KiCad)(uri /home/cpriscal/projects/fluffy-potato/common/kicad/Buttons_Switches_SMD.pretty)(options "")(descr ""))
 )
