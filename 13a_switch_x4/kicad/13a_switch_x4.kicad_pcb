@@ -152,7 +152,7 @@
     (add_net "Net-(U1-Pad12)")
   )
 
-  (module Mounting_Holes:MountingHole_2.7mm_Pad_Via (layer F.Cu) (tedit 5844A543) (tstamp 5844A971)
+  (module Mounting_Holes:MountingHole_2.7mm_Pad_Via locked (layer F.Cu) (tedit 5844A543) (tstamp 5844A971)
     (at 188.595 87.63)
     (descr "Mounting Hole 2.7mm")
     (tags "mounting hole 2.7mm")
@@ -175,7 +175,7 @@
     (pad "" thru_hole circle (at 1.431891 -1.431891) (size 0.6 0.6) (drill 0.5) (layers *.Cu *.Mask))
   )
 
-  (module Mounting_Holes:MountingHole_2.7mm_Pad_Via (layer F.Cu) (tedit 5844A546) (tstamp 5844A943)
+  (module Mounting_Holes:MountingHole_2.7mm_Pad_Via locked (layer F.Cu) (tedit 5844A546) (tstamp 5844A943)
     (at 107.315 87.63)
     (descr "Mounting Hole 2.7mm")
     (tags "mounting hole 2.7mm")
@@ -198,7 +198,7 @@
     (pad "" thru_hole circle (at 1.431891 -1.431891) (size 0.6 0.6) (drill 0.5) (layers *.Cu *.Mask))
   )
 
-  (module Mounting_Holes:MountingHole_2.7mm_Pad_Via (layer F.Cu) (tedit 5844A533) (tstamp 5844A91E)
+  (module Mounting_Holes:MountingHole_2.7mm_Pad_Via locked (layer F.Cu) (tedit 5844A533) (tstamp 5844A91E)
     (at 188.595 52.07)
     (descr "Mounting Hole 2.7mm")
     (tags "mounting hole 2.7mm")
@@ -1053,7 +1053,7 @@
     )
   )
 
-  (module Mounting_Holes:MountingHole_2.7mm_Pad_Via (layer F.Cu) (tedit 5844A549) (tstamp 5844A8C5)
+  (module Mounting_Holes:MountingHole_2.7mm_Pad_Via locked (layer F.Cu) (tedit 5844A549) (tstamp 5844A8C5)
     (at 107.315 52.07)
     (descr "Mounting Hole 2.7mm")
     (tags "mounting hole 2.7mm")
