@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:microchip_pic16mcu
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,7 +30,8 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:inputs
-LIBS:fluffy-potato
+LIBS:switches
+LIBS:rfcom
 LIBS:inputs-cache
 EELAYER 25 0
 EELAYER END
@@ -154,47 +156,35 @@ Connection ~ 5550 3100
 $Comp
 L GND #PWR08
 U 1 1 584497B3
-P 4050 5200
-F 0 "#PWR08" H 4050 4950 50  0001 C CNN
-F 1 "GND" H 4050 5050 50  0000 C CNN
-F 2 "" H 4050 5200 50  0000 C CNN
-F 3 "" H 4050 5200 50  0000 C CNN
-	1    4050 5200
+P 3400 4100
+F 0 "#PWR08" H 3400 3850 50  0001 C CNN
+F 1 "GND" H 3400 3950 50  0000 C CNN
+F 2 "" H 3400 4100 50  0000 C CNN
+F 3 "" H 3400 4100 50  0000 C CNN
+	1    3400 4100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4050 4950 4000 4950
+	3400 3850 3350 3850
 Wire Wire Line
-	4050 4650 4050 5200
+	3400 3550 3400 4100
 Wire Wire Line
-	4000 4850 4050 4850
-Connection ~ 4050 4950
+	3350 3750 3400 3750
+Connection ~ 3400 3850
 Wire Wire Line
-	4000 4750 4050 4750
-Connection ~ 4050 4850
+	3350 3650 3400 3650
+Connection ~ 3400 3750
 Wire Wire Line
-	4000 4650 4050 4650
-Connection ~ 4050 4750
-$Comp
-L DIP_SWITCH_4 S1
-U 1 1 5844A01A
-P 3700 4800
-F 0 "S1" H 3700 5100 60  0000 C CNN
-F 1 "DIP_SWITCH_4" H 3700 4500 60  0000 C CNN
-F 2 "footprints:Copal_CHS-04TB" H 3750 5150 60  0001 C CNN
-F 3 "http://www.nidec-copal-electronics.com/e/catalog/switch/chs.pdf" H 3750 5150 60  0001 C CNN
-F 4 "563-1008-1-ND" H 3700 5200 60  0000 C CNN "DIGIKEY"
-	1    3700 4800
-	1    0    0    -1  
-$EndComp
+	3350 3550 3400 3550
+Connection ~ 3400 3650
 Wire Wire Line
-	3300 4950 3400 4950
+	2650 3850 2750 3850
 Wire Wire Line
-	3300 4850 3400 4850
+	2650 3750 2750 3750
 Wire Wire Line
-	3300 4750 3400 4750
+	2650 3650 2750 3650
 Wire Wire Line
-	3300 4650 3400 4650
+	2650 3550 2750 3550
 Wire Wire Line
 	6450 2650 6450 2750
 Connection ~ 6450 2750
@@ -220,13 +210,13 @@ Wire Wire Line
 Connection ~ 5950 3750
 Wire Wire Line
 	5750 4850 5750 4700
-Text HLabel 3300 4650 0    60   UnSpc ~ 0
+Text HLabel 2650 3550 0    60   UnSpc ~ 0
 A0
-Text HLabel 3300 4750 0    60   UnSpc ~ 0
+Text HLabel 2650 3650 0    60   UnSpc ~ 0
 A1
-Text HLabel 3300 4850 0    60   UnSpc ~ 0
+Text HLabel 2650 3750 0    60   UnSpc ~ 0
 A2
-Text HLabel 3300 4950 0    60   UnSpc ~ 0
+Text HLabel 2650 3850 0    60   UnSpc ~ 0
 A3
 Wire Wire Line
 	7900 3100 7900 2750
@@ -238,4 +228,16 @@ Wire Wire Line
 Wire Wire Line
 	7900 3650 7900 3400
 Connection ~ 6400 3300
+$Comp
+L SW_DIP_x04 SW1
+U 1 1 5862F22E
+P 3050 3750
+F 0 "SW1" H 3050 4100 50  0000 C CNN
+F 1 "SW_DIP_x04" H 3050 3500 50  0000 C CNN
+F 2 "Buttons_Switches_SMD:SW_DIP_x4_W7.62mm_Slide_Copal_CHS-B" H 3050 3750 50  0001 C CNN
+F 3 "" H 3050 3750 50  0000 C CNN
+F 4 "563-1008-1-ND" H 3050 4200 60  0000 C CNN "DIGIKEY"
+	1    3050 3750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

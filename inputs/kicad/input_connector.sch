@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:microchip_pic16mcu
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,7 +30,8 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:inputs
-LIBS:fluffy-potato
+LIBS:switches
+LIBS:rfcom
 LIBS:inputs-cache
 EELAYER 25 0
 EELAYER END
