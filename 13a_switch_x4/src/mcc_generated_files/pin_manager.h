@@ -13,7 +13,7 @@
   @Description:
     This header file provides implementations for pin APIs for all pins selected in the GUI.
     Generation Information :
-        Product Revision  :  MPLAB(c) Code Configurator - 4.0
+        Product Revision  :  MPLAB(c) Code Configurator - 4.15
         Device            :  PIC16F1829
         Version           :  1.01
     The generated drivers are tested against the following:
@@ -170,19 +170,19 @@
 #define RB5_SetAnalogMode() do { ANSELBbits.ANSB5 = 1; } while(0)
 #define RB5_SetDigitalMode()do { ANSELBbits.ANSB5 = 0; } while(0)
 
-// get/set IO_RB6 aliases
-#define IO_RB6_TRIS               TRISBbits.TRISB6
-#define IO_RB6_LAT                LATBbits.LATB6
-#define IO_RB6_PORT               PORTBbits.RB6
-#define IO_RB6_WPU                WPUBbits.WPUB6
-#define IO_RB6_SetHigh()            do { LATBbits.LATB6 = 1; } while(0)
-#define IO_RB6_SetLow()             do { LATBbits.LATB6 = 0; } while(0)
-#define IO_RB6_Toggle()             do { LATBbits.LATB6 = ~LATBbits.LATB6; } while(0)
-#define IO_RB6_GetValue()           PORTBbits.RB6
-#define IO_RB6_SetDigitalInput()    do { TRISBbits.TRISB6 = 1; } while(0)
-#define IO_RB6_SetDigitalOutput()   do { TRISBbits.TRISB6 = 0; } while(0)
-#define IO_RB6_SetPullup()      do { WPUBbits.WPUB6 = 1; } while(0)
-#define IO_RB6_ResetPullup()    do { WPUBbits.WPUB6 = 0; } while(0)
+// get/set CS_LWAKE aliases
+#define CS_LWAKE_TRIS               TRISBbits.TRISB6
+#define CS_LWAKE_LAT                LATBbits.LATB6
+#define CS_LWAKE_PORT               PORTBbits.RB6
+#define CS_LWAKE_WPU                WPUBbits.WPUB6
+#define CS_LWAKE_SetHigh()            do { LATBbits.LATB6 = 1; } while(0)
+#define CS_LWAKE_SetLow()             do { LATBbits.LATB6 = 0; } while(0)
+#define CS_LWAKE_Toggle()             do { LATBbits.LATB6 = ~LATBbits.LATB6; } while(0)
+#define CS_LWAKE_GetValue()           PORTBbits.RB6
+#define CS_LWAKE_SetDigitalInput()    do { TRISBbits.TRISB6 = 1; } while(0)
+#define CS_LWAKE_SetDigitalOutput()   do { TRISBbits.TRISB6 = 0; } while(0)
+#define CS_LWAKE_SetPullup()      do { WPUBbits.WPUB6 = 1; } while(0)
+#define CS_LWAKE_ResetPullup()    do { WPUBbits.WPUB6 = 0; } while(0)
 
 // get/set RB7 procedures
 #define RB7_SetHigh()    do { LATBbits.LATB7 = 1; } while(0)
@@ -307,22 +307,22 @@
 #define IO_RC6_SetAnalogMode()  do { ANSELCbits.ANSC6 = 1; } while(0)
 #define IO_RC6_SetDigitalMode() do { ANSELCbits.ANSC6 = 0; } while(0)
 
-// get/set IO_RC7 aliases
-#define IO_RC7_TRIS               TRISCbits.TRISC7
-#define IO_RC7_LAT                LATCbits.LATC7
-#define IO_RC7_PORT               PORTCbits.RC7
-#define IO_RC7_WPU                WPUCbits.WPUC7
-#define IO_RC7_ANS                ANSELCbits.ANSC7
-#define IO_RC7_SetHigh()            do { LATCbits.LATC7 = 1; } while(0)
-#define IO_RC7_SetLow()             do { LATCbits.LATC7 = 0; } while(0)
-#define IO_RC7_Toggle()             do { LATCbits.LATC7 = ~LATCbits.LATC7; } while(0)
-#define IO_RC7_GetValue()           PORTCbits.RC7
-#define IO_RC7_SetDigitalInput()    do { TRISCbits.TRISC7 = 1; } while(0)
-#define IO_RC7_SetDigitalOutput()   do { TRISCbits.TRISC7 = 0; } while(0)
-#define IO_RC7_SetPullup()      do { WPUCbits.WPUC7 = 1; } while(0)
-#define IO_RC7_ResetPullup()    do { WPUCbits.WPUC7 = 0; } while(0)
-#define IO_RC7_SetAnalogMode()  do { ANSELCbits.ANSC7 = 1; } while(0)
-#define IO_RC7_SetDigitalMode() do { ANSELCbits.ANSC7 = 0; } while(0)
+// get/set POWER_GOOD aliases
+#define POWER_GOOD_TRIS               TRISCbits.TRISC7
+#define POWER_GOOD_LAT                LATCbits.LATC7
+#define POWER_GOOD_PORT               PORTCbits.RC7
+#define POWER_GOOD_WPU                WPUCbits.WPUC7
+#define POWER_GOOD_ANS                ANSELCbits.ANSC7
+#define POWER_GOOD_SetHigh()            do { LATCbits.LATC7 = 1; } while(0)
+#define POWER_GOOD_SetLow()             do { LATCbits.LATC7 = 0; } while(0)
+#define POWER_GOOD_Toggle()             do { LATCbits.LATC7 = ~LATCbits.LATC7; } while(0)
+#define POWER_GOOD_GetValue()           PORTCbits.RC7
+#define POWER_GOOD_SetDigitalInput()    do { TRISCbits.TRISC7 = 1; } while(0)
+#define POWER_GOOD_SetDigitalOutput()   do { TRISCbits.TRISC7 = 0; } while(0)
+#define POWER_GOOD_SetPullup()      do { WPUCbits.WPUC7 = 1; } while(0)
+#define POWER_GOOD_ResetPullup()    do { WPUCbits.WPUC7 = 0; } while(0)
+#define POWER_GOOD_SetAnalogMode()  do { ANSELCbits.ANSC7 = 1; } while(0)
+#define POWER_GOOD_SetDigitalMode() do { ANSELCbits.ANSC7 = 0; } while(0)
 
 /**
    @Param
