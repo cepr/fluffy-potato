@@ -13,7 +13,7 @@
   @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  MPLAB(c) Code Configurator - 4.0
+        Product Revision  :  MPLAB(c) Code Configurator - 4.15
         Device            :  PIC16F1829
         Version           :  1.02
     The generated drivers are tested against the following:
@@ -50,9 +50,9 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "interrupt_manager.h"
+#include "LINDrivers/lin_app.h"
 #include "tmr1.h"
 #include "eusart.h"
-#include "LINDrivers/lin_app.h"
 
 #define _XTAL_FREQ  16000000
 

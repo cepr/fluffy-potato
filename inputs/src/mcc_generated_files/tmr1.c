@@ -104,15 +104,6 @@ void TMR1_StopTimer(void)
     T1CONbits.TMR1ON = 0;
 }
 
-uint16_t TMR1_ReadTimer(void)
-{
-    uint16_t readVal;
-
-    readVal = (TMR1H << 8) | TMR1L;
-
-    return readVal;
-}
-
 void TMR1_WriteTimer(uint16_t timerVal)
 {
     if (T1CONbits.nT1SYNC == 1)
@@ -133,23 +124,6 @@ void TMR1_WriteTimer(uint16_t timerVal)
         TMR1H = (timerVal >> 8);
         TMR1L = timerVal;
     }
-}
-
-void TMR1_Reload(void)
-{
-    //Write to the Timer1 register
-    TMR1H = (timer1ReloadVal >> 8);
-    TMR1L = timer1ReloadVal;
-}
-
-void TMR1_StartSinglePulseAcquisition(void)
-{
-    T1GCONbits.T1GGO = 1;
-}
-
-uint8_t TMR1_CheckGateValueStatus(void)
-{
-    return (T1GCONbits.T1GVAL);
 }
 
 void TMR1_ISR(void)

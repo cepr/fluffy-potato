@@ -42,7 +42,7 @@
 
 void LIN_Slave_Initialize(void){
 
-    LIN_init(TABLE_SIZE, &scheduleTable, processLIN);
+    LIN_init(TABLE_SIZE, scheduleTable, processLIN);
     
 }
 
@@ -52,7 +52,13 @@ void processLIN(void){
 
     cmd = LIN_getPacket(tempRxData);
     switch(cmd){
-        case INPUTS:
+        case LEFT_TURN_SIGNAL_SWITCH:
+            break;
+        case RIGHT_TURN_SIGNAL_SWITCH:
+            break;
+        case HEADLIGHT_DIMMER_SWITCH:
+            break;
+        case WINDSHIELD_WIPERS_SWITCH:
             break;
         default:
             break;

@@ -62,7 +62,7 @@ void main(void)
     while (1)
     {
         if (LIN_handler() == LIN_RX_IDLE) {
-            asm("sleep");
+            //asm("sleep");
         }
     }
 }

@@ -45,14 +45,23 @@
 #include "lin_slave.h"
 
 typedef enum {
-    INPUTS
+    LEFT_TURN_SIGNAL_SWITCH,
+    RIGHT_TURN_SIGNAL_SWITCH,
+    HEADLIGHT_DIMMER_SWITCH,
+    WINDSHIELD_WIPERS_SWITCH
 }lin_cmd_t;
 
-uint8_t INPUTS_Data[1];
+uint8_t LEFT_TURN_SIGNAL_SWITCH_Data[1];
+uint8_t RIGHT_TURN_SIGNAL_SWITCH_Data[1];
+uint8_t HEADLIGHT_DIMMER_SWITCH_Data[1];
+uint8_t WINDSHIELD_WIPERS_SWITCH_Data[1];
 
 const lin_rx_cmd_t scheduleTable[] = {
     //Command, Type, TX/RX Length, Data Address
-    {INPUTS, TRANSMIT, 1, &INPUTS_Data }
+    {LEFT_TURN_SIGNAL_SWITCH, TRANSMIT, 1, LEFT_TURN_SIGNAL_SWITCH_Data },
+    {RIGHT_TURN_SIGNAL_SWITCH, TRANSMIT, 1, RIGHT_TURN_SIGNAL_SWITCH_Data },
+    {HEADLIGHT_DIMMER_SWITCH, TRANSMIT, 1, HEADLIGHT_DIMMER_SWITCH_Data },
+    {WINDSHIELD_WIPERS_SWITCH, TRANSMIT, 1, WINDSHIELD_WIPERS_SWITCH_Data }
 };
 #define TABLE_SIZE  (sizeof(scheduleTable)/sizeof(lin_rx_cmd_t))
 

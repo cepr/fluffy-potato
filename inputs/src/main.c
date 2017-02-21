@@ -67,14 +67,21 @@ void main(void)
             (A2_GetValue() << 2) |
             (A3_GetValue() << 3);
 
-        INPUTS_Data[0] = IN0_GetValue() |
-                (IN1_GetValue() << 1) |
-                (IN2_GetValue() << 2) |
-                (IN3_GetValue() << 3) |
-                (IN4_GetValue() << 4) |
-                (IN5_GetValue() << 5) |
-                (IN6_GetValue() << 6) |
-                (IN7_GetValue() << 7);
+        //if (!nFAULT_GetValue()) {
+        //    while(true);
+        //}
+
+        LEFT_TURN_SIGNAL_SWITCH_Data[0] = IN0_GetValue();
+        RIGHT_TURN_SIGNAL_SWITCH_Data[0] = IN1_GetValue();
+        HEADLIGHT_DIMMER_SWITCH_Data[0] = IN2_GetValue();
+        if (IN4_GetValue()) {
+            WINDSHIELD_WIPERS_SWITCH_Data[0] = 255;
+        } else if (IN3_GetValue()) {
+            WINDSHIELD_WIPERS_SWITCH_Data[0] = 127;
+        } else {
+            WINDSHIELD_WIPERS_SWITCH_Data[0] = 0;
+        }
+
         LIN_handler();
     }
 }

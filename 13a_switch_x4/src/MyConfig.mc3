@@ -9,12 +9,12 @@
          <string>class com.microchip.mcc.mcu8.modules.eusart.EUSART</string>
       </entry>
       <entry>
-         <string>INTERNAL OSCILLATOR</string>
-         <string>class com.microchip.mcc.mcu8.systemManager.osc.Osc</string>
-      </entry>
-      <entry>
          <string>LIN Slave</string>
          <string>class com.microchip.mcc.modules.mcu8.lin.slave.LINSlave</string>
+      </entry>
+      <entry>
+         <string>INTERNAL OSCILLATOR</string>
+         <string>class com.microchip.mcc.mcu8.systemManager.osc.Osc</string>
       </entry>
       <entry>
          <string>WDT</string>
@@ -307,6 +307,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="LIN Slave" name="data%2%length"/>
+         <value>1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="LATB" settingAlias="LATB7"/>
          <value>clear</value>
       </entry>
@@ -424,7 +428,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="LIN Slave" name="checksumSetting"/>
-         <value>Classic</value>
+         <value>Enhanced</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCAN" settingAlias="IOCAN2" alias="disabled"/>
@@ -469,6 +473,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="APFCON1" settingAlias="P2BSEL"/>
          <value>RC2</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="LIN Slave" name="data%2%signal"/>
+         <value>HEADLIGHT_DIMMER_SWITCH</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCAP" settingAlias="IOCAP0" alias="enabled"/>
@@ -692,7 +700,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="EUSART" registerAlias="SPBRGL" settingAlias="SPBRGL"/>
-         <value>199</value>
+         <value>207</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="LIN Slave" name="data%1%type"/>
+         <value>RECEIVE</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="TMR1" registerAlias="TMRH" settingAlias="TMRH"/>
@@ -756,7 +768,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="EUSART" name="baudRateComboBox"/>
-         <value>20000</value>
+         <value>19200</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="EUSART" name="EUSART_TXIISRFunction"/>
@@ -949,6 +961,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="EUSART" name="baudprocessmode"/>
          <value>easysetup</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="LIN Slave" name="data%2%type"/>
+         <value>RECEIVE</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="TMR1" registerAlias="TGCON" settingAlias="TGPOL" alias="low"/>
@@ -1391,6 +1407,10 @@
          <value>GATE_ISR</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="LIN Slave" name="data%3%signal"/>
+         <value>WINDSHIELD_WIPERS_SWITCH</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="TRISB" settingAlias="TRISB6" alias="input"/>
          <value>1</value>
       </entry>
@@ -1744,7 +1764,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="LIN Slave" name="pubSubselectedEusart"/>
-         <value>6884.667863261669</value>
+         <value>1706.8900065857595</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="System Module" name="CLOCK_FREQ"/>
@@ -1827,6 +1847,10 @@
          <value>disabled</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="LIN Slave" name="data%3%type"/>
+         <value>RECEIVE</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="WPUA" settingAlias="WPUA4"/>
          <value>clear</value>
       </entry>
@@ -1896,7 +1920,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="LIN Slave" name="data%0%signal"/>
-         <value>OUTPUT_MODULE_0</value>
+         <value>LEFT_TURN_SIGNAL_SWITCH</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="anselUserSetRB5"/>
@@ -2051,6 +2075,10 @@
          <value>0</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="LIN Slave" name="data%1%length"/>
+         <value>1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="IOCBF" settingAlias="IOCBF5" alias="disabled"/>
          <value>0</value>
       </entry>
@@ -2140,7 +2168,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="EUSART" name="baudRateErrorLabel"/>
-         <value>Error: 0.000 %</value>
+         <value>Error: 0.160 %</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="TRISB" settingAlias="TRISB4"/>
@@ -2193,6 +2221,10 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="TRISA" settingAlias="TRISA2" alias="input"/>
          <value>1</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="LIN Slave" name="data%1%signal"/>
+         <value>RIGHT_TURN_SIGNAL_SWITCH</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="WPUA" settingAlias="WPUA3" alias="clear"/>
@@ -2316,7 +2348,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="LIN Slave" name="linSignals"/>
-         <value>1</value>
+         <value>4</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="EUSART" registerAlias="RCI" settingAlias="order"/>
@@ -2576,7 +2608,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="EUSART" registerAlias="SPBRGL"/>
-         <value>199</value>
+         <value>207</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="WPUA" settingAlias="WPUA4" alias="set"/>
@@ -2907,6 +2939,10 @@
          <value>1</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="LIN Slave" name="data%3%length"/>
+         <value>1</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="EUSART" registerAlias="BAUDCON" settingAlias="ABDEN" alias="enabled"/>
          <value>1</value>
       </entry>
@@ -2972,7 +3008,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="LIN Slave" name="pubSubselectedTimer"/>
-         <value>700.8099603606521</value>
+         <value>4975.884666217645</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.OptionKey" moduleName="Pin Module" registerAlias="WPUC" settingAlias="WPUC5" alias="clear"/>
@@ -3122,11 +3158,11 @@
       </entry>
       <entry>
          <file>mcc_generated_files/LINDrivers/lin_slave.c</file>
-         <hash>133acfbb2a7a736ca9e9ff0ce38c8ff50ac21c1d88e2ab3e47d5c446ac606e7f</hash>
+         <hash>5245cdf9d576b5af06a5cc66fea394bd5023ea9adde89c451842c171940390d3</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/eusart.c</file>
-         <hash>170df33dbc42abbfa211464bc21a1b621b35369125ef30c3cdfa947bff1b8df8</hash>
+         <hash>15680fbd8370d701eddffad54dcbcadcaf60b8b2e9cc301ef7d28e9d0b13c756</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/tmr1.h</file>
@@ -3134,15 +3170,15 @@
       </entry>
       <entry>
          <file>mcc_generated_files/LINDrivers/lin_app.h</file>
-         <hash>32371bce29433b178f0482ad02d0be2bfbcf0b806c3280c667f5b8605aa02261</hash>
+         <hash>b5fb1d5705c18a1557408ec07165cacf806c21c9bdb31a74402251f6e7333cbc</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/LINDrivers/lin_slave.h</file>
-         <hash>e97aeb939048c857332c11b8e612dc765178460a80003c34568727a2637a6638</hash>
+         <hash>21d5db6695de2a7458c7d196997263c68c81dd3825792c66225edf99054848e7</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/LINDrivers/lin_app.c</file>
-         <hash>0aaaf1e1a27198701a529c70a2ac285bbb394fee7fd9ac42f5a1576f6a8ad8a3</hash>
+         <hash>b3c25ca9be387b93d5b8567528f53a270d2137663d8334ad94f8c37235502ab1</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/LINDrivers/lin_hardware.h</file>
@@ -3150,15 +3186,15 @@
       </entry>
       <entry>
          <file>mcc_generated_files/mcc.h</file>
-         <hash>21bf6185ed5c8bc2ad1127c557065c1ece8c25b6778e7a5a1709e9e918ecd860</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files/interrupt_manager.c</file>
-         <hash>d32c5f459dd8d223f21fd56b246775e14060764c331b92c171a3e59f13d268b4</hash>
+         <hash>3744e22a1326148e2e123a9408665b787fa5a8d3f4992dd7129b2bf7a42e0f1f</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/eusart.h</file>
          <hash>795dc5e284dab61e8e7770e55fa2ce73cac03a6e7830d9713763cf8151ae3fc5</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/interrupt_manager.c</file>
+         <hash>d32c5f459dd8d223f21fd56b246775e14060764c331b92c171a3e59f13d268b4</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/mcc.c</file>

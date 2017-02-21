@@ -43,7 +43,7 @@
 
 void LIN_Slave_Initialize(void){
 
-    LIN_init(TABLE_SIZE, &scheduleTable, processLIN);
+    LIN_init(TABLE_SIZE, scheduleTable, processLIN);
     
 }
 
@@ -53,11 +53,33 @@ void processLIN(void){
 
     cmd = LIN_getPacket(tempRxData);
     switch(cmd){
-        case OUTPUT_MODULE_0:
-            CMD_1_LAT = (tempRxData[0]) & 1;
-            CMD_2_LAT = (tempRxData[0] >> 1) & 1;
-            CMD_3_LAT = (tempRxData[0] >> 2) & 1;
-            CMD_4_LAT = (tempRxData[0] >> 3) & 1;
+        case LEFT_TURN_SIGNAL_SWITCH:
+            if (tempRxData[0]) {
+                CMD_1_SetHigh();
+            } else {
+                CMD_1_SetLow();
+            }
+            break;
+        case RIGHT_TURN_SIGNAL_SWITCH:
+            if (tempRxData[0]) {
+                CMD_2_SetHigh();
+            } else {
+                CMD_2_SetLow();
+            }
+            break;
+        case HEADLIGHT_DIMMER_SWITCH:
+            if (tempRxData[0]) {
+                CMD_3_SetHigh();
+            } else {
+                CMD_3_SetLow();
+            }
+            break;
+        case WINDSHIELD_WIPERS_SWITCH:
+            if (tempRxData[0]) {
+                CMD_4_SetHigh();
+            } else {
+                CMD_4_SetLow();
+            }
             break;
         default:
             break;

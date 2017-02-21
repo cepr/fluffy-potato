@@ -399,4 +399,6 @@ Wire Wire Line
 	5450 1650 5450 1750
 Wire Wire Line
 	5450 3200 5450 3050
+Text Notes 3850 2300 0    60   ~ 0
+Replace by 1K\nfor master !!
 $EndSCHEMATC
