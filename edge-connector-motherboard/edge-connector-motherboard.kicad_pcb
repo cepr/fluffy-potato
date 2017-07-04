@@ -2,7 +2,7 @@
 
   (general
     (links 126)
-    (no_connects 3)
+    (no_connects 5)
     (area 126.924999 29.134999 162.635001 161.365001)
     (thickness 1.6)
     (drawings 4)
@@ -348,6 +348,11 @@
       (net 1 +12V))
     (pad 1 thru_hole circle (at -2.5 3.5) (size 3 3) (drill 1.85) (layers *.Cu *.Mask)
       (net 1 +12V))
+    (model ../../../../../home/cpriscal/Projets/fluffy-potato/edge-connector-motherboard/keystone-PN7770.wrl
+      (at (xyz 0.155 0 -0.2))
+      (scale (xyz 0.393701 0.393701 0.393701))
+      (rotate (xyz -90 0 90))
+    )
   )
 
   (module edge-connector-motherboard:TERM_SCREW_M3 (layer F.Cu) (tedit 595A133F) (tstamp 595A01E6)
@@ -380,6 +385,11 @@
       (net 4 /PIC16F1829LIN/LBUS))
     (pad 1 thru_hole circle (at -2.5 3.5) (size 3 3) (drill 1.85) (layers *.Cu *.Mask)
       (net 4 /PIC16F1829LIN/LBUS))
+    (model ../../../../../home/cpriscal/Projets/fluffy-potato/edge-connector-motherboard/keystone-PN7770.wrl
+      (at (xyz 0.155 0 -0.2))
+      (scale (xyz 0.393701 0.393701 0.393701))
+      (rotate (xyz -90 0 90))
+    )
   )
 
   (module edge-connector-motherboard:TERM_SCREW_M3 (layer F.Cu) (tedit 595A133F) (tstamp 595A01FB)
@@ -412,6 +422,11 @@
       (net 26 GNDPWR))
     (pad 1 thru_hole circle (at -2.5 3.5) (size 3 3) (drill 1.85) (layers *.Cu *.Mask)
       (net 26 GNDPWR))
+    (model ../../../../../home/cpriscal/Projets/fluffy-potato/edge-connector-motherboard/keystone-PN7770.wrl
+      (at (xyz 0.155 0 -0.2))
+      (scale (xyz 0.393701 0.393701 0.393701))
+      (rotate (xyz -90 0 90))
+    )
   )
 
   (module edge-connector-motherboard:TERM_SCREW_M3 (layer F.Cu) (tedit 595A133F) (tstamp 595A0210)
@@ -444,6 +459,11 @@
       (net 1 +12V))
     (pad 1 thru_hole circle (at -2.5 3.5) (size 3 3) (drill 1.85) (layers *.Cu *.Mask)
       (net 1 +12V))
+    (model ../../../../../home/cpriscal/Projets/fluffy-potato/edge-connector-motherboard/keystone-PN7770.wrl
+      (at (xyz 0.155 0 -0.2))
+      (scale (xyz 0.393701 0.393701 0.393701))
+      (rotate (xyz -90 0 90))
+    )
   )
 
   (module edge-connector-motherboard:TERM_SCREW_M3 (layer F.Cu) (tedit 595A133F) (tstamp 595A0225)
@@ -476,6 +496,11 @@
       (net 4 /PIC16F1829LIN/LBUS))
     (pad 1 thru_hole circle (at -2.5 3.5) (size 3 3) (drill 1.85) (layers *.Cu *.Mask)
       (net 4 /PIC16F1829LIN/LBUS))
+    (model ../../../../../home/cpriscal/Projets/fluffy-potato/edge-connector-motherboard/keystone-PN7770.wrl
+      (at (xyz 0.155 0 -0.2))
+      (scale (xyz 0.393701 0.393701 0.393701))
+      (rotate (xyz -90 0 90))
+    )
   )
 
   (module edge-connector-motherboard:TERM_SCREW_M3 (layer F.Cu) (tedit 595A133F) (tstamp 595A023A)
@@ -508,6 +533,11 @@
       (net 26 GNDPWR))
     (pad 1 thru_hole circle (at -2.5 3.5) (size 3 3) (drill 1.85) (layers *.Cu *.Mask)
       (net 26 GNDPWR))
+    (model ../../../../../home/cpriscal/Projets/fluffy-potato/edge-connector-motherboard/keystone-PN7770.wrl
+      (at (xyz 0.155 0 -0.2))
+      (scale (xyz 0.393701 0.393701 0.393701))
+      (rotate (xyz -90 0 90))
+    )
   )
 
   (module Pin_Headers:Pin_Header_Angled_2x32_Pitch2.54mm (layer F.Cu) (tedit 58CD4EC7) (tstamp 595A027E)
@@ -1304,10 +1334,10 @@
       (net 20 /E8))
     (pad 64 thru_hole oval (at 2.54 78.74) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 20 /E8))
-    (model ${KISYS3DMOD}/Pin_Headers.3dshapes/Pin_Header_Angled_2x32_Pitch2.54mm.wrl
-      (at (xyz 0.05 -1.55 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 90))
+    (model ../../../../../home/cpriscal/Projets/fluffy-potato/edge-connector-motherboard/c-1761468-1-b-3d.wrl
+      (at (xyz 0.77 -1.55 0.185))
+      (scale (xyz 0.393701 0.393701 0.393701))
+      (rotate (xyz -90 0 -90))
     )
   )
 
@@ -1341,6 +1371,11 @@
       (net 6 /E1))
     (pad 1 thru_hole circle (at -2.5 3.5 90) (size 3 3) (drill 1.85) (layers *.Cu *.Mask)
       (net 6 /E1))
+    (model ../../../../../home/cpriscal/Projets/fluffy-potato/edge-connector-motherboard/keystone-PN7770.wrl
+      (at (xyz 0.155 0 -0.2))
+      (scale (xyz 0.393701 0.393701 0.393701))
+      (rotate (xyz -90 0 90))
+    )
   )
 
   (module edge-connector-motherboard:TERM_SCREW_M3 (layer F.Cu) (tedit 595A133F) (tstamp 595A02A8)
@@ -1373,6 +1408,11 @@
       (net 8 /E2))
     (pad 1 thru_hole circle (at -2.5 3.5 90) (size 3 3) (drill 1.85) (layers *.Cu *.Mask)
       (net 8 /E2))
+    (model ../../../../../home/cpriscal/Projets/fluffy-potato/edge-connector-motherboard/keystone-PN7770.wrl
+      (at (xyz 0.155 0 -0.2))
+      (scale (xyz 0.393701 0.393701 0.393701))
+      (rotate (xyz -90 0 90))
+    )
   )
 
   (module edge-connector-motherboard:TERM_SCREW_M3 (layer F.Cu) (tedit 595A133F) (tstamp 595A02BD)
@@ -1405,6 +1445,11 @@
       (net 10 /E3))
     (pad 1 thru_hole circle (at -2.5 3.5 90) (size 3 3) (drill 1.85) (layers *.Cu *.Mask)
       (net 10 /E3))
+    (model ../../../../../home/cpriscal/Projets/fluffy-potato/edge-connector-motherboard/keystone-PN7770.wrl
+      (at (xyz 0.155 0 -0.2))
+      (scale (xyz 0.393701 0.393701 0.393701))
+      (rotate (xyz -90 0 90))
+    )
   )
 
   (module edge-connector-motherboard:TERM_SCREW_M3 (layer F.Cu) (tedit 595A133F) (tstamp 595A02D2)
@@ -1437,6 +1482,11 @@
       (net 12 /E4))
     (pad 1 thru_hole circle (at -2.5 3.5 90) (size 3 3) (drill 1.85) (layers *.Cu *.Mask)
       (net 12 /E4))
+    (model ../../../../../home/cpriscal/Projets/fluffy-potato/edge-connector-motherboard/keystone-PN7770.wrl
+      (at (xyz 0.155 0 -0.2))
+      (scale (xyz 0.393701 0.393701 0.393701))
+      (rotate (xyz -90 0 90))
+    )
   )
 
   (module edge-connector-motherboard:TERM_SCREW_M3 (layer F.Cu) (tedit 595A133F) (tstamp 595A02E7)
@@ -1469,6 +1519,11 @@
       (net 14 /E5))
     (pad 1 thru_hole circle (at -2.5 3.5 90) (size 3 3) (drill 1.85) (layers *.Cu *.Mask)
       (net 14 /E5))
+    (model ../../../../../home/cpriscal/Projets/fluffy-potato/edge-connector-motherboard/keystone-PN7770.wrl
+      (at (xyz 0.155 0 -0.2))
+      (scale (xyz 0.393701 0.393701 0.393701))
+      (rotate (xyz -90 0 90))
+    )
   )
 
   (module edge-connector-motherboard:TERM_SCREW_M3 (layer F.Cu) (tedit 595A133F) (tstamp 595A02FC)
@@ -1501,6 +1556,11 @@
       (net 16 /E6))
     (pad 1 thru_hole circle (at -2.5 3.5 90) (size 3 3) (drill 1.85) (layers *.Cu *.Mask)
       (net 16 /E6))
+    (model ../../../../../home/cpriscal/Projets/fluffy-potato/edge-connector-motherboard/keystone-PN7770.wrl
+      (at (xyz 0.155 0 -0.2))
+      (scale (xyz 0.393701 0.393701 0.393701))
+      (rotate (xyz -90 0 90))
+    )
   )
 
   (module edge-connector-motherboard:TERM_SCREW_M3 (layer F.Cu) (tedit 595A133F) (tstamp 595A0311)
@@ -1533,6 +1593,11 @@
       (net 18 /E7))
     (pad 1 thru_hole circle (at -2.5 3.5 90) (size 3 3) (drill 1.85) (layers *.Cu *.Mask)
       (net 18 /E7))
+    (model ../../../../../home/cpriscal/Projets/fluffy-potato/edge-connector-motherboard/keystone-PN7770.wrl
+      (at (xyz 0.155 0 -0.2))
+      (scale (xyz 0.393701 0.393701 0.393701))
+      (rotate (xyz -90 0 90))
+    )
   )
 
   (module edge-connector-motherboard:TERM_SCREW_M3 (layer F.Cu) (tedit 595A133F) (tstamp 595A0326)
@@ -1565,6 +1630,11 @@
       (net 20 /E8))
     (pad 1 thru_hole circle (at -2.5 3.5 90) (size 3 3) (drill 1.85) (layers *.Cu *.Mask)
       (net 20 /E8))
+    (model ../../../../../home/cpriscal/Projets/fluffy-potato/edge-connector-motherboard/keystone-PN7770.wrl
+      (at (xyz 0.155 0 -0.2))
+      (scale (xyz 0.393701 0.393701 0.393701))
+      (rotate (xyz -90 0 90))
+    )
   )
 
   (module Housings_SSOP:SSOP-20_5.3x7.2mm_Pitch0.65mm (layer F.Cu) (tedit 54130A77) (tstamp 595A033E)
@@ -1849,6 +1919,8 @@
   (via (at 156.21 140.97) (size 1.27) (drill 0.635) (layers F.Cu B.Cu) (net 2))
   (segment (start 156.21 120.65) (end 156.21 110.49) (width 1.27) (layer B.Cu) (net 2))
   (segment (start 156.21 110.49) (end 156.21 100.33) (width 1.27) (layer B.Cu) (net 2))
+  (segment (start 156.21 100.33) (end 156.21 90.17) (width 1.27) (layer B.Cu) (net 2))
+  (segment (start 156.21 90.17) (end 156.21 80.01) (width 1.27) (layer B.Cu) (net 2))
   (via (at 147.955 143.51) (size 0.508) (layers F.Cu B.Cu) (net 3))
   (via (at 147.955 135.89) (size 0.508) (layers F.Cu B.Cu) (net 3))
   (via (at 147.955 142.24) (size 0.508) (layers F.Cu B.Cu) (net 3))
@@ -2084,8 +2156,6 @@
   (segment (start 156.21 59.69) (end 156.21 49.53) (width 1.27) (layer B.Cu) (net 26))
   (segment (start 156.21 69.85) (end 156.21 59.69) (width 1.27) (layer B.Cu) (net 26))
   (segment (start 156.21 80.01) (end 156.21 69.85) (width 1.27) (layer B.Cu) (net 26))
-  (segment (start 156.21 90.17) (end 156.21 80.01) (width 1.27) (layer B.Cu) (net 26))
-  (segment (start 156.21 100.33) (end 156.21 90.17) (width 1.27) (layer B.Cu) (net 26))
   (segment (start 153.71 39.06) (end 156.21 39.06) (width 1.27) (layer B.Cu) (net 26))
   (segment (start 156.21 39.06) (end 156.21 49.53) (width 1.27) (layer B.Cu) (net 26))
   (segment (start 143.51 110.49) (end 156.21 110.49) (width 1.27) (layer B.Cu) (net 26))

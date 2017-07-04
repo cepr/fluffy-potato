@@ -68,9 +68,10 @@ L Screw_Terminal_1x01 J1
 U 1 1 595A2D74
 P 3000 4250
 F 0 "J1" H 3000 4400 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" V 2850 4250 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" H 2450 4350 50  0000 C TNN
 F 2 "edge-connector-motherboard:TERM_SCREW_M3" H 3000 4125 50  0001 C CNN
 F 3 "" H 3000 4150 50  0001 C CNN
+F 4 "36-7771-ND" H 2450 4200 60  0000 C CNN "DIGIKEY"
 	1    3000 4250
 	1    0    0    -1  
 $EndComp
@@ -79,9 +80,10 @@ L Screw_Terminal_1x01 J2
 U 1 1 595A2F58
 P 3000 4650
 F 0 "J2" H 3000 4800 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" V 2850 4650 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" H 2450 4750 50  0000 C TNN
 F 2 "edge-connector-motherboard:TERM_SCREW_M3" H 3000 4525 50  0001 C CNN
 F 3 "" H 3000 4550 50  0001 C CNN
+F 4 "36-7771-ND" H 2450 4600 60  0000 C CNN "DIGIKEY"
 	1    3000 4650
 	1    0    0    -1  
 $EndComp
@@ -90,9 +92,10 @@ L Screw_Terminal_1x01 J3
 U 1 1 595A2FF8
 P 3000 5050
 F 0 "J3" H 3000 5200 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" V 2850 5050 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" H 2450 5150 50  0000 C TNN
 F 2 "edge-connector-motherboard:TERM_SCREW_M3" H 3000 4925 50  0001 C CNN
 F 3 "" H 3000 4950 50  0001 C CNN
+F 4 "36-7771-ND" H 2450 5000 60  0000 C CNN "DIGIKEY"
 	1    3000 5050
 	1    0    0    -1  
 $EndComp
@@ -101,9 +104,10 @@ L Screw_Terminal_1x01 J4
 U 1 1 595A3295
 P 4800 4250
 F 0 "J4" H 4800 4400 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" V 4650 4250 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" H 4250 4200 50  0000 C TNN
 F 2 "edge-connector-motherboard:TERM_SCREW_M3" H 4800 4125 50  0001 C CNN
 F 3 "" H 4800 4150 50  0001 C CNN
+F 4 "36-7771-ND" H 4250 4300 60  0000 C CNN "DIGIKEY"
 	1    4800 4250
 	-1   0    0    1   
 $EndComp
@@ -112,9 +116,10 @@ L Screw_Terminal_1x01 J5
 U 1 1 595A3677
 P 4800 4650
 F 0 "J5" H 4800 4800 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" V 4650 4650 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" H 4250 4600 50  0000 C TNN
 F 2 "edge-connector-motherboard:TERM_SCREW_M3" H 4800 4525 50  0001 C CNN
 F 3 "" H 4800 4550 50  0001 C CNN
+F 4 "36-7771-ND" H 4300 4700 60  0000 C CNN "DIGIKEY"
 	1    4800 4650
 	-1   0    0    1   
 $EndComp
@@ -123,9 +128,10 @@ L Screw_Terminal_1x01 J6
 U 1 1 595A3AA9
 P 4800 5050
 F 0 "J6" H 4800 5200 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" V 4650 5050 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" H 4250 5000 50  0000 C TNN
 F 2 "edge-connector-motherboard:TERM_SCREW_M3" H 4800 4925 50  0001 C CNN
 F 3 "" H 4800 4950 50  0001 C CNN
+F 4 "36-7771-ND" H 4250 5100 60  0000 C CNN "DIGIKEY"
 	1    4800 5050
 	-1   0    0    1   
 $EndComp
@@ -156,10 +162,10 @@ L CONN_02X32 J7
 U 1 1 595A443D
 P 7300 3750
 F 0 "J7" H 7300 5400 50  0000 C CNN
-F 1 "CONN_02X32" V 7300 3750 50  0000 C CNN
+F 1 "CONN_02X32" H 7300 1750 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Angled_2x32_Pitch2.54mm" H 7300 3350 50  0001 C CNN
 F 3 "http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F1761468%7FC2%7Fpdf%7FEnglish%7FENG_CD_1761468_C2.pdf%7F1761468-1" H 7300 3350 50  0001 C CNN
-F 4 "A102052-ND" H 7300 3750 60  0001 C CNN "DIGIKEY"
+F 4 "A102052-ND" H 7350 1650 60  0000 C CNN "DIGIKEY"
 	1    7300 3750
 	1    0    0    -1  
 $EndComp
@@ -168,9 +174,10 @@ L Screw_Terminal_1x01 J11
 U 1 1 595A92A4
 P 8550 3700
 F 0 "J11" H 8550 3850 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" H 8050 3700 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" H 8050 3800 50  0000 C TNN
 F 2 "edge-connector-motherboard:TERM_SCREW_M3" H 8550 3575 50  0001 C CNN
 F 3 "" H 8550 3600 50  0001 C CNN
+F 4 "36-7771-ND" H 8050 3650 60  0000 C CNN "DIGIKEY"
 	1    8550 3700
 	-1   0    0    -1  
 $EndComp
@@ -179,9 +186,10 @@ L Screw_Terminal_1x01 J10
 U 1 1 595AAF05
 P 8550 3300
 F 0 "J10" H 8550 3450 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" H 8050 3300 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" H 8050 3400 50  0000 C TNN
 F 2 "edge-connector-motherboard:TERM_SCREW_M3" H 8550 3175 50  0001 C CNN
 F 3 "" H 8550 3200 50  0001 C CNN
+F 4 "36-7771-ND" H 8050 3250 60  0000 C CNN "DIGIKEY"
 	1    8550 3300
 	-1   0    0    -1  
 $EndComp
@@ -190,9 +198,10 @@ L Screw_Terminal_1x01 J9
 U 1 1 595AAF9A
 P 8550 2900
 F 0 "J9" H 8550 3050 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" H 8050 2900 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" H 8050 3000 50  0000 C TNN
 F 2 "edge-connector-motherboard:TERM_SCREW_M3" H 8550 2775 50  0001 C CNN
 F 3 "" H 8550 2800 50  0001 C CNN
+F 4 "36-7771-ND" H 8050 2850 60  0000 C CNN "DIGIKEY"
 	1    8550 2900
 	-1   0    0    -1  
 $EndComp
@@ -201,10 +210,10 @@ L Screw_Terminal_1x01 J8
 U 1 1 595AB303
 P 8550 2500
 F 0 "J8" H 8550 2650 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" H 8050 2500 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" H 8050 2600 50  0000 C TNN
 F 2 "edge-connector-motherboard:TERM_SCREW_M3" H 8550 2375 50  0001 C CNN
 F 3 "http://www.keyelco.com/product-pdf.cfm?p=1090" H 8550 2400 50  0001 C CNN
-F 4 "36-7770-ND" H 8550 2500 60  0001 C CNN "DIGIKEY"
+F 4 "36-7771-ND" H 8100 2450 60  0000 C CNN "DIGIKEY"
 	1    8550 2500
 	-1   0    0    -1  
 $EndComp
@@ -375,9 +384,10 @@ L Screw_Terminal_1x01 J15
 U 1 1 595CD352
 P 8550 5300
 F 0 "J15" H 8550 5450 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" H 8050 5300 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" H 8050 5400 50  0000 C TNN
 F 2 "edge-connector-motherboard:TERM_SCREW_M3" H 8550 5175 50  0001 C CNN
 F 3 "" H 8550 5200 50  0001 C CNN
+F 4 "36-7771-ND" H 8100 5250 60  0000 C CNN "DIGIKEY"
 	1    8550 5300
 	-1   0    0    -1  
 $EndComp
@@ -386,9 +396,10 @@ L Screw_Terminal_1x01 J14
 U 1 1 595CD358
 P 8550 4900
 F 0 "J14" H 8550 5050 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" H 8050 4900 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" H 8050 5000 50  0000 C TNN
 F 2 "edge-connector-motherboard:TERM_SCREW_M3" H 8550 4775 50  0001 C CNN
 F 3 "" H 8550 4800 50  0001 C CNN
+F 4 "36-7771-ND" H 8100 4850 60  0000 C CNN "DIGIKEY"
 	1    8550 4900
 	-1   0    0    -1  
 $EndComp
@@ -397,9 +408,10 @@ L Screw_Terminal_1x01 J13
 U 1 1 595CD35E
 P 8550 4500
 F 0 "J13" H 8550 4650 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" H 8050 4500 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" H 8050 4600 50  0000 C TNN
 F 2 "edge-connector-motherboard:TERM_SCREW_M3" H 8550 4375 50  0001 C CNN
 F 3 "" H 8550 4400 50  0001 C CNN
+F 4 "36-7771-ND" H 8100 4450 60  0000 C CNN "DIGIKEY"
 	1    8550 4500
 	-1   0    0    -1  
 $EndComp
@@ -408,9 +420,10 @@ L Screw_Terminal_1x01 J12
 U 1 1 595CD364
 P 8550 4100
 F 0 "J12" H 8550 4250 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" H 8050 4100 50  0000 C TNN
+F 1 "Screw_Terminal_1x01" H 8050 4200 50  0000 C TNN
 F 2 "edge-connector-motherboard:TERM_SCREW_M3" H 8550 3975 50  0001 C CNN
 F 3 "" H 8550 4000 50  0001 C CNN
+F 4 "36-7771-ND" H 8050 4050 60  0000 C CNN "DIGIKEY"
 	1    8550 4100
 	-1   0    0    -1  
 $EndComp
