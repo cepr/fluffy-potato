@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name interface)(type KiCad)(uri /home/cpriscal/projects/fluffy-potato/board_generator/interface/interface.pretty)(options "")(descr ""))
+  (lib (name connectors)(type KiCad)(uri /home/cpriscal/projects/fluffy-potato/board_generator/libraries/connectors.pretty)(options "")(descr ""))
+)

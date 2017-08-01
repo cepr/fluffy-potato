@@ -1,0 +1,456 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:pic16f1829lin
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CP C2
+U 1 1 597E7A35
+P 8150 1700
+F 0 "C2" H 8175 1800 50  0000 L CNN
+F 1 "1uF" H 8175 1600 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8188 1550 50  0001 C CNN
+F 3 "http://www.digikey.com/product-detail/en/murata-electronics-north-america/GCM21BL81C105KA58L/490-8046-1-ND/4380331" H 8150 1700 50  0001 C CNN
+F 4 "490-8046-1-ND" V 8000 1700 60  0000 C CNN "DIGIKEY"
+	1    8150 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C1
+U 1 1 597E7A3D
+P 5000 2450
+F 0 "C1" H 5025 2550 50  0000 L CNN
+F 1 "10uF" H 4700 2500 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1210_HandSoldering" H 5038 2300 50  0001 C CNN
+F 3 "http://datasheets.avx.com/TPS.pdf" H 5000 2450 50  0001 C CNN
+F 4 "478-5230-1-ND" H 4500 2400 60  0000 C CNN "DIGIKEY"
+	1    5000 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_Zener D1
+U 1 1 597E7A45
+P 3700 4350
+F 0 "D1" H 3700 4450 50  0000 C CNN
+F 1 "RSB36V" V 3650 4100 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-323_HandSoldering" H 3700 4350 50  0001 C CNN
+F 3 "http://rohmfs.rohm.com/en/products/databook/datasheet/discrete/diode/zener/rsb36v.pdf" H 3700 4350 50  0001 C CNN
+F 4 "RSB36VTE-17CT-ND" V 3750 3800 60  0000 C CNN "DIGIKEY"
+	1    3700 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L D D2
+U 1 1 597E7A4D
+P 5300 1800
+F 0 "D2" H 5300 1900 50  0000 C CNN
+F 1 "1N4148W-7-F" V 5350 2250 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-123" H 5300 1800 50  0001 C CNN
+F 3 "http://www.diodes.com/_files/datasheets/ds30086.pdf" H 5300 1800 50  0001 C CNN
+F 4 "1N4148W-FDICT-ND" V 5250 2450 60  0000 C CNN "DIGIKEY"
+	1    5300 1800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +12V #PWR01
+U 1 1 597E7A54
+P 5300 1550
+F 0 "#PWR01" H 5300 1400 50  0001 C CNN
+F 1 "+12V" H 5300 1690 50  0000 C CNN
+F 2 "" H 5300 1550 50  0000 C CNN
+F 3 "" H 5300 1550 50  0000 C CNN
+	1    5300 1550
+	1    0    0    -1  
+$EndComp
+Text Label 3900 3500 0    60   ~ 0
+/MCLR
+Text Label 3900 3200 0    60   ~ 0
+ICSPDAT
+Text Label 3900 3300 0    60   ~ 0
+ICSPCLK
+$Comp
+L GND #PWR02
+U 1 1 597E7A5D
+P 5500 4800
+F 0 "#PWR02" H 5500 4550 50  0001 C CNN
+F 1 "GND" H 5500 4650 50  0000 C CNN
+F 2 "" H 5500 4800 50  0000 C CNN
+F 3 "" H 5500 4800 50  0000 C CNN
+	1    5500 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR03
+U 1 1 597E7A63
+P 5450 2550
+F 0 "#PWR03" H 5450 2400 50  0001 C CNN
+F 1 "+5V" H 5450 2690 50  0000 C CNN
+F 2 "" H 5450 2550 50  0000 C CNN
+F 3 "" H 5450 2550 50  0000 C CNN
+	1    5450 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 597E7A69
+P 5000 2600
+F 0 "#PWR04" H 5000 2350 50  0001 C CNN
+F 1 "GND" H 5000 2450 50  0000 C CNN
+F 2 "" H 5000 2600 50  0000 C CNN
+F 3 "" H 5000 2600 50  0000 C CNN
+	1    5000 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR05
+U 1 1 597E7A6F
+P 8150 1550
+F 0 "#PWR05" H 8150 1400 50  0001 C CNN
+F 1 "+5V" H 8150 1690 50  0000 C CNN
+F 2 "" H 8150 1550 50  0000 C CNN
+F 3 "" H 8150 1550 50  0000 C CNN
+	1    8150 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR06
+U 1 1 597E7A75
+P 8150 1850
+F 0 "#PWR06" H 8150 1600 50  0001 C CNN
+F 1 "GND" H 8150 1700 50  0000 C CNN
+F 2 "" H 8150 1850 50  0000 C CNN
+F 3 "" H 8150 1850 50  0000 C CNN
+	1    8150 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X05 P1
+U 1 1 597E7A7C
+P 3050 3200
+F 0 "P1" H 3050 3550 50  0000 C CNN
+F 1 "MOLEX-22-28-6050" V 3150 3200 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Angled_1x05_Pitch2.54mm" H 3050 3200 50  0001 C CNN
+F 3 "" H 3050 3200 50  0000 C CNN
+F 4 "WM13455-ND" V 3250 3200 60  0000 C CNN "DIGIKEY"
+	1    3050 3200
+	1    0    0    -1  
+$EndComp
+Text Label 2300 3000 0    60   ~ 0
+/MCLR
+$Comp
+L +5V #PWR07
+U 1 1 597E7A84
+P 2200 3050
+F 0 "#PWR07" H 2200 2900 50  0001 C CNN
+F 1 "+5V" H 2200 3190 50  0000 C CNN
+F 2 "" H 2200 3050 50  0000 C CNN
+F 3 "" H 2200 3050 50  0000 C CNN
+	1    2200 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 597E7A8A
+P 2200 3250
+F 0 "#PWR08" H 2200 3000 50  0001 C CNN
+F 1 "GND" H 2200 3100 50  0000 C CNN
+F 2 "" H 2200 3250 50  0000 C CNN
+F 3 "" H 2200 3250 50  0000 C CNN
+	1    2200 3250
+	1    0    0    -1  
+$EndComp
+Text Label 2300 3300 0    60   ~ 0
+ICSPDAT
+Text Label 2300 3400 0    60   ~ 0
+ICSPCLK
+$Comp
+L GND #PWR09
+U 1 1 597E7A92
+P 3700 4600
+F 0 "#PWR09" H 3700 4350 50  0001 C CNN
+F 1 "GND" H 3700 4450 50  0000 C CNN
+F 2 "" H 3700 4600 50  0000 C CNN
+F 3 "" H 3700 4600 50  0000 C CNN
+	1    3700 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L PIC16F1829LIN U1
+U 1 1 597E7A99
+P 5400 3700
+F 0 "U1" H 5450 3800 60  0000 C CNN
+F 1 "PIC16F1829LIN" H 5450 3650 60  0000 C CNN
+F 2 "Housings_SSOP:SSOP-20_5.3x7.2mm_Pitch0.65mm" H 5400 3700 60  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/41673A.pdf" H 5400 3700 60  0001 C CNN
+F 4 "PIC16F1829LIN-I/SS-ND" H 6200 4600 60  0000 C CNN "DIGIKEY"
+	1    5400 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 3500 4500 3500
+Wire Wire Line
+	3900 3200 4500 3200
+Wire Wire Line
+	3900 3300 4500 3300
+Wire Wire Line
+	4500 3900 4400 3900
+Wire Wire Line
+	4400 3900 4400 4000
+Wire Wire Line
+	4400 4000 4500 4000
+Wire Wire Line
+	5300 4600 5300 4700
+Wire Wire Line
+	5500 4600 5500 4800
+Wire Wire Line
+	5300 1950 5300 2800
+Wire Wire Line
+	3400 4100 4500 4100
+Wire Wire Line
+	5400 2800 5400 2650
+Wire Wire Line
+	5400 2650 5500 2650
+Wire Wire Line
+	5500 2650 5500 2800
+Wire Wire Line
+	5450 2650 5450 2550
+Connection ~ 5450 2650
+Wire Wire Line
+	3700 4200 3700 4100
+Wire Wire Line
+	2850 3000 2300 3000
+Wire Wire Line
+	2200 3100 2850 3100
+Wire Wire Line
+	2200 3200 2850 3200
+Wire Wire Line
+	2850 3300 2300 3300
+Wire Wire Line
+	2850 3400 2300 3400
+Wire Wire Line
+	2200 3200 2200 3250
+Wire Wire Line
+	2200 3100 2200 3050
+Wire Wire Line
+	5300 4700 5500 4700
+Connection ~ 5500 4700
+Wire Wire Line
+	3700 4500 3700 4600
+Text HLabel 6300 3500 2    60   BiDi ~ 0
+RC5
+Text HLabel 6300 3600 2    60   BiDi ~ 0
+RC4
+Text HLabel 6300 3700 2    60   BiDi ~ 0
+RC3
+Text HLabel 6300 3800 2    60   BiDi ~ 0
+RC2
+Text HLabel 6300 3900 2    60   BiDi ~ 0
+RC1
+Text HLabel 6300 4000 2    60   BiDi ~ 0
+RC0
+Text HLabel 4500 3600 0    60   BiDi ~ 0
+RA4
+Text HLabel 4500 3700 0    60   BiDi ~ 0
+RA5
+Text HLabel 4500 3400 0    60   BiDi ~ 0
+RA2
+Text HLabel 3400 4100 0    60   BiDi ~ 0
+LBUS
+Connection ~ 3700 4100
+Wire Wire Line
+	5300 1550 5300 1650
+$Comp
+L GND #PWR010
+U 1 1 597E7AC6
+P 5050 6300
+F 0 "#PWR010" H 5050 6050 50  0001 C CNN
+F 1 "GND" H 5050 6150 50  0000 C CNN
+F 2 "" H 5050 6300 50  0000 C CNN
+F 3 "" H 5050 6300 50  0000 C CNN
+	1    5050 6300
+	1    0    0    -1  
+$EndComp
+Text HLabel 5150 6200 2    60   Input ~ 0
+GND
+Wire Wire Line
+	5050 6300 5050 6200
+Wire Wire Line
+	5050 6200 5150 6200
+$Comp
+L +12V #PWR011
+U 1 1 597E7ACF
+P 5050 5950
+F 0 "#PWR011" H 5050 5800 50  0001 C CNN
+F 1 "+12V" H 5050 6090 50  0000 C CNN
+F 2 "" H 5050 5950 50  0000 C CNN
+F 3 "" H 5050 5950 50  0000 C CNN
+	1    5050 5950
+	1    0    0    -1  
+$EndComp
+Text HLabel 5150 6050 2    60   Input ~ 0
++12V
+Wire Wire Line
+	5050 5950 5050 6050
+Wire Wire Line
+	5050 6050 5150 6050
+$Comp
+L +5V #PWR012
+U 1 1 597E7AD8
+P 5850 5950
+F 0 "#PWR012" H 5850 5800 50  0001 C CNN
+F 1 "+5V" H 5850 6090 50  0000 C CNN
+F 2 "" H 5850 5950 50  0000 C CNN
+F 3 "" H 5850 5950 50  0000 C CNN
+	1    5850 5950
+	1    0    0    -1  
+$EndComp
+Text HLabel 5950 6050 2    60   Output ~ 0
++5V
+Wire Wire Line
+	5850 5950 5850 6050
+Wire Wire Line
+	5850 6050 5950 6050
+Wire Wire Line
+	5000 2300 5000 2200
+Wire Wire Line
+	5000 2200 5300 2200
+Connection ~ 5300 2200
+$Comp
+L interface X2
+U 1 1 597E7CE4
+P 9650 3900
+F 0 "X2" H 9650 4600 60  0000 C CNN
+F 1 "interface" H 9650 3200 60  0000 C CNN
+F 2 "interface:interface" H 9900 4600 60  0001 C CNN
+F 3 "" H 9900 4600 60  0001 C CNN
+	1    9650 3900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L interface X1
+U 1 1 597E7E88
+P 7500 3900
+F 0 "X1" H 7500 4600 60  0000 C CNN
+F 1 "interface" H 7500 3200 60  0000 C CNN
+F 2 "interface:interface" H 7750 4600 60  0001 C CNN
+F 3 "" H 7750 4600 60  0001 C CNN
+	1    7500 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 3350 9400 3350
+Wire Wire Line
+	9400 3450 7750 3450
+Wire Wire Line
+	7750 4450 9400 4450
+NoConn ~ 7750 3550
+NoConn ~ 7750 3650
+NoConn ~ 7750 3750
+NoConn ~ 7750 3850
+NoConn ~ 7750 3950
+NoConn ~ 7750 4050
+NoConn ~ 7750 4150
+NoConn ~ 7750 4250
+Text Label 9400 3550 2    60   ~ 0
+RC5
+Text Label 9400 3650 2    60   ~ 0
+RC4
+Text Label 9400 3750 2    60   ~ 0
+RC3
+Text Label 9400 3850 2    60   ~ 0
+RC2
+Text Label 9400 3950 2    60   ~ 0
+RC1
+Text Label 9400 4050 2    60   ~ 0
+RC0
+Text Label 9400 4150 2    60   ~ 0
+RA4
+Text Label 9400 4250 2    60   ~ 0
+RA5
+$Comp
+L +12V #PWR013
+U 1 1 597E8210
+P 8450 3300
+F 0 "#PWR013" H 8450 3150 50  0001 C CNN
+F 1 "+12V" H 8450 3440 50  0000 C CNN
+F 2 "" H 8450 3300 50  0000 C CNN
+F 3 "" H 8450 3300 50  0000 C CNN
+	1    8450 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 3350 8450 3300
+Connection ~ 8450 3350
+$Comp
+L +5V #PWR014
+U 1 1 597E8277
+P 8900 4300
+F 0 "#PWR014" H 8900 4150 50  0001 C CNN
+F 1 "+5V" H 8900 4440 50  0000 C CNN
+F 2 "" H 8900 4300 50  0000 C CNN
+F 3 "" H 8900 4300 50  0000 C CNN
+	1    8900 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 4350 9400 4350
+Wire Wire Line
+	8900 4350 8900 4300
+Text Label 8300 3450 0    60   ~ 0
+LBUS
+Connection ~ 8900 4350
+$Comp
+L GND #PWR015
+U 1 1 597E873F
+P 8900 4550
+F 0 "#PWR015" H 8900 4300 50  0001 C CNN
+F 1 "GND" H 8900 4400 50  0000 C CNN
+F 2 "" H 8900 4550 50  0000 C CNN
+F 3 "" H 8900 4550 50  0000 C CNN
+	1    8900 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 4550 8900 4450
+Connection ~ 8900 4450
+$EndSCHEMATC
