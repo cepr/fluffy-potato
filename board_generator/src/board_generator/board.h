@@ -8,12 +8,14 @@ class Board
 {
 public:
     Board(const char* name);
+    ~Board();
     void add_module(Module* module);
     void save();
 
 protected:
     std::string name;
-
+    gerbv_image_t *images[6];
+    double x;
 };
 
 #endif // BOARD_H
