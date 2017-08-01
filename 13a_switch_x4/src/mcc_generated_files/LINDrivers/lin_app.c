@@ -1,5 +1,5 @@
 /**
-  LIN Slave Application
+  LIN Master Application
 	
   Company:
     Microchip Technology Inc.
@@ -8,7 +8,7 @@
     lin_app.c
 
   Summary:
-    LIN Slave Application
+    LIN Master Application
 
   Description:
     This source file provides the interface between the user and 
@@ -38,12 +38,12 @@
     TERMS.
 */
 
-#include "lin_app.h"
 #include "../mcc.h"
+#include "lin_app.h"
 
-void LIN_Slave_Initialize(void){
+void LIN_Master_Initialize(void){
 
-    LIN_init(TABLE_SIZE, scheduleTable, processLIN);
+    LIN_init(TABLE_SIZE, &scheduleTable, processLIN);
     
 }
 
@@ -54,37 +54,19 @@ void processLIN(void){
     cmd = LIN_getPacket(tempRxData);
     switch(cmd){
         case LEFT_TURN_SIGNAL_SWITCH:
-            if (tempRxData[0]) {
-                CMD_1_SetHigh();
-            } else {
-                CMD_1_SetLow();
-            }
             break;
         case RIGHT_TURN_SIGNAL_SWITCH:
-            if (tempRxData[0]) {
-                CMD_2_SetHigh();
-            } else {
-                CMD_2_SetLow();
-            }
             break;
         case HEADLIGHT_DIMMER_SWITCH:
             if (tempRxData[0]) {
-                CMD_3_SetHigh();
+                D8_SetHigh();
             } else {
-                CMD_3_SetLow();
+                D8_SetLow();
             }
             break;
         case WINDSHIELD_WIPERS_SWITCH:
-            if (tempRxData[0]) {
-                CMD_4_SetHigh();
-            } else {
-                CMD_4_SetLow();
-            }
             break;
         default:
             break;
     }
-
-    // Refresh the watchdog
-    //asm("clrwdt");
 }

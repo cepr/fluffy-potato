@@ -74,7 +74,7 @@ void SYSTEM_Initialize(void)
     WDT_Initialize();
     TMR1_Initialize();
     EUSART_Initialize();
-    LIN_Slave_Initialize();
+    LIN_Master_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)

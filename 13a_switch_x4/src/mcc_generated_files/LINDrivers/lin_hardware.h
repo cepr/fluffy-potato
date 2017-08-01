@@ -65,5 +65,4 @@
 #define LIN_StopTimer           TMR1_StopTimer
 #define LIN_SetInterruptHandler TMR1_SetInterruptHandler
 
-
 #endif	/* HARDWARE_H */

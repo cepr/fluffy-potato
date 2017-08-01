@@ -1,17 +1,17 @@
 /**
-  LIN Slave Driver
+  LIN Master Driver
 	
   Company:
     Microchip Technology Inc.
 
   File Name:
-    lin_slave.h
+    lin_master.h
 
   Summary:
-    LIN Slave Driver
+    LIN Master Driver
 
   Description:
-    This header file provides the driver for LIN slave nodes
+    This header file provides the driver for LIN master nodes
 
  */
 
@@ -44,47 +44,46 @@
 #include <string.h>
 
 typedef enum {
-    LIN_RX_IDLE,
-    LIN_RX_BREAK,
-    LIN_RX_SYNC,
-    LIN_RX_PID,
-    LIN_RX_DATA,
-    LIN_RX_CHECKSUM,
-    LIN_RX_TX_DATA,
-    LIN_RX_RDY,
-    LIN_RX_ERROR,
-    LIN_RX_WAIT
-}lin_rx_state_t;
+    LIN_IDLE,
+    LIN_TX_IP,
+    LIN_RX_IP,
+    LIN_RX_RDY
+}lin_state_t;
 
 typedef enum {
     TRANSMIT,
-    RECEIVE,
-    ERROR
+    RECEIVE
 }lin_packet_type_t;
 
-typedef enum {
-    CMD,
-    TYPE,
-    LENGTH
-}lin_sch_param_t;
+typedef struct {
+    uint8_t cmd;
+    lin_packet_type_t type;
+    uint8_t length;
+    uint8_t timeout;
+    uint8_t period;
+    uint8_t* data;
+}lin_cmd_packet_t;
 
 typedef union {
     struct {
         uint8_t PID;
         uint8_t data[8];
         uint8_t checksum;
-        lin_packet_type_t type;
-        int8_t length;
+        uint8_t length;
     };
-    uint8_t rawPacket[13];
+    uint8_t rawPacket[11];
 }lin_packet_t;
 
-typedef struct {
-    uint8_t cmd;
-    lin_packet_type_t type;
-    uint8_t length;
-    uint8_t* data;
-}lin_rx_cmd_t;
+typedef union {
+    struct {
+        uint8_t cmd;
+        uint8_t rxLength;
+        uint8_t data[8];
+        uint8_t checksum;
+        uint8_t timeout;
+    };
+    uint8_t rawPacket[12];
+}lin_rxpacket_t;
 
 typedef union {
     struct {
@@ -101,19 +100,18 @@ typedef union {
 }lin_pid_t;
 
 //Set up schedule table timings
-void LIN_init(uint8_t tableLength, const lin_rx_cmd_t* const command, void (*processData));
 
-void LIN_queuePacket(uint8_t cmd);
+void LIN_init(uint8_t tableLength, const lin_cmd_packet_t* const table, void (*processData));
 
-void LIN_sendPacket(uint8_t length, uint8_t pid, uint8_t* data);
+void LIN_queuePacket(uint8_t cmd, uint8_t* data);
+
+bool LIN_receivePacket(void);
+
+void LIN_sendPacket(void);
 
 uint8_t LIN_getPacket(uint8_t* data);
 
-uint8_t LIN_getFromTable(uint8_t cmd, lin_sch_param_t param);
-
-lin_rx_state_t LIN_handler(void);
-
-bool LIN_checkPID(uint8_t pid);
+lin_state_t LIN_handler(void);
 
 uint8_t LIN_getChecksum(uint8_t length, uint8_t pid, uint8_t* data);
 
@@ -128,11 +126,18 @@ void LIN_setTimerHandler(void);
 
 void LIN_stopTimer(void);
 
+void LIN_startPeriod(void);
+
+void LIN_stopPeriod(void);
+
 void LIN_enableRx(void);
 
 void LIN_disableRx(void);
 
-bool LIN_breakCheck(void);
+void LIN_sendBreak(void);
+
+void LIN_sendPeriodicTx(void);
+
 
 #endif	/* LIN_H */
 

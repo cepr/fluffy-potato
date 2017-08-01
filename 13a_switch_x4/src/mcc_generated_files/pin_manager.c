@@ -55,14 +55,14 @@ void PIN_MANAGER_Initialize(void)
     */   
     LATA = 0x00;    
     LATB = 0x40;    
-    LATC = 0x00;    
+    LATC = 0x01;    
 
     /**
     TRISx registers
     */    
-    TRISA = 0x2F;
-    TRISB = 0xB0;
-    TRISC = 0xC7;
+    TRISA = 0x3F;
+    TRISB = 0xF0;
+    TRISC = 0xFE;
 
     /**
     ANSELx registers
@@ -74,9 +74,9 @@ void PIN_MANAGER_Initialize(void)
     /**
     WPUx registers
     */ 
-    WPUB = 0xB0;
-    WPUA = 0x2F;
-    WPUC = 0xC7;
+    WPUB = 0xF0;
+    WPUA = 0x3F;
+    WPUC = 0xFE;
     OPTION_REGbits.nWPUEN = 0;
 
     
@@ -90,6 +90,11 @@ void PIN_MANAGER_Initialize(void)
    
     
 }       
+
+void PIN_MANAGER_IOC(void)
+{   
+
+}
 
 /**
  End of File

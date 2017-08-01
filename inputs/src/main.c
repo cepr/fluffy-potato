@@ -61,26 +61,11 @@ void main(void)
 
     while (1)
     {
-        // Read the module dip-switch configuration
-        uint8_t module = A0_GetValue() | 
-            (A1_GetValue() << 1) |
-            (A2_GetValue() << 2) |
-            (A3_GetValue() << 3);
-
         //if (!nFAULT_GetValue()) {
         //    while(true);
         //}
 
-        LEFT_TURN_SIGNAL_SWITCH_Data[0] = IN0_GetValue();
-        RIGHT_TURN_SIGNAL_SWITCH_Data[0] = IN1_GetValue();
-        HEADLIGHT_DIMMER_SWITCH_Data[0] = IN2_GetValue();
-        if (IN4_GetValue()) {
-            WINDSHIELD_WIPERS_SWITCH_Data[0] = 255;
-        } else if (IN3_GetValue()) {
-            WINDSHIELD_WIPERS_SWITCH_Data[0] = 127;
-        } else {
-            WINDSHIELD_WIPERS_SWITCH_Data[0] = 0;
-        }
+        HEADLIGHT_DIMMER_SWITCH_Data[0] = D8_GetValue();
 
         LIN_handler();
     }

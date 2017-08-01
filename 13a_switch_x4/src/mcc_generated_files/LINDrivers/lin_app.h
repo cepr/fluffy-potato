@@ -1,5 +1,5 @@
 /**
-  LIN Slave Application
+  LIN Master Application
 	
   Company:
     Microchip Technology Inc.
@@ -8,7 +8,7 @@
     lin_app.h
 
   Summary:
-    LIN Slave Application
+    LIN Master Application
 
   Description:
     This header file provides the interface between the user and 
@@ -38,11 +38,11 @@
     TERMS.
 */
 
+#include "lin_master.h"
 
 #ifndef LIN_APP_H
 #define	LIN_APP_H
 
-#include "lin_slave.h"
 
 typedef enum {
     LEFT_TURN_SIGNAL_SWITCH,
@@ -56,19 +56,18 @@ uint8_t RIGHT_TURN_SIGNAL_SWITCH_Data[1];
 uint8_t HEADLIGHT_DIMMER_SWITCH_Data[1];
 uint8_t WINDSHIELD_WIPERS_SWITCH_Data[1];
 
-const lin_rx_cmd_t scheduleTable[] = {
-    //Command, Type, TX/RX Length, Data Address
-    {LEFT_TURN_SIGNAL_SWITCH, RECEIVE, 1, LEFT_TURN_SIGNAL_SWITCH_Data },
-    {RIGHT_TURN_SIGNAL_SWITCH, RECEIVE, 1, RIGHT_TURN_SIGNAL_SWITCH_Data },
-    {HEADLIGHT_DIMMER_SWITCH, RECEIVE, 1, HEADLIGHT_DIMMER_SWITCH_Data },
-    {WINDSHIELD_WIPERS_SWITCH, RECEIVE, 1, WINDSHIELD_WIPERS_SWITCH_Data }
+const lin_cmd_packet_t scheduleTable[] = {
+    //Command, Type, TX/RX Length, Timeout, Period, Data Address
+    {LEFT_TURN_SIGNAL_SWITCH, RECEIVE, 1, 0, 100, &LEFT_TURN_SIGNAL_SWITCH_Data },
+    {RIGHT_TURN_SIGNAL_SWITCH, RECEIVE, 1, 0, 100, &RIGHT_TURN_SIGNAL_SWITCH_Data },
+    {HEADLIGHT_DIMMER_SWITCH, RECEIVE, 1, 0, 100, &HEADLIGHT_DIMMER_SWITCH_Data },
+    {WINDSHIELD_WIPERS_SWITCH, RECEIVE, 1, 0, 100, &WINDSHIELD_WIPERS_SWITCH_Data }
 };
-#define TABLE_SIZE  (sizeof(scheduleTable)/sizeof(lin_rx_cmd_t))
+#define TABLE_SIZE  (sizeof(scheduleTable)/sizeof(lin_cmd_packet_t))
 
-void LIN_Slave_Initialize(void);
+void LIN_Master_Initialize(void);
 
 void processLIN(void);
-
 
 #endif	/* LIN_APP_H */
 
