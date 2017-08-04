@@ -5,7 +5,7 @@
     (no_connects 0)
     (area 114.072599 91.507362 155.802401 127.160001)
     (thickness 1.6)
-    (drawings 6)
+    (drawings 4)
     (tracks 119)
     (zones 0)
     (modules 8)
@@ -64,7 +64,7 @@
     (aux_axis_origin 126.365 120.65)
     (visible_elements FFFFEF7F)
     (pcbplotparams
-      (layerselection 0x000f0_80000001)
+      (layerselection 0x010f0_80000001)
       (usegerberextensions false)
       (excludeedgelayer true)
       (linewidth 0.100000)
@@ -601,9 +601,7 @@
     (arrow2b (pts (xy 146.05 102.235) (xy 146.636421 103.361504)))
   )
   (gr_line (start 126.365 122.555) (end 143.51 122.555) (layer Edge.Cuts) (width 0.15))
-  (gr_line (start 126.365 102.235) (end 126.365 122.555) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 143.51 102.235) (end 126.365 102.235) (layer Edge.Cuts) (width 0.15))
-  (gr_line (start 143.51 122.555) (end 143.51 102.235) (layer Edge.Cuts) (width 0.15))
 
   (segment (start 128.27 117.855) (end 130.84241 117.855) (width 0.3048) (layer F.Cu) (net 1))
   (segment (start 130.84241 117.855) (end 131.415151 118.427741) (width 0.3048) (layer F.Cu) (net 1))

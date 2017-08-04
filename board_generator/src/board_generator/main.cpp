@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    cout << "Board generator" << endl;
 
     /* Modules */
     Module input_pull_up("input-pull-up", 0.450);

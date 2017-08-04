@@ -14,7 +14,8 @@ public:
 
 protected:
     std::string name;
-    gerbv_image_t *images[6];
+    gerbv_image_t *images[7];
+    gerbv_image_t *drill_file;
     double x;
 };
 

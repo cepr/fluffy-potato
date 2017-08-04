@@ -9,6 +9,7 @@ class Module
 public:
     Module(const char* name, double width);
     gerbv_image_t *get_layer(int index);
+    gerbv_image_t *get_drill_file();
     double get_width();
 
 protected:
