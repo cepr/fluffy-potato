@@ -1,5 +1,15 @@
 #include "board.h"
 
+const char* EXTENSIONS[] = {
+    "GTO", // Top Silkscreen
+    "GTS", // Top soldermask
+    "GTL", // Top layer
+    "GBL", // Bottom layer
+    "GBS", // Bottom soldermask
+    "GBO", // Bottom silkscreen
+    "GKO", // Board outline
+};
+
 Board::Board(const char *name) :
     name(name), x(0.)
 {
