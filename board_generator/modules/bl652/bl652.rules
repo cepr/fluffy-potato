@@ -1,0 +1,94 @@
+
+(rules PCB bl652
+  (snap_angle 
+    none
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 1)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.6)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.6)
+    )
+  )
+  (rule
+    (width 508.0)
+    (clear 178.0)
+    (clear 254.0 (type smd_to_turn_gap))
+    (clear 44.6 (type smd_smd))
+  )
+  (padstack "Via[0-1]_762:381_um"
+    (shape
+      (circle F.Cu 762.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 762.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_762:381_um" "Via[0-1]_762:381_um" default
+  )
+  (via 
+    "Via[0-1]_762:381_um-kicad_default" "Via[0-1]_762:381_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_762:381_um-IOs" "Via[0-1]_762:381_um" IOs
+  )
+  (via_rule
+    default "Via[0-1]_762:381_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_762:381_um-kicad_default"
+  )
+  (via_rule
+    IOs "Via[0-1]_762:381_um-IOs"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 508.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    +3V3 GND +12V /LIN /FAULT "/VBAT_RATIO" /RXD /CS/LWAKE
+    /TXD "Net-(J1-Pad1)" "Net-(J2-Pad1)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 508.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class IOs
+    /IO0 /IO1 /IO2 /IO3 /IO4 /IO6 /IO5 /IO7
+    (clearance_class IOs)
+    (via_rule IOs)
+    (rule
+      (width 304.8)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
