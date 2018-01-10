@@ -6,7 +6,20 @@ jobs:
     steps:
       - checkout
       - run: /opt/microchip/mplabx/v4.05/mplab_ide/bin/prjMakefilesGenerator.sh inputs/src
-      - run: cd inputs/src && make
+      - run: |
+          cd inputs/src
+          make
       - store_artifacts:
           path: inputs/src/dist
+      - run: |
+          apt-get build-dep -y gerbv
+          apt-get source -y gerbv
+          cd gerbv-2.6.0
+          dpkg-buildpackage
+          make install
+      - run: |
+          apt-get install -y qt5-default
+          cd board_generator/src/board_generator
+          qmake
+          make
 
