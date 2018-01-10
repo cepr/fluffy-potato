@@ -5,5 +5,8 @@ jobs:
       - image: cepr/microchip-xc8-docker:latest
     steps:
       - checkout
+      - run: /opt/microchip/mplabx/v4.05/mplab_ide/bin/prjMakefilesGenerator.sh inputs/src
       - run: cd inputs/src && make
+      - store_artifacts:
+        - path: inputs/src/dist
 
