@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: cepr/microchip-xc8-docker:latest
+    steps:
+      - checkout
+      - run: cd inputs/src && make
+
