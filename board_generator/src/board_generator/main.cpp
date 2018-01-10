@@ -71,7 +71,7 @@ int main()
     {
         Board board("engine");
         board.add_module(&edge);
-        board_add_module(&input);
+        board.add_module(&input);
         board.add_module(&pic16f1829lin);
         board.add_module(&switch_low_side);  // HEATER_AIR_BLOWER
         board.add_module(&switch_low_side);  // COLD_STARTING_VALVE
@@ -80,7 +80,7 @@ int main()
         board.add_module(&switch_high_side); // FUEL_PUMP
         board.add_module(&analog_input);     // CYLINDER_HEAD_TEMPERATURE
         board.add_module(&analog_input);     // FUEL_GAUGE (resistance measurement)
-        board_add_module(&input);
+        board.add_module(&input);
         board.add_module(&edge);
     }
 
