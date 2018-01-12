@@ -18,6 +18,7 @@ int main()
     Module pic16f1829lin("pic16f1829lin", 0.675);
     Module bl652("bl652", 0.9);
     Module switch_low_side("switch-lowside-6a", 0.450);
+    //Module switch_high_size("switch-highside", TODO);
 
     /* Boards */
     {
@@ -67,7 +68,7 @@ int main()
         board.add_module(&edge);
         board.save();
     }
-
+#if 0
     {
         Board board("engine");
         board.add_module(&edge);
@@ -83,7 +84,7 @@ int main()
         board.add_module(&input);
         board.add_module(&edge);
     }
-
+#endif
     return 0;
 }
 
