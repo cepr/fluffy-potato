@@ -17,8 +17,8 @@ int main()
     Module input_pull_up("input-pull-up", 0.450);
     Module pic16f1829lin("pic16f1829lin", 0.675);
     Module bl652("bl652", 0.9);
-    Module switch_low_side("switch-lowside-6a", 0.450);
-    //Module switch_high_size("switch-highside", TODO);
+    Module switch_lowside_6a("switch-lowside-6a", 0.450);
+    Module switch_highside_10a("switch-highside-10a", 0.9);
 
     /* Boards */
     {
@@ -44,10 +44,10 @@ int main()
         board.add_module(&edge);
         board.add_module(&input);
         board.add_module(&pic16f1829lin);
-        board.add_module(&switch_low_side); // PARKING_LIGHT
-        board.add_module(&switch_low_side); // TURN_LIGHT
-        board.add_module(&switch_low_side); // HIGH_BEAM
-        board.add_module(&switch_low_side); // LOW_BEAM
+        board.add_module(&switch_lowside_6a); // PARKING_LIGHT
+        board.add_module(&switch_lowside_6a); // TURN_LIGHT
+        board.add_module(&switch_lowside_6a); // HIGH_BEAM
+        board.add_module(&switch_lowside_6a); // LOW_BEAM
         board.add_module(&input);
         board.add_module(&edge);
         board.save();
@@ -58,33 +58,34 @@ int main()
         board.add_module(&edge);
         board.add_module(&input);
         board.add_module(&pic16f1829lin);
-        board.add_module(&switch_low_side); // REAR_SIDE_MARKER_LIGHT
-        board.add_module(&switch_low_side); // REAR_TURN_LIGHT
-        board.add_module(&switch_low_side); // REAR_TAIL_LIGHT
-        board.add_module(&switch_low_side); // REAR_BREAK_LIGHT
-        board.add_module(&switch_low_side); // REAR_BACK_UP_LIGHT
-        board.add_module(&switch_low_side); // LICENSE_PLATE_LIGHT
+        board.add_module(&switch_lowside_6a); // REAR_SIDE_MARKER_LIGHT
+        board.add_module(&switch_lowside_6a); // REAR_TURN_LIGHT
+        board.add_module(&switch_lowside_6a); // REAR_TAIL_LIGHT
+        board.add_module(&switch_lowside_6a); // REAR_BREAK_LIGHT
+        board.add_module(&switch_lowside_6a); // REAR_BACK_UP_LIGHT
+        board.add_module(&switch_lowside_6a); // LICENSE_PLATE_LIGHT
         board.add_module(&input);
         board.add_module(&edge);
         board.save();
     }
-#if 0
+
     {
         Board board("engine");
         board.add_module(&edge);
         board.add_module(&input);
         board.add_module(&pic16f1829lin);
-        board.add_module(&switch_low_side);  // HEATER_AIR_BLOWER
-        board.add_module(&switch_low_side);  // COLD_STARTING_VALVE
-        board.add_module(&switch_high_side); // IGNITION
-        board.add_module(&switch_high_side); // ECU
-        board.add_module(&switch_high_side); // FUEL_PUMP
-        board.add_module(&analog_input);     // CYLINDER_HEAD_TEMPERATURE
-        board.add_module(&analog_input);     // FUEL_GAUGE (resistance measurement)
+        board.add_module(&switch_lowside_6a);   // HEATER_AIR_BLOWER
+        board.add_module(&switch_lowside_6a);   // COLD_STARTING_VALVE
+        board.add_module(&switch_highside_10a); // IGNITION (5A)
+        board.add_module(&switch_highside_10a); // ECU
+        board.add_module(&switch_highside_10a); // FUEL_PUMP
+        //board.add_module(&analog_input);        // CYLINDER_HEAD_TEMPERATURE
+        //board.add_module(&analog_input);        // FUEL_GAUGE (resistance measurement)
         board.add_module(&input);
         board.add_module(&edge);
+        board.save();
     }
-#endif
+
     return 0;
 }
 

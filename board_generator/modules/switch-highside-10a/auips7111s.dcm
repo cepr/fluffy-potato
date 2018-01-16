@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AUIPS7111S
+D CURRENT SENSE HIGH SIDE SWITCH
+F auips7111s.pdf
+$ENDCMP
+#
+#End Doc Library
