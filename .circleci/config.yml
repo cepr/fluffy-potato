@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cepr/microchip-xc8-docker:latest
+      - image: cepr/fluffy-potato
     steps:
       - checkout
       - run: /opt/microchip/mplabx/v4.05/mplab_ide/bin/prjMakefilesGenerator.sh inputs/src
@@ -12,13 +12,6 @@ jobs:
       - store_artifacts:
           path: inputs/src/dist
       - run: |
-          apt-get build-dep -y gerbv
-          apt-get source -y gerbv
-          cd gerbv-2.6.0
-          dpkg-buildpackage
-          make install
-      - run: |
-          apt-get install -y qt5-default
           cd board_generator/src/board_generator
           qmake
           make
