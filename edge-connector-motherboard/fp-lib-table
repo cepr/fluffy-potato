@@ -1,4 +1,0 @@
-(fp_lib_table
-  (lib (name edge-connector-motherboard)(type KiCad)(uri "$(KIPRJMOD)/edge-connector-motherboard.pretty")(options "")(descr ""))
-  (lib (name fluffy-potato)(type KiCad)(uri /home/cpriscal/projects/fluffy-potato/common/kicad/fluffy-potato.pretty)(options "")(descr ""))
-)

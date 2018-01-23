@@ -1,0 +1,11 @@
+Makefile-genesis.properties
+Makefile-variables.mk
+private/
+.vscode/
+Makefile
+Makefile-default.mk
+Makefile-impl.mk
+Makefile-local-default.mk
+Package-default.bash
+build/
+dist/

@@ -5,12 +5,26 @@ jobs:
       - image: cepr/fluffy-potato
     steps:
       - checkout
-      - run: /opt/microchip/mplabx/v4.05/mplab_ide/bin/prjMakefilesGenerator.sh inputs/src
       - run: |
-          cd inputs/src
+          cd firmware
+          ./configure.py
           make
       - store_artifacts:
-          path: inputs/src/dist
+          path: firmware/engine/dist/default/production/engine.production.hex
+      - store_artifacts:
+          path: firmware/horn/dist/default/production/horn.production.hex
+      - store_artifacts:
+          path: firmware/rear_lights/dist/default/production/rear_lights.production.hex
+      - store_artifacts:
+          path: firmware/front_lights/dist/default/production/front_lights.production.hex
+      - store_artifacts:
+          path: firmware/rear_window_defogger/dist/default/production/rear_window_defogger.production.hex
+      - store_artifacts:
+          path: firmware/windshield/dist/default/production/windshield.production.hex
+      - store_artifacts:
+          path: firmware/sensors/dist/default/production/sensors.production.hex
+      - store_artifacts:
+          path: firmware/steering_wheel/dist/default/production/steering_wheel.production.hex
       - run: |
           cd board_generator/src/board_generator
           qmake

@@ -22,7 +22,7 @@ int main()
 
     /* Boards */
     {
-        Board board("comodo");
+        Board board("steering_wheel");
         board.add_module(&edge);
         board.add_module(&input);
         board.add_module(&bl652);
@@ -33,7 +33,7 @@ int main()
         board.add_module(&input_pull_up); // TURN_SIGNAL_LEFT
         board.add_module(&input_pull_up); // TURN_SIGNAL_RIGHT
         board.add_module(&input_pull_up); // HEADLIGHT_DIMMER
-        board.add_module(&input_pull_up); // HORN
+        board.add_module(&input_pull_up); // HORN_BUTTON
         board.add_module(&input);
         board.add_module(&edge);
         board.save();
@@ -79,13 +79,56 @@ int main()
         board.add_module(&switch_highside_10a); // IGNITION (5A)
         board.add_module(&switch_highside_10a); // ECU
         board.add_module(&switch_highside_10a); // FUEL_PUMP
-        //board.add_module(&analog_input);        // CYLINDER_HEAD_TEMPERATURE
-        //board.add_module(&analog_input);        // FUEL_GAUGE (resistance measurement)
         board.add_module(&input);
         board.add_module(&edge);
         board.save();
     }
 
+    {
+        Board board("horn");
+        board.add_module(&edge);
+        board.add_module(&input);
+        board.add_module(&switch_lowside_6a); // HORN
+	board.add_module(&input_pull_up);     // BREAK_SWITCH_1
+	board.add_module(&input_pull_up);     // BREAK_SWITCH_2
+        board.add_module(&input);
+        board.add_module(&edge);
+    }
+
+    {
+        Board board("windshield");
+        board.add_module(&edge);
+        board.add_module(&input);
+        board.add_module(&switch_highside_10a); // WIPERS
+        board.add_module(&switch_lowside_6a);   // WASHER
+        board.add_module(&switch_highside_10a); // AUDIO
+        board.add_module(&input);
+        board.add_module(&edge);
+    }
+
+    {
+        Board board("rear_window_defogger");
+        board.add_module(&edge);
+        board.add_module(&input);
+        board.add_module(&switch_lowside_6a); // REAR_WINDOW_DEFOGGER ( TODO check current)
+        board.add_module(&switch_lowside_6a); // REAR_BREAK_LIGHT
+        board.add_module(&input);
+        board.add_module(&edge);
+    }
+
+#if 0
+    {
+        Board board("sensors");
+        board.add_module(&edge);
+        board.add_module(&input);
+        board.add_module(&pic16f1829lin);
+        board.add_module(&analog_input);        // CYLINDER_HEAD_TEMPERATURE
+        board.add_module(&analog_input);        // FUEL_GAUGE (resistance measurement)
+        board.add_module(&input);
+        board.add_module(&edge);
+        board.save();
+    }
+#endif
     return 0;
 }
 
