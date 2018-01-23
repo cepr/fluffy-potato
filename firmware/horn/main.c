@@ -61,6 +61,27 @@ void main(void)
 
     while (1)
     {
+        // D0. HORN
+        if (HORN_Data[0]) {
+            D0_SetHigh();
+        } else {
+            D0_SetLow();
+        }
+
+        // D1. BREAK_SWITCH_1
+        if (D1_GetValue() == 0) {
+            BREAK_SWITCHES_Data[0] |= 1;
+        } else {
+            BREAK_SWITCHES_Data[0] &= ~1;
+        }
+
+        // D2. BREAK_SWITCH_2
+        if (D2_GetValue() == 0) {
+            BREAK_SWITCHES_Data[0] |= 2;
+        } else {
+            BREAK_SWITCHES_Data[0] &= ~2;
+        }
+
         LIN_handler();
     }
 }

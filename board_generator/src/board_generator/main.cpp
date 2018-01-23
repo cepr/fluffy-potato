@@ -89,8 +89,8 @@ int main()
         board.add_module(&edge);
         board.add_module(&input);
         board.add_module(&switch_lowside_6a); // HORN
-	board.add_module(&input_pull_up);     // BREAK_SWITCH_1
-	board.add_module(&input_pull_up);     // BREAK_SWITCH_2
+        board.add_module(&input_pull_up);     // BREAK_SWITCH_1
+        board.add_module(&input_pull_up);     // BREAK_SWITCH_2
         board.add_module(&input);
         board.add_module(&edge);
     }
