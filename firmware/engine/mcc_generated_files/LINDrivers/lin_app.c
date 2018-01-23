@@ -42,7 +42,7 @@
 
 void LIN_Slave_Initialize(void){
 
-    LIN_init(TABLE_SIZE, &scheduleTable, processLIN);
+    LIN_init(TABLE_SIZE, scheduleTable, processLIN);
     
 }
 

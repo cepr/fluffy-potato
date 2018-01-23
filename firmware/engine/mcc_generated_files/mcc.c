@@ -72,6 +72,7 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     WDT_Initialize();
+    ADC_Initialize();
     TMR1_Initialize();
     EUSART_Initialize();
     LIN_Slave_Initialize();
@@ -83,8 +84,6 @@ void OSCILLATOR_Initialize(void)
     OSCCON = 0x78;
     // TUN 0; 
     OSCTUNE = 0x00;
-    // Set the secondary oscillator
-    
 }
 
 void WDT_Initialize(void)

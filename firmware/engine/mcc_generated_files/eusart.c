@@ -58,14 +58,14 @@
   Section: Global Variables
 */
 
-static uint8_t eusartTxHead = 0;
-static uint8_t eusartTxTail = 0;
-static uint8_t eusartTxBuffer[EUSART_TX_BUFFER_SIZE];
+volatile uint8_t eusartTxHead = 0;
+volatile uint8_t eusartTxTail = 0;
+volatile uint8_t eusartTxBuffer[EUSART_TX_BUFFER_SIZE];
 volatile uint8_t eusartTxBufferRemaining;
 
-static uint8_t eusartRxHead = 0;
-static uint8_t eusartRxTail = 0;
-static uint8_t eusartRxBuffer[EUSART_RX_BUFFER_SIZE];
+volatile uint8_t eusartRxHead = 0;
+volatile uint8_t eusartRxTail = 0;
+volatile uint8_t eusartRxBuffer[EUSART_RX_BUFFER_SIZE];
 volatile uint8_t eusartRxCount;
 
 /**
@@ -80,8 +80,8 @@ void EUSART_Initialize(void)
 
     // Set the EUSART module to the options selected in the user interface.
 
-    // ABDOVF no_overflow; SCKP Non-Inverted; BRG16 16bit_generator; WUE enabled; ABDEN disabled; 
-    BAUDCON = 0x0A;
+    // ABDOVF no_overflow; SCKP Non-Inverted; BRG16 16bit_generator; WUE disabled; ABDEN disabled; 
+    BAUDCON = 0x08;
 
     // SPEN enabled; RX9 8-bit; CREN enabled; ADDEN disabled; SREN disabled; 
     RCSTA = 0x90;

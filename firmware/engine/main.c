@@ -45,6 +45,13 @@
 
 #include "mcc_generated_files/mcc.h"
 
+static adc_result_t temperature = 0;
+static void TEMP_handler();
+
+#define TEMPERATURE_REFRESH_INTERVAL_MS 5000
+// TODO calibrate this value
+#define COLD_START_VALVE_TEMPERATURE 20000
+
 /*
                          Main application
  */
@@ -61,9 +68,82 @@ void main(void)
 
     while (1)
     {
+        // D0. HEATER_AIR_BLOWER
+        if (HEATER_AIR_BLOWER_Data[0]) {
+            D0_SetHigh();
+        } else {
+            D0_SetLow();
+        }
+
+        // D1. COLD_STARTING_VALVE
+        // The cold starting valve activates when below 67 deg F and when the
+        // starter is running. It also stops after 10 seconds to avoid flooding
+        // the engine.
+        // TODO add a 10 seconds timeout.
+        if (temperature && // temperature is zero until the first reading
+            temperature < COLD_START_VALVE_TEMPERATURE &&
+            IGNITION_STARTER_Data[0] == 2) {
+            D1_SetHigh();
+        } else {
+            D1_SetLow();
+        }
+
+        // D2. IGNITION (5A)
+        // D3. ECU
+        // D4. FUEL_PUMP
+        if (IGNITION_STARTER_Data[0] >= 1) {
+            D2_SetHigh();
+            D3_SetHigh();
+            D4_SetHigh();
+        } else {
+            D2_SetLow();
+            D3_SetLow();
+            D4_SetLow();
+        }
+
         LIN_handler();
+
+        TEMP_handler();
     }
 }
+
+static void TEMP_handler() {
+    static int temperature_state = 0;
+    static uint16_t time_prev_state = 0;
+
+    if (temperature_state == 0) {
+        // It's time to do a new temperature measurement
+        // Enable the temperature sensor
+        ADC_SelectChannel(channel_Temp);
+        TSEN = 1;
+        temperature_state++;
+        time_prev_state = TMR1_ReadTimer();
+    } else if (temperature_state == 1) {
+        // We need to wait at least 200us before starting the conversion
+        if (TMR1_ReadTimer() - time_prev_state >= 1) {
+            // 1ms has elapsed, start the conversion
+            ADC_StartConversion();
+            temperature_state++;
+        }
+    } else if (temperature_state == 2) {
+        // Conversion is in progress, wait for it to complete
+        if (ADC_IsConversionDone()) {
+            // Done, store the result
+            temperature = ADC_GetConversionResult();
+            // Disable the temperature sensor
+            TSEN = 0;
+            // Record the time to know when to start the next conversion
+            time_prev_state = TMR1_ReadTimer();
+            temperature_state++;
+        }
+    } else if (temperature_state == 3) {
+        // Idle
+        if (TMR1_ReadTimer() - time_prev_state >= TEMPERATURE_REFRESH_INTERVAL_MS) {
+            temperature_state = 0;
+        }
+    }
+}
+
 /**
  End of File
 */

@@ -104,8 +104,7 @@ lin_rx_state_t LIN_handler(void){
                 //Start Timer
                 LIN_startTimer(READ_TIMEOUT); 
                 LIN_rxInProgress = true;
-                //LIN_rxState = LIN_RX_BREAK;
-                LIN_rxState = LIN_RX_SYNC;
+                LIN_rxState = LIN_RX_BREAK;
             }
             break;
         case LIN_RX_BREAK:
@@ -122,7 +121,7 @@ lin_rx_state_t LIN_handler(void){
                 if(LIN_EUSART_Read() == 0x55){  //Read sync - discard
                     LIN_rxState = LIN_RX_PID;
                 } else {
-                    LIN_rxState = LIN_RX_SYNC; // temporary - should go to LIN_RX_ERROR
+                    LIN_rxState = LIN_RX_ERROR;
                 }
             }
             break;

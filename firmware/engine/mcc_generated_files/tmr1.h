@@ -365,7 +365,6 @@ uint8_t TMR1_CheckGateValueStatus(void);
 */
 void TMR1_ISR(void);
 
-
 /**
   @Summary
     Set Timer Interrupt Handler

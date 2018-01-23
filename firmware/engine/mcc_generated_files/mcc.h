@@ -50,9 +50,10 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include "interrupt_manager.h"
-#include "tmr1.h"
 #include "LINDrivers/lin_app.h"
+#include "adc.h"
 #include "eusart.h"
+#include "tmr1.h"
 
 #define _XTAL_FREQ  16000000
 

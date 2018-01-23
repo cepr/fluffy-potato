@@ -67,7 +67,7 @@ void TMR1_Initialize(void)
     //T1CKPS 1:1; T1OSCEN disabled; nT1SYNC synchronize; TMR1CS FOSC; TMR1ON off; 
     T1CON = 0x40;
 
-    //T1GSS T1G; TMR1GE disabled; T1GTM disabled; T1GPOL low; T1GGO done; T1GSPM disabled; 
+    //T1GSS T1G_pin; TMR1GE disabled; T1GTM disabled; T1GPOL low; T1GGO done; T1GSPM disabled; 
     T1GCON = 0x00;
 
     //TMR1H 193; 
