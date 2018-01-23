@@ -61,6 +61,46 @@ void main(void)
 
     while (1)
     {
+        // D0: PARKING_LIGHT
+        // Turn the parking light if the ignition is on position 1 or 2 (until I add
+        // a dedicated headlight switch)
+        if (IGNITION_STARTER_Data[0] > 0) {
+            D0_SetHigh();
+        } else {
+            D0_SetLow();
+        }
+
+        // D1: TURN_LIGHT
+#if defined(LEFT)
+        if (BLINKER_Data[0] && (TURN_SIGNAL_Data[0] & 1)) {
+            D1_SetHigh();
+        } else {
+            D1_SetLow();
+        }
+#elif defined(RIGHT)
+        if (BLINKER_Data[0] && (TURN_SIGNAL_Data[0] & 2)) {
+            D1_SetHigh();
+        } else {
+            D1_SetLow();
+        }
+#else
+#error You must define either LEFT or RIGHT
+#endif
+
+        // D2: HIGH_BEAM
+        if ((LIGHTS_Data[0] & 2) && IGNITION_STARTER_Data[0] > 0) {
+            D2_SetHigh();
+        } else {
+            D2_SetLow();
+        }
+
+        // D3: LOW_BEAM
+        if ((LIGHTS_Data[0] & 1) && IGNITION_STARTER_Data[0] > 0) {
+            D3_SetHigh();
+        } else {
+            D3_SetLow();
+        }
+
         LIN_handler();
     }
 }

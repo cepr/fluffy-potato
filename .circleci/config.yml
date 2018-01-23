@@ -27,7 +27,9 @@ jobs:
           cd firmware/front_lights
           make
       - store_artifacts:
-          path: firmware/front_lights/dist/default/production/front_lights.production.hex
+          path: firmware/front_lights/dist/left/production/front_lights.production.hex
+      - store_artifacts:
+          path: firmware/front_lights/dist/right/production/front_lights.production.hex
       - run: |
           cd firmware/rear_window_defogger
           make
