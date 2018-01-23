@@ -8,21 +8,44 @@ jobs:
       - run: |
           cd firmware
           ./configure.py
+      - run: |
+          cd firmware/engine
           make
       - store_artifacts:
           path: firmware/engine/dist/default/production/engine.production.hex
+      - run: |
+          cd firmware/horn
+          make
       - store_artifacts:
           path: firmware/horn/dist/default/production/horn.production.hex
+      - run: |
+          cd firmware/rear_lights
+          make
       - store_artifacts:
           path: firmware/rear_lights/dist/default/production/rear_lights.production.hex
+      - run: |
+          cd firmware/front_lights
+          make
       - store_artifacts:
           path: firmware/front_lights/dist/default/production/front_lights.production.hex
+      - run: |
+          cd firmware/rear_window_defogger
+          make
       - store_artifacts:
           path: firmware/rear_window_defogger/dist/default/production/rear_window_defogger.production.hex
+      - run: |
+          cd firmware/windshield
+          make
       - store_artifacts:
           path: firmware/windshield/dist/default/production/windshield.production.hex
+      - run: |
+          cd firmware/sensors
+          make
       - store_artifacts:
           path: firmware/sensors/dist/default/production/sensors.production.hex
+      - run: |
+          cd firmware/steering_wheel
+          make
       - store_artifacts:
           path: firmware/steering_wheel/dist/default/production/steering_wheel.production.hex
       - run: |
