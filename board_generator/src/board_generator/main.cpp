@@ -88,28 +88,33 @@ int main()
         Board board("horn");
         board.add_module(&edge);
         board.add_module(&input);
+        board.add_module(&pic16f1829lin);
         board.add_module(&switch_lowside_6a); // HORN
         board.add_module(&input_pull_up);     // BREAK_SWITCH_1
         board.add_module(&input_pull_up);     // BREAK_SWITCH_2
         board.add_module(&input);
         board.add_module(&edge);
+        board.save();
     }
 
     {
         Board board("windshield");
         board.add_module(&edge);
         board.add_module(&input);
+        board.add_module(&pic16f1829lin);
         board.add_module(&switch_highside_10a); // WIPERS
         board.add_module(&switch_lowside_6a);   // WASHER
         board.add_module(&switch_highside_10a); // AUDIO
         board.add_module(&input);
         board.add_module(&edge);
+        board.save();
     }
 
     {
         Board board("rear_window_defogger");
         board.add_module(&edge);
         board.add_module(&input);
+        board.add_module(&pic16f1829lin);
         board.add_module(&switch_lowside_6a); // REAR_WINDOW_DEFOGGER ( TODO check current)
         board.add_module(&switch_lowside_6a); // REAR_BREAK_LIGHT
         board.add_module(&input);
