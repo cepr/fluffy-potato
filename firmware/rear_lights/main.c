@@ -45,6 +45,14 @@
 
 #include "mcc_generated_files/mcc.h"
 
+#if defined(LEFT)
+#define SIDE_BIT 1
+#elif defined(RIGHT)
+#define SIDE_BIT 2
+#else
+#error You must define either LEFT or RIGHT
+#endif
+
 /*
                          Main application
  */
@@ -61,6 +69,44 @@ void main(void)
 
     while (1)
     {
+        // D0. REAR_SIDE_MARKER_LIGHT
+        // D2. REAR_TAIL_LIGHT
+        // D5. LICENSE_PLATE_LIGHT
+        if (IGNITION_STARTER_Data[0]) {
+            D0_SetHigh();
+            D2_SetHigh();
+            D5_SetHigh();
+        } else {
+            D0_SetLow();
+            D2_SetLow();
+            D5_SetLow();
+        }
+
+        // D1. REAR_TURN_LIGHT
+        if (BLINKER_Data[0] && (
+                (IGNITION_STARTER_Data[0] && (TURN_SIGNAL_Data[0] & SIDE_BIT)) ||
+                EMERGENCY_FLASHER_SWITCH_Data[0]
+           ))
+        {
+            D1_SetHigh();
+        } else {
+            D1_SetLow();
+        }
+
+        // D3. REAR_BRAKE_LIGHT
+        if (IGNITION_STARTER_Data[0] && BREAK_SWITCHES_Data[0]) {
+            D3_SetHigh();
+        } else {
+            D3_SetLow();
+        }
+
+        // D4. REAR_BACK_UP_LIGHT
+        if (IGNITION_STARTER_Data[0] && BACK_UP_SWITCH_Data[0]) {
+            D4_SetHigh();
+        } else {
+            D4_SetLow();
+        }
+
         LIN_handler();
     }
 }

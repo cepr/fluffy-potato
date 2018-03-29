@@ -45,6 +45,14 @@
 
 #include "mcc_generated_files/mcc.h"
 
+#if defined(LEFT)
+#define SIDE_BIT 1
+#elif defined(RIGHT)
+#define SIDE_BIT 2
+#else
+#error You must define either LEFT or RIGHT
+#endif
+
 /*
                          Main application
  */
@@ -62,30 +70,22 @@ void main(void)
     while (1)
     {
         // D0: PARKING_LIGHT
-        // Turn the parking light if the ignition is on position 1 or 2 (until I add
-        // a dedicated headlight switch)
-        if (IGNITION_STARTER_Data[0] > 0) {
+        if (IGNITION_STARTER_Data[0]) {
             D0_SetHigh();
         } else {
             D0_SetLow();
         }
 
         // D1: TURN_LIGHT
-#if defined(LEFT)
-        if (BLINKER_Data[0] && (TURN_SIGNAL_Data[0] & 1)) {
+        if (BLINKER_Data[0] && (
+                (IGNITION_STARTER_Data[0] && (TURN_SIGNAL_Data[0] & SIDE_BIT)) ||
+                EMERGENCY_FLASHER_SWITCH_Data[0]
+           ))
+        {
             D1_SetHigh();
         } else {
             D1_SetLow();
         }
-#elif defined(RIGHT)
-        if (BLINKER_Data[0] && (TURN_SIGNAL_Data[0] & 2)) {
-            D1_SetHigh();
-        } else {
-            D1_SetLow();
-        }
-#else
-#error You must define either LEFT or RIGHT
-#endif
 
         // D2: HIGH_BEAM
         if ((LIGHTS_Data[0] & 2) && IGNITION_STARTER_Data[0] > 0) {

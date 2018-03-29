@@ -57,7 +57,9 @@ typedef enum {
     WASHER,
     REAR_WINDOW_DEFOGGER,
     CYLINDER_HEAD_TEMPERATURE,
-    FUEL_GAUGE
+    FUEL_GAUGE,
+    BACK_UP_SWITCH,
+    EMERGENCY_FLASHER_SWITCH
 }lin_cmd_t;
 
 uint8_t IGNITION_STARTER_Data[1];
@@ -73,6 +75,8 @@ uint8_t WASHER_Data[1];
 uint8_t REAR_WINDOW_DEFOGGER_Data[1];
 uint8_t CYLINDER_HEAD_TEMPERATURE_Data[1];
 uint8_t FUEL_GAUGE_Data[1];
+uint8_t BACK_UP_SWITCH_Data[1];
+uint8_t EMERGENCY_FLASHER_SWITCH_Data[1];
 
 const lin_rx_cmd_t scheduleTable[] = {
     //Command, Type, TX/RX Length, Data Address
@@ -88,7 +92,9 @@ const lin_rx_cmd_t scheduleTable[] = {
     {WASHER, RECEIVE, 1, &WASHER_Data },
     {REAR_WINDOW_DEFOGGER, RECEIVE, 1, &REAR_WINDOW_DEFOGGER_Data },
     {CYLINDER_HEAD_TEMPERATURE, RECEIVE, 1, &CYLINDER_HEAD_TEMPERATURE_Data },
-    {FUEL_GAUGE, RECEIVE, 1, &FUEL_GAUGE_Data }
+    {FUEL_GAUGE, RECEIVE, 1, &FUEL_GAUGE_Data },
+    {BACK_UP_SWITCH, RECEIVE, 1, &BACK_UP_SWITCH_Data },
+    {EMERGENCY_FLASHER_SWITCH, RECEIVE, 1, &EMERGENCY_FLASHER_SWITCH_Data }
 };
 #define TABLE_SIZE  (sizeof(scheduleTable)/sizeof(lin_rx_cmd_t))
 

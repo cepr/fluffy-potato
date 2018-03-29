@@ -69,6 +69,16 @@ SIGNALS = [
         'signal': 'FUEL_GAUGE',
         'length': 1,
         'source': None
+    },
+    {
+        'signal': 'BACK_UP_SWITCH',
+        'length': 1,
+        'source': None # TODO
+    },
+    {
+        'signal': 'EMERGENCY_FLASHER_SWITCH',
+        'length': 1,
+        'source': None # TODO
     }
 ]
 
@@ -146,6 +156,12 @@ def add_signal(token_map: Element, index: int, signal: str, length: int, signal_
         name='data%%%d%%signal' % index,
         value=signal
     )
+    add_entry(
+        token_map,
+        class_name='com.microchip.mcc.core.tokenManager.PropertyTokenKey',
+        name='data%%%d%%PID' % index,
+        value=str(index)
+    )
 
 
 def set_entry(token_map: Element, name: str, value: str) -> None:
@@ -182,7 +198,9 @@ def configure_module(module: str):
     set_entry(token_map, "linSignals", str(i))
     tree.write(path)
     # Generate Makefile
-    subprocess.run(['/opt/microchip/mplabx/v4.05/mplab_ide/bin/prjMakefilesGenerator.sh', module])
+    subprocess.run(
+        ['/opt/microchip/mplabx/v4.15/mplab_ide/bin/prjMakefilesGenerator.sh', module])
+
 
 for module in MODULES:
     configure_module(module)

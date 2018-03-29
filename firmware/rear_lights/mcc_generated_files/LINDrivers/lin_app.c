@@ -78,6 +78,10 @@ void processLIN(void){
             break;
         case FUEL_GAUGE:
             break;
+        case BACK_UP_SWITCH:
+            break;
+        case EMERGENCY_FLASHER_SWITCH:
+            break;
         default:
             break;
     }
