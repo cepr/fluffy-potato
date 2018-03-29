@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/cpriscal/projects/fluffy-potato/board_generator/modules/switch-highside-10a/switch-highside-10a.sch</source>
+    <date>Mon 19 Mar 2018 09:12:16 PM PDT</date>
+    <tool>Eeschema 4.0.7-e2-6376~58~ubuntu16.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>switch-highside-10a.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U1">
+      <value>AUIPS7111S</value>
+      <footprint>TO_SOT_Packages_SMD:TO-263-5_TabPin3</footprint>
+      <fields>
+        <field name="DIGIKEY">AUIPS7111STRLCT-ND</field>
+      </fields>
+      <libsource lib="auips7111s" part="AUIPS7111S"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A5C03C2</tstamp>
+    </comp>
+    <comp ref="X1">
+      <value>interface</value>
+      <footprint>interface:interface</footprint>
+      <libsource lib="interface" part="interface"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A5C046E</tstamp>
+    </comp>
+    <comp ref="X2">
+      <value>interface</value>
+      <footprint>interface:interface</footprint>
+      <libsource lib="interface" part="interface"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A5C0515</tstamp>
+    </comp>
+    <comp ref="Rifb1">
+      <value>4K22</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <fields>
+        <field name="DIGIKEY">311-4.22KCRCT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A5C0812</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <fields>
+        <field name="DIGIKEY">311-10.0KCRCT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A5C0899</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>Screw_Terminal_01x01</value>
+      <footprint>connectors:TERM_SCREW_M3</footprint>
+      <fields>
+        <field name="DIGIKEY">36-7771-ND</field>
+      </fields>
+      <libsource lib="conn" part="Screw_Terminal_01x01"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A5C0B51</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>NTR5103N</value>
+      <footprint>TO_SOT_Packages_SMD:SOT-23</footprint>
+      <datasheet>NTR5103N-D.PDF</datasheet>
+      <fields>
+        <field name="DIGIKEY">NTR5103NT1GOSCT-ND</field>
+      </fields>
+      <libsource lib="transistors" part="2N7002"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A5C11A5</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>10K</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <fields>
+        <field name="DIGIKEY">311-10.0KCRCT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A5EC140</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>100</value>
+      <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
+      <fields>
+        <field name="DIGIKEY">311-100CRCT-ND</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5A5EC27D</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="auips7111s" part="AUIPS7111S">
+      <description>CURRENT SENSE HIGH SIDE SWITCH</description>
+      <docs>auips7111s.pdf</docs>
+      <footprints>
+        <fp>TO-263-5_TabPin3</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AUIPS7111S</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="input"/>
+        <pin num="2" name="Ifb" type="output"/>
+        <pin num="3" name="VCC" type="power_in"/>
+        <pin num="4" name="OUT" type="power_out"/>
+        <pin num="5" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="transistors" part="BSS138">
+      <aliases>
+        <alias>2N7002</alias>
+        <alias>MMBF170</alias>
+      </aliases>
+      <description>50V Vds, 0.22 A Id, N-channel MOSFET, SOT-23</description>
+      <docs>https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BSS138</field>
+        <field name="Footprint">TO_SOT_Packages_SMD:SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="Screw_Terminal_01x01">
+      <description>Generic screw terminal, single row, 01x01</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*Terminal*Block*:*</fp>
+        <fp>TerminalBlock*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x01</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="interface" part="interface">
+      <footprints>
+        <fp>interface</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">X</field>
+        <field name="Value">interface</field>
+      </fields>
+      <pins>
+        <pin num="1" name="12V" type="BiDi"/>
+        <pin num="2" name="GND" type="BiDi"/>
+        <pin num="3" name="LIN" type="BiDi"/>
+        <pin num="4" name="VCC" type="input"/>
+        <pin num="5" name="0" type="BiDi"/>
+        <pin num="6" name="1" type="BiDi"/>
+        <pin num="7" name="2" type="BiDi"/>
+        <pin num="8" name="3" type="BiDi"/>
+        <pin num="9" name="4" type="BiDi"/>
+        <pin num="10" name="5" type="BiDi"/>
+        <pin num="11" name="6" type="BiDi"/>
+        <pin num="12" name="7" type="BiDi"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+    <library logical="auips7111s">
+      <uri>/home/cpriscal/projects/fluffy-potato/board_generator/modules/switch-highside-10a/auips7111s.lib</uri>
+    </library>
+    <library logical="transistors">
+      <uri>/usr/share/kicad/library/transistors.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>/usr/share/kicad/library/conn.lib</uri>
+    </library>
+    <library logical="interface">
+      <uri>/home/cpriscal/projects/fluffy-potato/board_generator/interface/interface.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(X1-Pad12)">
+      <node ref="X2" pin="10"/>
+      <node ref="X1" pin="12"/>
+    </net>
+    <net code="2" name="Net-(X1-Pad11)">
+      <node ref="X1" pin="11"/>
+      <node ref="X2" pin="9"/>
+    </net>
+    <net code="3" name="Net-(X1-Pad10)">
+      <node ref="X1" pin="10"/>
+      <node ref="X2" pin="8"/>
+    </net>
+    <net code="4" name="Net-(X1-Pad9)">
+      <node ref="X2" pin="7"/>
+      <node ref="X1" pin="9"/>
+    </net>
+    <net code="5" name="Net-(X1-Pad8)">
+      <node ref="X1" pin="8"/>
+      <node ref="X2" pin="6"/>
+    </net>
+    <net code="6" name="Net-(X1-Pad7)">
+      <node ref="X2" pin="5"/>
+      <node ref="X1" pin="7"/>
+    </net>
+    <net code="7" name="Net-(J1-Pad1)">
+      <node ref="U1" pin="5"/>
+      <node ref="U1" pin="4"/>
+      <node ref="J1" pin="1"/>
+    </net>
+    <net code="8" name="Net-(Q1-Pad3)">
+      <node ref="U1" pin="1"/>
+      <node ref="Q1" pin="3"/>
+    </net>
+    <net code="9" name="Net-(R2-Pad2)">
+      <node ref="X1" pin="5"/>
+      <node ref="R2" pin="2"/>
+    </net>
+    <net code="10" name="GND">
+      <node ref="Q1" pin="2"/>
+      <node ref="X2" pin="2"/>
+      <node ref="Rifb1" pin="2"/>
+      <node ref="X1" pin="2"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="11" name="Net-(Q1-Pad1)">
+      <node ref="R2" pin="1"/>
+      <node ref="Q1" pin="1"/>
+      <node ref="R3" pin="2"/>
+    </net>
+    <net code="12" name="Net-(R1-Pad2)">
+      <node ref="X1" pin="6"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="13" name="Net-(X2-Pad12)">
+      <node ref="X2" pin="12"/>
+    </net>
+    <net code="14" name="Net-(X2-Pad11)">
+      <node ref="X2" pin="11"/>
+    </net>
+    <net code="15" name="VCC">
+      <node ref="X1" pin="4"/>
+      <node ref="X2" pin="4"/>
+    </net>
+    <net code="16" name="Net-(X1-Pad3)">
+      <node ref="X1" pin="3"/>
+      <node ref="X2" pin="3"/>
+    </net>
+    <net code="17" name="+12V">
+      <node ref="X2" pin="1"/>
+      <node ref="X1" pin="1"/>
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="18" name="Net-(R1-Pad1)">
+      <node ref="Rifb1" pin="1"/>
+      <node ref="R1" pin="1"/>
+      <node ref="U1" pin="2"/>
+    </net>
+  </nets>
+</export>

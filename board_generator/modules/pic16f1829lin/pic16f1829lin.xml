@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/cpriscal/projects/fluffy-potato/board_generator/modules/pic16f1829lin/pic16f1829lin.sch</source>
+    <date>Mon 19 Mar 2018 09:08:16 PM PDT</date>
+    <tool>Eeschema 4.0.7-e2-6376~58~ubuntu16.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>pic16f1829lin.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C2">
+      <value>1uF</value>
+      <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
+      <datasheet>http://www.digikey.com/product-detail/en/murata-electronics-north-america/GCM21BL81C105KA58L/490-8046-1-ND/4380331</datasheet>
+      <fields>
+        <field name="DIGIKEY">490-8046-1-ND</field>
+      </fields>
+      <libsource lib="device" part="CP"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>597E7A35</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>10uF</value>
+      <footprint>Capacitors_SMD:C_1210_HandSoldering</footprint>
+      <datasheet>http://datasheets.avx.com/TPS.pdf</datasheet>
+      <fields>
+        <field name="DIGIKEY">478-5230-1-ND</field>
+      </fields>
+      <libsource lib="device" part="CP"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>597E7A3D</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>RSB36V</value>
+      <footprint>Diodes_SMD:D_SOD-323_HandSoldering</footprint>
+      <datasheet>http://rohmfs.rohm.com/en/products/databook/datasheet/discrete/diode/zener/rsb36v.pdf</datasheet>
+      <fields>
+        <field name="DIGIKEY">RSB36VTE-17CT-ND</field>
+      </fields>
+      <libsource lib="device" part="D_Zener"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>597E7A45</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>1N4148W-7-F</value>
+      <footprint>Diodes_SMD:D_SOD-123</footprint>
+      <datasheet>http://www.diodes.com/_files/datasheets/ds30086.pdf</datasheet>
+      <fields>
+        <field name="DIGIKEY">1N4148W-FDICT-ND</field>
+      </fields>
+      <libsource lib="device" part="D"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>597E7A4D</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>MOLEX-22-28-6050</value>
+      <footprint>Pin_Headers:Pin_Header_Angled_1x05_Pitch2.54mm</footprint>
+      <fields>
+        <field name="DIGIKEY">WM13455-ND</field>
+      </fields>
+      <libsource lib="pic16f1829lin-cache" part="CONN_01X05"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>597E7A7C</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>PIC16F1829LIN</value>
+      <footprint>Housings_SSOP:SSOP-20_5.3x7.2mm_Pitch0.65mm</footprint>
+      <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/41673A.pdf</datasheet>
+      <fields>
+        <field name="DIGIKEY">PIC16F1829LIN-I/SS-ND</field>
+      </fields>
+      <libsource lib="pic16f1829lin" part="PIC16F1829LIN"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>597E7A99</tstamp>
+    </comp>
+    <comp ref="X2">
+      <value>interface</value>
+      <footprint>interface:interface</footprint>
+      <libsource lib="interface" part="interface"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>597E7CE4</tstamp>
+    </comp>
+    <comp ref="X1">
+      <value>interface</value>
+      <footprint>interface:interface</footprint>
+      <libsource lib="interface" part="interface"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>597E7E88</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="pic16f1829lin-cache" part="CONN_01X05">
+      <footprints>
+        <fp>Pin_Header_Straight_1X*</fp>
+        <fp>Pin_Header_Angled_1X*</fp>
+        <fp>Socket_Strip_Straight_1X*</fp>
+        <fp>Socket_Strip_Angled_1X*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">CONN_01X05</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="CP">
+      <description>Polarised capacitor</description>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="D">
+      <description>Diode</description>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="D_Zener">
+      <description>Zener Diode</description>
+      <docs>https://en.wikipedia.org/wiki/Zener_diode</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*SingleDiode</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Zener</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="pic16f1829lin" part="PIC16F1829LIN">
+      <description>PIC16F1829LIN - Flash-Based, 8-Bit CMOS Microcontrollers with integrated voltage regulator and LIN transceiver</description>
+      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/41673A.pdf</docs>
+      <footprints>
+        <fp>SSOP*5.3x7.2mm*Pitch0.65mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">PIC16F1829LIN</field>
+        <field name="Footprint">Housings_SSOP:SSOP-20_5.3x7.2mm_Pitch0.65mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="RA5" type="BiDi"/>
+        <pin num="3" name="RA4" type="BiDi"/>
+        <pin num="4" name="RA3/MCLR" type="BiDi"/>
+        <pin num="5" name="RC5" type="BiDi"/>
+        <pin num="6" name="RC4" type="BiDi"/>
+        <pin num="7" name="RC3" type="BiDi"/>
+        <pin num="8" name="LINVSS" type="power_in"/>
+        <pin num="9" name="LBUS" type="BiDi"/>
+        <pin num="10" name="VREG" type="power_out"/>
+        <pin num="11" name="VBAT" type="power_in"/>
+        <pin num="12" name="/FAULT" type="BiDi"/>
+        <pin num="13" name="RB4" type="BiDi"/>
+        <pin num="14" name="RC2" type="BiDi"/>
+        <pin num="15" name="RC1" type="BiDi"/>
+        <pin num="16" name="RC0" type="BiDi"/>
+        <pin num="17" name="RA2" type="BiDi"/>
+        <pin num="18" name="RA1/ICSPCLK" type="BiDi"/>
+        <pin num="19" name="RA0/ICSPDAT" type="BiDi"/>
+        <pin num="20" name="VSS" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="interface" part="interface">
+      <footprints>
+        <fp>interface</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">X</field>
+        <field name="Value">interface</field>
+      </fields>
+      <pins>
+        <pin num="1" name="12V" type="BiDi"/>
+        <pin num="2" name="GND" type="BiDi"/>
+        <pin num="3" name="LIN" type="BiDi"/>
+        <pin num="4" name="VCC" type="input"/>
+        <pin num="5" name="0" type="BiDi"/>
+        <pin num="6" name="1" type="BiDi"/>
+        <pin num="7" name="2" type="BiDi"/>
+        <pin num="8" name="3" type="BiDi"/>
+        <pin num="9" name="4" type="BiDi"/>
+        <pin num="10" name="5" type="BiDi"/>
+        <pin num="11" name="6" type="BiDi"/>
+        <pin num="12" name="7" type="BiDi"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="device">
+      <uri>/usr/share/kicad/library/device.lib</uri>
+    </library>
+    <library logical="interface">
+      <uri>/home/cpriscal/projects/fluffy-potato/board_generator/interface/interface.lib</uri>
+    </library>
+    <library logical="pic16f1829lin">
+      <uri>/home/cpriscal/projects/fluffy-potato/board_generator/libraries/pic16f1829lin.lib</uri>
+    </library>
+    <library logical="pic16f1829lin-cache">
+      <uri>/home/cpriscal/projects/fluffy-potato/board_generator/modules/pic16f1829lin/pic16f1829lin-cache.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/RC5">
+      <node ref="X2" pin="5"/>
+      <node ref="U1" pin="5"/>
+    </net>
+    <net code="2" name="+5V">
+      <node ref="X1" pin="4"/>
+      <node ref="U1" pin="1"/>
+      <node ref="P1" pin="2"/>
+      <node ref="C2" pin="1"/>
+      <node ref="X2" pin="4"/>
+      <node ref="U1" pin="10"/>
+    </net>
+    <net code="3" name="/RC4">
+      <node ref="U1" pin="6"/>
+      <node ref="X2" pin="6"/>
+    </net>
+    <net code="4" name="/RC3">
+      <node ref="X2" pin="7"/>
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="5" name="/RC2">
+      <node ref="U1" pin="14"/>
+      <node ref="X2" pin="8"/>
+    </net>
+    <net code="6" name="/RC1">
+      <node ref="X2" pin="9"/>
+      <node ref="U1" pin="15"/>
+    </net>
+    <net code="7" name="/RC0">
+      <node ref="X2" pin="10"/>
+      <node ref="U1" pin="16"/>
+    </net>
+    <net code="8" name="/RA4">
+      <node ref="U1" pin="3"/>
+      <node ref="X2" pin="11"/>
+    </net>
+    <net code="9" name="/RA5">
+      <node ref="U1" pin="2"/>
+      <node ref="X2" pin="12"/>
+    </net>
+    <net code="10" name="GND">
+      <node ref="P1" pin="3"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="D1" pin="2"/>
+      <node ref="U1" pin="20"/>
+      <node ref="U1" pin="8"/>
+      <node ref="X1" pin="2"/>
+      <node ref="X2" pin="2"/>
+    </net>
+    <net code="11" name="+12V">
+      <node ref="D2" pin="2"/>
+      <node ref="X2" pin="1"/>
+      <node ref="X1" pin="1"/>
+    </net>
+    <net code="12" name="/LBUS">
+      <node ref="X2" pin="3"/>
+      <node ref="U1" pin="9"/>
+      <node ref="X1" pin="3"/>
+      <node ref="D1" pin="1"/>
+    </net>
+    <net code="13" name="Net-(X1-Pad5)">
+      <node ref="X1" pin="5"/>
+    </net>
+    <net code="14" name="Net-(X1-Pad6)">
+      <node ref="X1" pin="6"/>
+    </net>
+    <net code="15" name="Net-(X1-Pad7)">
+      <node ref="X1" pin="7"/>
+    </net>
+    <net code="16" name="Net-(X1-Pad8)">
+      <node ref="X1" pin="8"/>
+    </net>
+    <net code="17" name="Net-(X1-Pad9)">
+      <node ref="X1" pin="9"/>
+    </net>
+    <net code="18" name="Net-(X1-Pad10)">
+      <node ref="X1" pin="10"/>
+    </net>
+    <net code="19" name="Net-(X1-Pad11)">
+      <node ref="X1" pin="11"/>
+    </net>
+    <net code="20" name="Net-(X1-Pad12)">
+      <node ref="X1" pin="12"/>
+    </net>
+    <net code="21" name="//MCLR">
+      <node ref="P1" pin="1"/>
+      <node ref="U1" pin="4"/>
+    </net>
+    <net code="22" name="/ICSPDAT">
+      <node ref="P1" pin="4"/>
+      <node ref="U1" pin="19"/>
+    </net>
+    <net code="23" name="/ICSPCLK">
+      <node ref="U1" pin="18"/>
+      <node ref="P1" pin="5"/>
+    </net>
+    <net code="24" name="Net-(C1-Pad1)">
+      <node ref="U1" pin="11"/>
+      <node ref="D2" pin="1"/>
+      <node ref="C1" pin="1"/>
+    </net>
+    <net code="25" name="/RA2">
+      <node ref="U1" pin="17"/>
+    </net>
+    <net code="26" name="Net-(U1-Pad12)">
+      <node ref="U1" pin="13"/>
+      <node ref="U1" pin="12"/>
+    </net>
+  </nets>
+</export>
