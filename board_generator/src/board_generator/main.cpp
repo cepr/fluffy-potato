@@ -22,101 +22,102 @@ int main()
 
     /* Boards */
     {
-        Board board("steering_wheel");
+        Board board("steering_wheel_rev1");
         board.add_module(&edge);
         board.add_module(&input);
         board.add_module(&bl652);
-        board.add_module(&input_pull_up); // IGNITION_STARTER_POS_1
-        board.add_module(&input_pull_up); // IGNITION_STARTER_POS_2
-        board.add_module(&input_pull_up); // WINDSHIELD_WIPERS_SLOW
-        board.add_module(&input_pull_up); // WINDSHIELD_WIPERS_FAST
-        board.add_module(&input_pull_up); // TURN_SIGNAL_LEFT
-        board.add_module(&input_pull_up); // TURN_SIGNAL_RIGHT
-        board.add_module(&input_pull_up); // HEADLIGHT_DIMMER
-        board.add_module(&input_pull_up); // HORN_BUTTON
+        board.add_module(&input_pull_up); // D0 - IGNITION_STARTER_POS_1
+        board.add_module(&input_pull_up); // D1 - IGNITION_STARTER_POS_2
+        board.add_module(&input_pull_up); // D2 - WINDSHIELD_WIPERS_SLOW
+        board.add_module(&input_pull_up); // D3 - WINDSHIELD_WIPERS_FAST
+        board.add_module(&input_pull_up); // D4 - TURN_SIGNAL_LEFT
+        board.add_module(&input_pull_up); // D5 - TURN_SIGNAL_RIGHT
+        board.add_module(&input_pull_up); // D6 - HEADLIGHT_DIMMER
+        board.add_module(&input_pull_up); // D7 - HORN_BUTTON
         board.add_module(&input);
         board.add_module(&edge);
         board.save();
     }
 
     {
-        Board board("front_lights");
+        Board board("front_lights_rev1");
         board.add_module(&edge);
         board.add_module(&input);
         board.add_module(&pic16f1829lin);
-        board.add_module(&switch_lowside_6a); // PARKING_LIGHT
-        board.add_module(&switch_lowside_6a); // TURN_LIGHT
-        board.add_module(&switch_lowside_6a); // HIGH_BEAM
-        board.add_module(&switch_lowside_6a); // LOW_BEAM
+        board.add_module(&switch_lowside_6a); // D0 - PARKING_LIGHT
+        board.add_module(&switch_lowside_6a); // D1 - TURN_LIGHT
+        board.add_module(&switch_lowside_6a); // D2 - HIGH_BEAM
+        board.add_module(&switch_lowside_6a); // D3 - LOW_BEAM
         board.add_module(&input);
         board.add_module(&edge);
         board.save();
     }
 
     {
-        Board board("rear_lights");
+        Board board("rear_lights_rev1");
         board.add_module(&edge);
         board.add_module(&input);
-        board.add_module(&pic16f1829lin);
-        board.add_module(&switch_lowside_6a); // REAR_SIDE_MARKER_LIGHT
-        board.add_module(&switch_lowside_6a); // REAR_TURN_LIGHT
-        board.add_module(&switch_lowside_6a); // REAR_TAIL_LIGHT
-        board.add_module(&switch_lowside_6a); // REAR_BREAK_LIGHT
-        board.add_module(&switch_lowside_6a); // REAR_BACK_UP_LIGHT
-        board.add_module(&switch_lowside_6a); // LICENSE_PLATE_LIGHT
-        board.add_module(&input);
-        board.add_module(&edge);
-        board.save();
-    }
-
-    {
-        Board board("engine");
-        board.add_module(&edge);
-        board.add_module(&input);
-        board.add_module(&pic16f1829lin);
-        board.add_module(&switch_lowside_6a);   // HEATER_AIR_BLOWER
-        board.add_module(&switch_lowside_6a);   // COLD_STARTING_VALVE
-        board.add_module(&switch_highside_10a); // IGNITION (5A)
-        board.add_module(&switch_highside_10a); // ECU
-        board.add_module(&switch_highside_10a); // FUEL_PUMP
+        board.add_module(&pic16f1829lin); // analog inputs only on pins 2,3,4,5,6
+        board.add_module(&switch_lowside_6a); // D0 - REAR_SIDE_MARKER_LIGHT
+        board.add_module(&switch_lowside_6a); // D1 - REAR_TURN_LIGHT
+        board.add_module(&switch_lowside_6a); // D2 - REAR_TAIL_LIGHT
+        board.add_module(&switch_lowside_6a); // D3 - REAR_BREAK_LIGHT
+        board.add_module(&switch_lowside_6a); // D4 - REAR_BACK_UP_LIGHT
+        board.add_module(&switch_lowside_6a); // D5 - LICENSE_PLATE_LIGHT
         board.add_module(&input);
         board.add_module(&edge);
         board.save();
     }
 
     {
-        Board board("horn");
+        Board board("engine_rev2");
         board.add_module(&edge);
         board.add_module(&input);
-        board.add_module(&pic16f1829lin);
-        board.add_module(&switch_lowside_6a); // HORN
-        board.add_module(&input_pull_up);     // BREAK_SWITCH_1
-        board.add_module(&input_pull_up);     // BREAK_SWITCH_2
-        board.add_module(&input);
-        board.add_module(&edge);
-        board.save();
-    }
-
-    {
-        Board board("windshield");
-        board.add_module(&edge);
-        board.add_module(&input);
-        board.add_module(&pic16f1829lin);
-        board.add_module(&switch_highside_10a); // WIPERS
-        board.add_module(&switch_lowside_6a);   // WASHER
-        board.add_module(&switch_highside_10a); // AUDIO
+        board.add_module(&pic16f1829lin); // analog inputs only on pins 2,3,4,5,6
+        board.add_module(&switch_lowside_6a);   // D0    - HEATER_AIR_BLOWER
+        board.add_module(&switch_highside_10a); // D1 A2 - IGNITION (5A)
+        board.add_module(&switch_highside_10a); // D3 A4 - ECU
+        board.add_module(&switch_highside_10a); // D5,A6 - FUEL_PUMP
+        board.add_module(&switch_lowside_6a);   // D7    - COLD_STARTING_VALVE
         board.add_module(&input);
         board.add_module(&edge);
         board.save();
     }
 
     {
-        Board board("rear_window_defogger");
+        Board board("horn_rev1");
         board.add_module(&edge);
         board.add_module(&input);
-        board.add_module(&pic16f1829lin);
-        board.add_module(&switch_lowside_6a); // REAR_WINDOW_DEFOGGER ( TODO check current)
-        board.add_module(&switch_lowside_6a); // REAR_BREAK_LIGHT
+        board.add_module(&pic16f1829lin); // analog inputs only on pins 2,3,4,5,6
+        board.add_module(&switch_lowside_6a); // D0 - HORN
+        board.add_module(&input_pull_up);     // D1 - BREAK_SWITCH_1
+        board.add_module(&input_pull_up);     // D2 - BREAK_SWITCH_2
+        board.add_module(&input);
+        board.add_module(&edge);
+        board.save();
+    }
+
+    {
+        Board board("windshield_rev2");
+        board.add_module(&edge);
+        board.add_module(&input);
+        board.add_module(&pic16f1829lin); // analog inputs only on pins 2,3,4,5,6
+        board.add_module(&input_pull_up);       // D0    - WIPERS_REST_POSITION
+        board.add_module(&switch_highside_10a); // D1 A2 - WIPERS
+        board.add_module(&switch_lowside_6a);   // D3    - WASHER
+        board.add_module(&switch_highside_10a); // D4 A5 - AUDIO
+        board.add_module(&input);
+        board.add_module(&edge);
+        board.save();
+    }
+
+    {
+        Board board("rear_window_defogger_rev0");
+        board.add_module(&edge);
+        board.add_module(&input);
+        board.add_module(&pic16f1829lin); // analog inputs only on pins 2,3,4,5,6
+        board.add_module(&switch_lowside_6a); // D0 - REAR_WINDOW_DEFOGGER ( TODO check current)
+        board.add_module(&switch_lowside_6a); // D1 - REAR_BREAK_LIGHT
         board.add_module(&input);
         board.add_module(&edge);
     }
