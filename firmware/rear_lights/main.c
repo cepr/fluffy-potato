@@ -45,6 +45,8 @@
 
 #include "mcc_generated_files/mcc.h"
 
+//#define HARDWARE_TEST
+
 #if defined(LEFT)
 #define SIDE_BIT 1
 #elif defined(RIGHT)
@@ -69,6 +71,31 @@ void main(void)
 
     while (1)
     {
+#ifdef HARDWARE_TEST
+        D0_SetHigh();
+        __delay_ms(1000);
+        D0_SetLow();
+
+        D1_SetHigh();
+        __delay_ms(1000);
+        D1_SetLow();
+
+        D2_SetHigh();
+        __delay_ms(1000);
+        D2_SetLow();
+
+        D3_SetHigh();
+        __delay_ms(1000);
+        D3_SetLow();
+
+        D4_SetHigh();
+        __delay_ms(1000);
+        D4_SetLow();
+
+        D5_SetHigh();
+        __delay_ms(1000);
+        D5_SetLow();
+#else
         // D0. REAR_SIDE_MARKER_LIGHT
         // D2. REAR_TAIL_LIGHT
         // D5. LICENSE_PLATE_LIGHT
@@ -84,7 +111,7 @@ void main(void)
 
         // D1. REAR_TURN_LIGHT
         if (BLINKER_Data[0] && (
-                (IGNITION_STARTER_Data[0] && (TURN_SIGNAL_Data[0] & SIDE_BIT)) ||
+                (TURN_SIGNAL_Data[0] & SIDE_BIT) ||
                 EMERGENCY_FLASHER_SWITCH_Data[0]
            ))
         {
@@ -94,7 +121,7 @@ void main(void)
         }
 
         // D3. REAR_BRAKE_LIGHT
-        if (IGNITION_STARTER_Data[0] && BREAK_SWITCHES_Data[0]) {
+        if (BREAK_SWITCHES_Data[0]) {
             D3_SetHigh();
         } else {
             D3_SetLow();
@@ -108,6 +135,7 @@ void main(void)
         }
 
         LIN_handler();
+#endif
     }
 }
 /**

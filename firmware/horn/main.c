@@ -43,7 +43,11 @@
     TERMS.
 */
 
+#include <pic.h>
+
 #include "mcc_generated_files/mcc.h"
+
+//#define HARDWARE_TEST
 
 /*
                          Main application
@@ -61,6 +65,12 @@ void main(void)
 
     while (1)
     {
+#ifdef HARDWARE_TEST
+        D0_SetHigh();
+        __delay_ms(1000);
+        D0_SetLow();
+        __delay_ms(1000);
+#else
         // D0. HORN
         if (HORN_Data[0]) {
             D0_SetHigh();
@@ -83,6 +93,7 @@ void main(void)
         }
 
         LIN_handler();
+#endif
     }
 }
 /**

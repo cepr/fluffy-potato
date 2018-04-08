@@ -45,6 +45,8 @@
 
 #include "mcc_generated_files/mcc.h"
 
+//#define HARDWARE_TEST
+
 #if defined(LEFT)
 #define SIDE_BIT 1
 #elif defined(RIGHT)
@@ -69,6 +71,24 @@ void main(void)
 
     while (1)
     {
+#ifdef HARDWARE_TEST
+
+        D0_SetHigh();
+        __delay_ms(1000);
+        D0_SetLow();
+
+        D1_SetHigh();
+        __delay_ms(1000);
+        D1_SetLow();
+
+        D2_SetHigh();
+        __delay_ms(1000);
+        D2_SetLow();
+
+        D3_SetHigh();
+        __delay_ms(1000);
+        D3_SetLow();
+#else
         // D0: PARKING_LIGHT
         if (IGNITION_STARTER_Data[0]) {
             D0_SetHigh();
@@ -78,7 +98,7 @@ void main(void)
 
         // D1: TURN_LIGHT
         if (BLINKER_Data[0] && (
-                (IGNITION_STARTER_Data[0] && (TURN_SIGNAL_Data[0] & SIDE_BIT)) ||
+                (TURN_SIGNAL_Data[0] & SIDE_BIT) ||
                 EMERGENCY_FLASHER_SWITCH_Data[0]
            ))
         {
@@ -88,20 +108,20 @@ void main(void)
         }
 
         // D2: HIGH_BEAM
-        if ((LIGHTS_Data[0] & 2) && IGNITION_STARTER_Data[0] > 0) {
+        if (LIGHTS_Data[0] & 2) {
             D2_SetHigh();
         } else {
             D2_SetLow();
         }
 
         // D3: LOW_BEAM
-        if ((LIGHTS_Data[0] & 1) && IGNITION_STARTER_Data[0] > 0) {
+        if (LIGHTS_Data[0] & 1) {
             D3_SetHigh();
         } else {
             D3_SetLow();
         }
-
         LIN_handler();
+#endif
     }
 }
 /**

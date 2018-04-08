@@ -51,6 +51,13 @@ void processLIN(void){
     uint8_t cmd;
 
     cmd = LIN_getPacket(tempRxData);
+    if (cmd >= TABLE_SIZE) {
+        // Invalid ID
+        return;
+    }
+
+    scheduleTable[cmd].data[0] = tempRxData[0];
+
     switch(cmd){
         case IGNITION_STARTER:
             break;

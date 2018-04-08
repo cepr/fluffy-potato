@@ -51,6 +51,13 @@ void processLIN(void){
     uint8_t cmd;
 
     cmd = LIN_getPacket(tempRxData);
+    if (cmd >= TABLE_SIZE) {
+        // Invalid ID
+        return;
+    }
+
+    scheduleTable[cmd].data[0] = tempRxData[0];
+
     switch(cmd){
         case IGNITION_STARTER:
             break;
@@ -77,6 +84,10 @@ void processLIN(void){
         case CYLINDER_HEAD_TEMPERATURE:
             break;
         case FUEL_GAUGE:
+            break;
+        case BACK_UP_SWITCH:
+            break;
+        case EMERGENCY_FLASHER_SWITCH:
             break;
         default:
             break;
