@@ -193,17 +193,6 @@ Text Label 6500 2650 0    60   ~ 0
 LIN
 Wire Wire Line
 	5050 3550 7350 3550
-$Comp
-L Screw_Terminal_1x01 J1
-U 1 1 597E743F
-P 6550 5100
-F 0 "J1" H 6550 5250 50  0000 C TNN
-F 1 "Screw_Terminal_1x01" V 6400 5100 50  0000 C TNN
-F 2 "connectors:TERM_SCREW_M3" H 6550 4975 50  0001 C CNN
-F 3 "" H 6550 5000 50  0001 C CNN
-	1    6550 5100
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	6050 4250 6050 4650
 Connection ~ 6050 4400
@@ -223,4 +212,29 @@ Wire Wire Line
 	6050 5600 6050 5800
 Wire Wire Line
 	5300 4400 6050 4400
+$Comp
+L Conn_01x01 J1
+U 1 1 5BDFDC83
+P 6550 5100
+F 0 "J1" H 6550 5200 50  0000 C CNN
+F 1 "IN" H 6550 5000 50  0000 C CNN
+F 2 "connectors:SolderWirePad_single_SMD_15x40mil" H 6550 5100 50  0001 C CNN
+F 3 "" H 6550 5100 50  0001 C CNN
+	1    6550 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x01 J2
+U 1 1 5BDFDCE4
+P 6550 5650
+F 0 "J2" H 6550 5750 50  0000 C CNN
+F 1 "GND" H 6550 5550 50  0000 C CNN
+F 2 "connectors:SolderWirePad_single_SMD_15x40mil" H 6550 5650 50  0001 C CNN
+F 3 "" H 6550 5650 50  0001 C CNN
+	1    6550 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 5650 6050 5650
+Connection ~ 6050 5650
 $EndSCHEMATC
